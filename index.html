@@ -337,7 +337,7 @@
       url('courseware-bg-cheese.jpg');
     background-blend-mode: normal, color, normal;
     background-size: cover;
-    background-position: center bottom;
+    background-position: center top;
     background-repeat: no-repeat;
     animation: bgPanAbout 26s ease-in-out infinite alternate;
   }
@@ -403,7 +403,7 @@
       url('contact-bg-canal.png');
     background-blend-mode: normal, color, normal;
     background-size: cover;
-    background-position: center bottom;
+    background-position: center top;
     background-repeat: no-repeat;
     animation: bgPanBlog 26s ease-in-out infinite alternate;
   }
@@ -423,12 +423,12 @@
   /* Gentle vertical drift on each page's background photo — full-screen
      `cover` sizing never changes, only the visible crop window shifts. */
   @keyframes bgPanHome       { 0% { background-position: center 0%;   } 100% { background-position: center 14%;  } }
-  @keyframes bgPanAbout      { 0% { background-position: center 86%;  } 100% { background-position: center 100%; } }
+  @keyframes bgPanAbout      { 0% { background-position: center 0%;   } 100% { background-position: center 14%;  } }
   @keyframes bgPanCourseware { 0% { background-position: 3% 42%;  } 100% { background-position: 3% 58%;  } }
   @keyframes bgPanServices   { 0% { background-position: right 42%;   } 100% { background-position: right 58%;   } }
   @keyframes bgPanSyllabus   { 0% { background-position: center 42%;  } 100% { background-position: center 58%;  } }
   @keyframes bgPanFaq        { 0% { background-position: center 0%;   } 100% { background-position: center 14%;  } }
-  @keyframes bgPanBlog       { 0% { background-position: center 86%;  } 100% { background-position: center 100%; } }
+  @keyframes bgPanBlog       { 0% { background-position: center 0%;   } 100% { background-position: center 14%;  } }
   @keyframes bgPanContact    { 0% { background-position: center 0%;   } 100% { background-position: center 14%;  } }
 
   #courseware .content, #faq .content,
