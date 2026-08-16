@@ -1,27 +1,17 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Talking Dutch favicon">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <defs>
-    <radialGradient id="dotGlow" cx="50%" cy="45%" r="55%">
-      <stop offset="0%" stop-color="#ffd3ad"/>
-      <stop offset="38%" stop-color="#ff9b47"/>
-      <stop offset="68%" stop-color="#e87722"/>
-      <stop offset="100%" stop-color="#8f3f07"/>
+    <radialGradient id="bg" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#2b1608"/>
+      <stop offset="100%" stop-color="#0d0602"/>
     </radialGradient>
-    <radialGradient id="halo" cx="50%" cy="50%" r="58%">
-      <stop offset="0%" stop-color="#ff9b47" stop-opacity="0.42"/>
-      <stop offset="100%" stop-color="#ff9b47" stop-opacity="0"/>
+    <radialGradient id="innerGlow" cx="50%" cy="54%" r="45%">
+      <stop offset="0%" stop-color="#4a2610" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#4a2610" stop-opacity="0"/>
     </radialGradient>
-    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="2.6" result="b"/>
-      <feMerge>
-        <feMergeNode in="b"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
   </defs>
-
-  <rect x="4" y="4" width="56" height="56" rx="14" fill="#121212"/>
-  <rect x="4" y="4" width="56" height="56" rx="14" fill="none" stroke="#e87722" stroke-width="2.5"/>
-
-  <circle cx="32" cy="32" r="18" fill="url(#halo)"/>
-  <circle cx="32" cy="32" r="10.5" fill="url(#dotGlow)" filter="url(#softGlow)"/>
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <rect x="84" y="84" width="344" height="344" rx="34" fill="url(#innerGlow)"/>
+  <rect x="84" y="84" width="344" height="344" rx="34" fill="none" stroke="#e87722" stroke-width="16"/>
+  <path transform="translate(138.0 309.0) scale(0.148000 -0.148000)" d="M307.6475830078125 0V575.1465454101562H20V720H740V575.1465454101562H452.50103759765625V0Z" fill="#ffffff"/>
+  <path transform="translate(250.3 309.0) scale(0.148000 -0.148000)" d="M58 0V720H633.3099975585938Q672.6953430175781 720 705.5164642333984 700.594482421875Q738.3375854492188 681.18896484375 758.1687927246094 648.3678436279297Q778 615.5467224121094 778 576.161376953125V143.838623046875Q778 104.45327758789062 758.1687927246094 71.63215637207031Q738.3375854492188 38.81103515625 705.5164642333984 19.405517578125Q672.6953430175781 0 633.3099975585938 0ZM206.9468994140625 144.85345458984375H626.4989624023438Q628.8768920898438 144.85345458984375 630.5860290527344 146.56259155273438Q632.295166015625 148.271728515625 632.295166015625 150.649658203125V569.350341796875Q632.295166015625 571.728271484375 630.5860290527344 573.4374084472656Q628.8768920898438 575.1465454101562 626.4989624023438 575.1465454101562H206.9468994140625Q204.5689697265625 575.1465454101562 202.85983276367188 573.4374084472656Q201.15069580078125 571.728271484375 201.15069580078125 569.350341796875V150.649658203125Q201.15069580078125 148.271728515625 202.85983276367188 146.56259155273438Q204.5689697265625 144.85345458984375 206.9468994140625 144.85345458984375Z" fill="#ffffff"/>
 </svg>
