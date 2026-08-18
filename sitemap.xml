@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.talkingdutch.com/</loc>
+    <loc>https://www.talkingdutch.nl/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.talkingdutch.com/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://www.talkingdutch.nl/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.talkingdutch.com/"/>
@@ -10,7 +10,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.talkingdutch.com/about.html</loc>
+    <loc>https://www.talkingdutch.nl/about.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.talkingdutch.com/about.html"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://www.talkingdutch.nl/about.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.talkingdutch.com/about.html"/>
@@ -18,7 +18,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.talkingdutch.com/courseware.html</loc>
+    <loc>https://www.talkingdutch.nl/courseware.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.talkingdutch.com/courseware.html"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://www.talkingdutch.nl/courseware.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.talkingdutch.com/courseware.html"/>
@@ -26,7 +26,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.talkingdutch.com/packages.html</loc>
+    <loc>https://www.talkingdutch.nl/packages.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.talkingdutch.com/packages.html"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://www.talkingdutch.nl/packages.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.talkingdutch.com/packages.html"/>
@@ -34,7 +34,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.talkingdutch.com/syllabus.html</loc>
+    <loc>https://www.talkingdutch.nl/syllabus.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.talkingdutch.com/syllabus.html"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://www.talkingdutch.nl/syllabus.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.talkingdutch.com/syllabus.html"/>
@@ -42,7 +42,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.talkingdutch.com/faq.html</loc>
+    <loc>https://www.talkingdutch.nl/faq.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.talkingdutch.com/faq.html"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://www.talkingdutch.nl/faq.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.talkingdutch.com/faq.html"/>
@@ -50,7 +50,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.talkingdutch.com/blog.html</loc>
+    <loc>https://www.talkingdutch.nl/blog.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.talkingdutch.com/blog.html"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://www.talkingdutch.nl/blog.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.talkingdutch.com/blog.html"/>
@@ -58,7 +58,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.talkingdutch.com/contact.html</loc>
+    <loc>https://www.talkingdutch.nl/contact.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.talkingdutch.com/contact.html"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://www.talkingdutch.nl/contact.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.talkingdutch.com/contact.html"/>
