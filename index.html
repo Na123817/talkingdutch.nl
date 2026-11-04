@@ -2762,7 +2762,7 @@
           <div class="testimonial-text" style="font-style:normal;">"Erg behulpzaam, legt alles gedetailleerd uit en past de les aan op mijn leerstijl."</div>
         </div>
 <div class="gflip-back testimonial-photo-back">
-          <img src="testimonial-antzela-full.webp" alt="Antzela" class="testimonial-photo-img" style="object-position:50% 38%;">
+          <img loading="lazy" decoding="async" src="testimonial-antzela-full.webp" alt="Antzela" class="testimonial-photo-img" style="object-position:50% 38%;">
           <div class="testimonial-photo-caption">
             <div class="testimonial-photo-name">Antzela</div>
             <div class="testimonial-photo-date">2 december 2025</div>
@@ -2790,7 +2790,7 @@
           <div class="testimonial-text" style="font-style:normal;">"Jonathan is geduldig en behulpzaam. Hij heeft een geweldige verzameling materiaal om het leren van Nederlands te ondersteunen en ik merk dat ik elke les vooruitga!"</div>
         </div>
 <div class="gflip-back testimonial-photo-back">
-          <img src="testimonial-rory-full.webp" alt="Rory" class="testimonial-photo-img">
+          <img loading="lazy" decoding="async" src="testimonial-rory-full.webp" alt="Rory" class="testimonial-photo-img">
           <div class="testimonial-photo-caption">
             <div class="testimonial-photo-name">Rory</div>
             <div class="testimonial-photo-date">22 juli 2025</div>
@@ -2819,7 +2819,7 @@
           <div class="testimonial-text" style="font-style:normal;">"Zeer goed georganiseerd met zijn materiaal en lessen. Helpt me absoluut vooruit met mijn Nederlands!"</div>
         </div>
 <div class="gflip-back testimonial-photo-back">
-          <img src="testimonial-matt-full.webp" alt="Matt" class="testimonial-photo-img">
+          <img loading="lazy" decoding="async" src="testimonial-matt-full.webp" alt="Matt" class="testimonial-photo-img">
           <div class="testimonial-photo-caption">
             <div class="testimonial-photo-name">Matt</div>
             <div class="testimonial-photo-date">22 juli 2025</div>
@@ -3963,7 +3963,14 @@
     // Fraction of the source photo occupied by the monitor screen (best estimate; nudge these if misaligned)
     var screenRect = { xPct: 0.335, yPct: 0.155, wPct: 0.225, hPct: 0.20 };
     var img = new Image();
-    img.src = IMG_URL;
+    var started = false;
+    function startLoad() { if (started) return; started = true; img.src = IMG_URL; }
+    var syl = document.getElementById('syllabus');
+    if (!syl || syl.classList.contains('active')) { startLoad(); }
+    else {
+      new MutationObserver(function (m, o) { if (syl.classList.contains('active')) { startLoad(); o.disconnect(); } })
+        .observe(syl, { attributes: true, attributeFilter: ['class'] });
+    }
 
     function position() {
       if (!img.naturalWidth || !img.naturalHeight) return;
