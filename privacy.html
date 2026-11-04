@@ -948,6 +948,49 @@
     #faq .faq-a { padding-left: 1rem; padding-right: 1rem; }
   }
 
+  /* ── FAQ v2: dark glass cards, outlined numbers, orange only when open + help aside ── */
+  #faq .content { max-width: 1060px; display: grid; grid-template-columns: minmax(0,1fr) 300px; column-gap: 2.4rem; align-items: start; }
+  #faq .content > .page-title { grid-column: 1 / -1; }
+  #faq .orange-panel { grid-column: 1; }
+  #faq .faq-aside {
+    grid-column: 2; position: sticky; top: 6.5rem; margin-top: 1.6rem;
+    padding: 1.8rem 1.6rem; border-radius: 16px; text-align: left;
+    background: linear-gradient(160deg, rgba(222,125,52,0.3), rgba(181,98,31,0.3), rgba(138,71,21,0.3));
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  #faq .faq-aside .fa-kicker { font-family:'Orbitron',sans-serif; font-size:.62rem; letter-spacing:.2em; text-transform:uppercase; color: var(--accent); margin-bottom:.9rem; }
+  #faq .faq-aside .fa-title { font-family:'Orbitron',sans-serif; font-size:1.15rem; line-height:1.4; color: var(--text); margin-bottom:.8rem; }
+  #faq .faq-aside p { color: var(--text); font-size:.92rem; line-height:1.7; margin:0 0 1.3rem; }
+  #faq .faq-aside .cta-secondary { width:100%; background: rgba(0,0,0,0.25); }
+  #faq .faq-item {
+    background: rgba(12,7,3,0.62);
+    -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-left: 3px solid rgba(232,119,34,0.35);
+    border-radius: 12px;
+  }
+  #faq .faq-item::before { display: none; }
+  #faq .faq-item:hover { border-color: rgba(232,119,34,0.4); border-left-color: var(--accent); background: rgba(24,12,5,0.7); }
+  #faq .faq-item.open {
+    background: linear-gradient(160deg, rgba(222,125,52,0.34), rgba(181,98,31,0.3), rgba(138,71,21,0.3));
+    border-color: rgba(232,119,34,0.5); border-left-color: var(--accent);
+  }
+  #faq .faq-q { padding: 1.3rem 1.3rem 1.3rem 1.1rem; }
+  #faq .faq-q::before {
+    font-size: 1.6rem; font-weight: 900; min-width: 2.7rem; letter-spacing: 0;
+    color: transparent; -webkit-text-stroke: 1px rgba(232,119,34,0.75);
+  }
+  #faq .faq-item.open .faq-q::before { color: var(--accent); -webkit-text-stroke: 0; }
+  #faq .faq-a { padding-left: calc(1.1rem + 2.7rem + 1rem); }
+  @media (max-width: 900px) {
+    #faq .content { grid-template-columns: 1fr; }
+    #faq .faq-aside { grid-column: 1; position: static; margin-top: 1.4rem; }
+  }
+  @media (max-width: 640px) {
+    #faq .faq-q::before { font-size: 1.25rem; min-width: 2.1rem; }
+    #faq .faq-a { padding-left: 1rem; }
+  }
+
   /* ── FORM ── */
   .form-wrap { max-width: 460px; margin: 0 auto; padding: 5rem 2rem 6rem; }
   .form-group { margin-bottom: 1.5rem; }
@@ -3752,6 +3795,7 @@
       <div class="faq-a">Het pakket van 100 uur (Blokken 1+2) bevat specifiek NT2- en inburgeringsexamenmateriaal, en de volledige cursus van 150 uur sluit af met een gratis examen. Dit zijn onze meest uitgebreide opties voor wie een officieel certificaat wil behalen.</div>
     </div>
     </div>
+    <aside class="faq-aside"><div class="fa-kicker">Nog vragen?</div><div class="fa-title">Staat je vraag er niet bij?</div><p>Stuur me je vraag — ik help je graag kiezen voor het juiste niveau, pakket of examentraject.</p><button onclick="show('contact')" class="cta-secondary">Neem contact op →</button></aside>
   </div>
 </div>
 
