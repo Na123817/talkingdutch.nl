@@ -310,6 +310,26 @@
     pointer-events: none;
   }
 
+
+  /* ── Transparent orange text panels (same look as the courseware cards) ── */
+  .orange-panel, .hero-body, .booking-cal-wrap, #syllabus .toc-panel.active {
+    background: linear-gradient(160deg, rgba(222,125,52,0.3), rgba(181,98,31,0.3), rgba(138,71,21,0.3));
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 2rem 2.2rem;
+    box-sizing: border-box;
+  }
+  .hero-body { padding: 1.8rem 2rem; }
+  .hero-body .accent-bar { display: none; }
+  .booking-cal-wrap { margin-top: 2rem; }
+  #syllabus .toc-panel.active .toc-study {
+    background: rgba(0,0,0,0.22); border: 1px solid rgba(255,255,255,0.08);
+  }
+  #faq .orange-panel { padding: 1rem 2.2rem; }
+  @media (max-width: 640px) {
+    .orange-panel, .hero-body, .booking-cal-wrap, #syllabus .toc-panel.active { padding: 1.4rem 1.2rem; border-radius: 14px; }
+  }
+
   /* ── PAGES ── */
   .page { display: none; }
   .page.active { display: block; }
@@ -2019,10 +2039,14 @@
   .toc-panel { display: none; }
   .toc-panel.active { display: block; }
   #syllabus .toc-panel.active {
-    background: rgba(8,5,3,0.6);
-    border: 1px solid rgba(232,119,34,0.18);
-    border-radius: 14px;
-    padding: 0.5rem 1.6rem;
+    background: linear-gradient(160deg, rgba(222,125,52,0.3), rgba(181,98,31,0.3), rgba(138,71,21,0.3));
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 0.8rem 1.8rem 1.8rem;
+  }
+  #syllabus .toc-panel.active .toc-rec,
+  #syllabus .toc-panel.active .toc-study {
+    background: rgba(0,0,0,0.22); border: 1px solid rgba(255,255,255,0.08);
   }
   #syllabus .toc-module-title, #syllabus .toc-module-num {
     text-shadow: 0 1px 6px rgba(0,0,0,0.9);
@@ -3530,6 +3554,7 @@
 <div class="page" id="faq">
   <div class="content">
     <div class="page-title" id="faqTitle"></div>
+    <div class="orange-panel">
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">Heb ik voorkennis van het Nederlands nodig? <span class="arrow">▼</span></div>
       <div class="faq-a">Helemaal niet! Cursussen beginnen vanaf absoluut nul (A0). Of je nu nog nooit Nederlands hebt gehoord of bestaande vaardigheden wilt aanscherpen, er is een plek voor jou.</div>
@@ -3569,6 +3594,7 @@
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">Welke betaalmethoden accepteer je? <span class="arrow">▼</span></div>
       <div class="faq-a">PayPal, kaart (via de PayPal-link, geen account nodig), Revolut, iDEAL voor Nederlandse bankrekeningen en Wero. Gegevens voor een bankoverschrijving stuur ik op aanvraag.</div>
+    </div>
     </div>
   </div>
 </div>
@@ -4051,7 +4077,7 @@
     <div class="page-title" id="aboutTitle"></div>
 
     <!-- Intro block -->
-    <div style="margin-bottom:3.5rem;">
+    <div class="orange-panel" style="margin-bottom:3.5rem;">
 
       <p style="color:#f0e6d6;font-size:0.97rem;line-height:1.9;margin-bottom:1rem;">Mijn naam is Jonathan van Hassel. Ik ben een Nederlandse moedertaalspreker die jarenlang in het buitenland heeft gewoond en gewerkt — waardoor ik precies weet hoe het voelt om je weg te vinden in een taal die niet de jouwe is. Die ervaring vormt elke les die ik geef.</p>
       <p style="color:#f0e6d6;font-size:0.97rem;line-height:1.9;margin-bottom:1rem;">Ik spreek Nederlands, Engels, Spaans en Portugees — dus wat je achtergrond ook is, we vinden altijd het juiste startpunt. Of je nu een complete beginner bent of je voorbereidt op een officieel examen, mijn aanpak past zich aan jouw tempo, jouw doelen en jouw leven aan.</p>
@@ -4112,7 +4138,7 @@
     <div style="margin-bottom:3.5rem;">
       <div class="home-section-label">De cultuur</div>
       <h2 style="font-family:'Orbitron',sans-serif;font-size:clamp(1rem,2.2vw,1.5rem);font-weight:700;color:var(--text);margin-bottom:1.2rem;line-height:1.3;">De Nederlandse Samenleving Begrijpen</h2>
-      <div style="max-width:680px;margin:0 auto;">
+      <div class="orange-panel" style="max-width:680px;margin:0 auto;">
         <p style="color:#f0e6d6;font-size:0.97rem;line-height:1.9;margin-bottom:1rem;">Nederlanders staan bekend om hun directheid — ze zeggen wat ze bedoelen en bedoelen wat ze zeggen. Dit is geen onbeleefdheid; het is een culturele waarde die geworteld is in respect en efficiëntie. Als je dit begrijpt, verloopt het leven, werken en studeren in Nederland een stuk soepeler.</p>
         <p style="color:#f0e6d6;font-size:0.97rem;line-height:1.9;margin-bottom:1rem;">Het <em>poldermodel</em> — een traditie van consensus zoeken en samenwerken — loopt als een rode draad door de Nederlandse samenleving, van politiek tot werkvloer. Als je deze culturele codes kent, kun je écht contact maken met Nederlanders, niet alleen met hen communiceren.</p>
         <p style="color:#f0e6d6;font-size:0.97rem;line-height:1.9;">In mijn lessen is cultuur nooit een bijzaak. We verkennen Nederlandse gewoonten, humor, het maatschappelijk leven en sociale normen samen met de taal zelf — want echte vloeiendheid betekent dat je de mensen begrijpt, niet alleen de woorden.</p>
