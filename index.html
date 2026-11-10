@@ -338,7 +338,13 @@
     filter: sepia(0.3) saturate(1.1) brightness(0.92); }
   .page-photo::after { content: ""; position: absolute; inset: 0; pointer-events: none;
     background: linear-gradient(160deg, rgba(222,125,52,0.22), rgba(138,71,21,0.12)); }
-  #home .page-photo { max-width: 600px; }
+  #faq .content > .page-photo { grid-column: 1 / -1; }
+  /* All page photos share one size */
+  .page-photo { width: 100%; max-width: 796px; }
+  .page-photo img, #services .page-photo img, #faq .page-photo img { height: auto; aspect-ratio: 2.2 / 1; object-position: center 45%; }
+  #services .page-photo img { object-position: center 68%; }
+  #faq .page-photo img { object-position: center 25%; }
+  #home .page-photo { max-width: none; width: min(796px, calc(100vw - 3rem)); }
 
   /* ── PAGES ── */
   .page { display: none; }
