@@ -1015,6 +1015,11 @@
   html body #syllabus.page .syl-head .home-section-label { text-align: center; }
   html body #syllabus.page .toc-tabs { margin-top: 0 !important; }
   html body #services.page .services-left .services-label { text-align: center; }
+  /* Designed call-to-action button, placed at the bottom of FAQ and Blog */
+  .page-cta { display: flex; justify-content: center; align-self: center; width: 100%; margin: 3rem 0 1rem; order: 99; }
+  html body .btn-cta { font-family: 'Orbitron', sans-serif; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #1a0d03; background: linear-gradient(135deg, #ffb066, #f0781e 55%, #d9620f); border: 0; border-radius: 999px; padding: 1.05rem 3rem; cursor: pointer; box-shadow: 0 6px 26px rgba(240,120,30,0.38), inset 0 1px 0 rgba(255,255,255,0.35); transition: transform .25s, box-shadow .25s, filter .25s; }
+  html body .btn-cta:hover { transform: translateY(-3px); box-shadow: 0 12px 34px rgba(240,120,30,0.55), inset 0 1px 0 rgba(255,255,255,0.45); filter: brightness(1.08); }
+  html body .btn-cta:active { transform: translateY(-1px); }
   .fc-hint {
     margin-top: auto;
     font-family: 'Orbitron', sans-serif;
@@ -4173,7 +4178,8 @@
       <div class="faq-a">PayPal, kaart (via de PayPal-link, geen account nodig), Revolut, iDEAL voor Nederlandse bankrekeningen en Wero. Gegevens voor een bankoverschrijving stuur ik op aanvraag.</div>
     </div>
     </div>
-    <aside class="faq-aside"><div class="fa-kicker">Nog vragen?</div><div class="fa-title">Staat je vraag er niet bij?</div><p>Stuur me je vraag — ik help je graag kiezen voor het juiste niveau, pakket of examentraject.</p><button onclick="show('contact')" class="cta-secondary">Neem contact op →</button></aside>
+    <aside class="faq-aside"><div class="fa-kicker">Nog vragen?</div><div class="fa-title">Staat je vraag er niet bij?</div><p>Stuur me je vraag — ik help je graag kiezen voor het juiste niveau, pakket of examentraject.</p></aside>
+    <div class="page-cta"><button onclick="show('contact')" class="btn-cta">Neem contact op</button></div>
   </div>
 </div>
 
@@ -4870,8 +4876,8 @@
         <div class="blog-outro-kicker">Aan de slag</div>
         <h3>Klaar om het zelf te proberen?</h3>
         <p>Kies een artikel hieronder om je op weg te helpen, en zet daarna de volgende stap: een proefles van 30 minuten waarin we samen kijken waar jij nu staat en welk pakket het best bij je doelen past.</p>
-        <button onclick="show('contact')" class="cta-secondary">Boek een proefles →</button>
       </div>
+      <div class="page-cta"><button onclick="show('contact')" class="btn-cta">Boek een proefles</button></div>
     </div>
 
     <!-- Article: Stigmas -->
