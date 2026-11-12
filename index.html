@@ -383,9 +383,6 @@
   .page:not(#contact) :is(.orange-panel, .hero-body, .gflip-front, .gflip-back, .flip-card-front, .flip-card-back, .toc-panel, .faq-aside, .price-table, .blog-card, .about-language-card .gflip-front, .about-language-card .gflip-back, .about-approach-card) {
     background: linear-gradient(160deg, rgba(125,60,14,0.6), rgba(95,45,10,0.58), rgba(65,30,7,0.58)) !important;
     -webkit-backdrop-filter: blur(6px) brightness(0.5); backdrop-filter: blur(6px) brightness(0.5); }
-  /* About: photo sits inside the intro box, where the portrait used to be */
-  .about-inline-photo { margin: 0; border-radius: 14px; overflow: hidden; border: 1px solid rgba(255,255,255,0.12); }
-  .about-inline-photo img { display: block; width: 100%; aspect-ratio: 2.2 / 1; object-fit: cover; object-position: center 45%; filter: sepia(0.2) saturate(1.1) brightness(0.92); }
   #faq.page:not(#contact) .orange-panel { background: none !important; -webkit-backdrop-filter: none; backdrop-filter: none; }
 
   /* ── PAGES ── */
@@ -4184,6 +4181,7 @@
 <!-- ══════════ ABOUT ══════════ -->
 <div class="page" id="about">
   <div class="content" style="max-width:860px;">
+    <figure class="page-photo"><img src="about-bg-marken.webp" alt="Marken" loading="lazy" decoding="async"></figure>
     <div class="page-title" id="aboutTitle"></div>
     
 
@@ -4194,7 +4192,10 @@
       <p style="color:#f0e6d6;font-size:0.97rem;line-height:1.9;margin-bottom:1rem;">Ik spreek Nederlands, Engels, Spaans en Portugees — dus wat je achtergrond ook is, we vinden altijd het juiste startpunt. Of je nu een complete beginner bent of je voorbereidt op een officieel examen, mijn aanpak past zich aan jouw tempo, jouw doelen en jouw leven aan.</p>
       <p style="color:#f0e6d6;font-size:0.97rem;line-height:1.9;margin-bottom:2.5rem;">Ik heb Talking Dutch opgericht om professionele, persoonlijke Nederlandse lessen voor iedereen, overal toegankelijk te maken. Elke student krijgt een gestructureerd plan, echt lesmateriaal en een docent die oprecht betrokken is bij zijn of haar vooruitgang.</p>
 
-      <figure class="about-inline-photo"><img src="about-bg-marken.webp" alt="Marken" loading="lazy" decoding="async"></figure>
+      <div>
+        <img src="face.webp" id="aboutPortraitImg" class="about-portrait-circle" alt="Jonathan van Hassel" onerror="this.parentElement.style.display='none'">
+        <div style="font-family:'Orbitron',sans-serif;font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);text-align:center;margin-top:1rem;">Jonathan van Hassel</div>
+      </div>
     </div>
 
     <!-- Why Dutch section -->
