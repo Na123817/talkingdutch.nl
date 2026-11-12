@@ -970,7 +970,9 @@
   html body #blog.page #blog-list .blog-grid { order: 2; margin-top: 2rem !important; }
   html body #home.page .hero-end { min-height: 0 !important; padding-top: 0 !important; }
   /* FAQ: leave room between the title and the questions so the photo shows */
-  html body #faq.page .content > .orange-panel { margin-top: clamp(6rem, 34vh, 20rem) !important; }
+  html body #faq.page .content { display: flex; flex-direction: column; }
+  html body #faq.page .content > .faq-aside { order: 1; margin: 1.5rem auto 0 !important; }
+  html body #faq.page .content > .orange-panel { order: 2; margin-top: clamp(4rem, 22vh, 14rem) !important; }
   /* Courseware cards and Contact form come last, below the rest of the page text */
   html body #courseware.page .cw-end { padding-top: 0; }
   html body #contact.page .contact-page { display: flex; flex-direction: column; }
