@@ -970,6 +970,16 @@
   #faq .faq-aside .fa-title { font-family:'Orbitron',sans-serif; font-size:1.15rem; line-height:1.4; color: var(--text); margin-bottom:.8rem; }
   #faq .faq-aside p { color: var(--text); font-size:.92rem; line-height:1.7; margin:0 0 1.3rem; }
   #faq .faq-aside .cta-secondary { width:100%; background: rgba(0,0,0,0.25); }
+  /* ── FAQ: help block below the questions, no box ── */
+  html body #faq.page.page .content { grid-template-columns: minmax(0,1fr); max-width: 860px; }
+  html body #faq.page.page .faq-aside.faq-aside {
+    grid-column: 1; position: static; margin-top: 3.5rem; padding: 0; text-align: center;
+    background: none !important; border: none !important; border-radius: 0; box-shadow: none;
+    -webkit-backdrop-filter: none !important; backdrop-filter: none !important;
+  }
+  html body #faq .faq-aside .fa-title { font-size: clamp(1.1rem, 2.4vw, 1.5rem); color: #f7ecd9; }
+  html body #faq .faq-aside p { max-width: 520px; margin: 0 auto 1.8rem; text-align: center !important; }
+  html body #faq .faq-aside .cta-secondary { width: auto; padding-left: 2.4rem; padding-right: 2.4rem; }
   #faq .faq-item {
     background: rgba(12,7,3,0.62);
     -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
@@ -2167,7 +2177,7 @@
     background: var(--accent); box-shadow: 0 0 12px rgba(232,119,34,0.8);
   }
   .booking-section .booking-step:not(:first-child)::before { left: 1.6rem; }
-  .booking-section .booking-step-num { font-family: 'Barlow', 'Helvetica Neue', Arial, sans-serif; font-size: 3.2rem; font-weight: 600; line-height: 1; color: var(--accent); -webkit-text-stroke: 0; letter-spacing: 0.02em; text-shadow: 0 0 22px rgba(232,119,34,0.35); }
+  .booking-section .booking-step-num { font-family: 'Barlow', 'Helvetica Neue', Arial, sans-serif; font-size: 3.2rem; font-weight: 600; line-height: 1; color: #f7ecd9; -webkit-text-stroke: 0; letter-spacing: 0.02em; text-shadow: 0 0 22px rgba(232,119,34,0.35); }
   .booking-section .booking-step-title { color: #f7ecd9; margin-top: 0.4rem; }
   .booking-section .booking-step-desc { color: rgba(247,236,217,0.78); }
   @media (max-width: 600px) {
