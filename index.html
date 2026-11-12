@@ -1795,6 +1795,23 @@
     color: #f0e6d6; font-size: 0.98rem;
     line-height: 1.85; margin-bottom: 1rem;
   }
+  /* ── WHY LEARN DUTCH: open design, no boxes, no flip (back repeated the front) ── */
+  html body #about.page.page .about-language-grid { gap: 2.8rem 3rem; }
+  html body #about.page.page .about-language-card { perspective: none; background: none !important; border: none !important; box-shadow: none; }
+  html body #about.page.page .about-language-card:hover .gflip-inner,
+  html body #about.page.page .about-language-card:focus-within .gflip-inner { transform: none !important; }
+  html body #about.page.page .about-language-card .gflip-back { display: none !important; }
+  html body #about.page.page .about-language-card .gflip-front.gflip-front {
+    background: none !important; border: none !important; border-radius: 0; box-shadow: none; text-align: left;
+    -webkit-backdrop-filter: none !important; backdrop-filter: none !important;
+    border-top: 1px solid rgba(247,236,217,0.25) !important; padding: 1.6rem 0 0; position: relative;
+  }
+  html body #about.page.page .about-language-card .gflip-front::before {
+    content: ''; position: absolute; top: -4px; left: 0; width: 7px; height: 7px; border-radius: 50%;
+    background: var(--accent); box-shadow: 0 0 12px rgba(232,119,34,0.8);
+  }
+  html body #about.page.page .about-language-card .about-language-title { font-size: 0.9rem; letter-spacing: 0.06em; color: #f7ecd9; margin-bottom: 0.8rem; }
+  html body #about.page.page .about-language-card .about-language-body { font-size: 0.92rem; color: rgba(247,236,217,0.78); line-height: 1.75; }
   .about-language-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
