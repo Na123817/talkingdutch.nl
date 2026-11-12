@@ -383,6 +383,12 @@
   .page:not(#contact) :is(.orange-panel, .hero-body, .gflip-front, .gflip-back, .flip-card-front, .flip-card-back, .toc-panel, .faq-aside, .price-table, .blog-card, .about-language-card .gflip-front, .about-language-card .gflip-back, .about-approach-card) {
     background: linear-gradient(160deg, rgba(125,60,14,0.6), rgba(95,45,10,0.58), rgba(65,30,7,0.58)) !important;
     -webkit-backdrop-filter: blur(6px) brightness(0.5); backdrop-filter: blur(6px) brightness(0.5); }
+  /* Blog: text under the cards; card backs are black */
+  .blog-outro { max-width: 640px; margin: 3.5rem auto 1rem; text-align: center; }
+  .blog-outro-kicker { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem; }
+  .blog-outro h3 { margin: 0 0 0.8rem; font-size: 1.35rem; color: #f7ecd9; }
+  .blog-outro p { color: #f0e6d6; font-size: 0.97rem; line-height: 1.85; margin: 0 0 1.4rem; text-align: center !important; }
+  #blog.page:not(#contact) .blog-card .gflip-back { background: rgba(6,3,1,0.95) !important; -webkit-backdrop-filter: none; backdrop-filter: none; }
   #faq.page:not(#contact) .orange-panel { background: none !important; -webkit-backdrop-filter: none; backdrop-filter: none; }
   #faq.page:not(#contact) .faq-item { background: rgba(8,4,2,0.76) !important; -webkit-backdrop-filter: blur(10px) brightness(0.5); backdrop-filter: blur(10px) brightness(0.5); }
 
@@ -4454,6 +4460,12 @@
         </div>
 </div>
 </div>
+      </div>
+      <div class="blog-outro">
+        <div class="blog-outro-kicker">Aan de slag</div>
+        <h3>Klaar om het zelf te proberen?</h3>
+        <p>Kies een artikel hierboven om je op weg te helpen, en zet daarna de volgende stap: een proefles van 30 minuten waarin we samen kijken waar jij nu staat en welk pakket het best bij je doelen past.</p>
+        <button onclick="show('contact')" class="cta-secondary">Boek een proefles →</button>
       </div>
     </div>
 
