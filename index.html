@@ -940,6 +940,9 @@
   html body .page.page:not(#zz):not(#zy) :is(.blog-card, .about-approach-card) .gflip-front.gflip-front { background: none !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
   /* FAQ: Peace Palace photo framing */
   html body #faq.page .page-photo img { object-position: center 38% !important; }
+  /* Contact: new horses photo, not too bright */
+  html body #contact.page > .page-photo img { filter: brightness(0.9) contrast(1.05) saturate(1.05) !important; object-position: center 45% !important; }
+  html body #contact.page > .page-photo::after { background: linear-gradient(180deg, rgba(10,6,3,0.3), rgba(10,6,3,0.05) 22%, rgba(10,6,3,0.05) 62%, rgba(10,6,3,0.4)) !important; }
   .fc-hint {
     margin-top: auto;
     font-family: 'Orbitron', sans-serif;
@@ -4893,7 +4896,7 @@
 
 <!-- ══════════ CONTACT ══════════ -->
 <div class="page" id="contact">
-  <figure class="page-photo"><img src="contact-bg-horses.webp" alt="Paarden in de duinen" loading="lazy" decoding="async"></figure>
+  <figure class="page-photo"><img src="contact-bg-horses2.webp" alt="Paarden in de duinen" loading="lazy" decoding="async"></figure>
   <div class="contact-page">
     <div class="contact-hero">
       <div class="contact-kicker">Boek een les / Neem contact op</div>
