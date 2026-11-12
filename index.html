@@ -971,6 +971,11 @@
   html body #home.page .hero-end { min-height: 0 !important; padding-top: 0 !important; }
   /* FAQ: leave room between the title and the questions so the photo shows */
   html body #faq.page .content > .orange-panel { margin-top: clamp(6rem, 34vh, 20rem) !important; }
+  /* Courseware cards and Contact form come last, below the rest of the page text */
+  html body #courseware.page .cw-end { padding-top: 0; }
+  html body #contact.page .contact-page { display: flex; flex-direction: column; }
+  html body #contact.page .contact-page > .contact-hero { order: 99; margin-top: 2rem !important; }
+  html body #contact.page .payment-methods { margin-top: calc(clamp(5rem, 62vh, 36rem) - 5rem); margin-bottom: 2rem; }
   .fc-hint {
     margin-top: auto;
     font-family: 'Orbitron', sans-serif;
@@ -3189,104 +3194,7 @@
     
     <p>Alles wat je nodig hebt om het Nederlands onder de knie te krijgen — werkboeken, boeiende videolessen, interactieve oefeningen en PowerPoint-presentaties. Al het materiaal wordt digitaal aangeboden en regelmatig bijgewerkt.</p>
 
-    <div class="courseware-grid">
-      <div class="cw-card">
-<div class="gflip-inner">
-<div class="gflip-front">
-        <div class="cw-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></div>
-        <div class="cw-title">Werkboeken</div>
-        <div class="cw-desc">Uitgebreide werkboeken voor elk niveau, van de basis op A0 tot beheersing op C1. Inclusief oefeningen, woordenlijsten en grammaticaoefeningen.</div>
-        <span class="cw-badge">Alle niveaus</span>
-      </div>
-<div class="gflip-back">
-        <div class="cw-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></div>
-        <div class="cw-title">Werkboeken</div>
-        <div class="cw-desc">Uitgebreide werkboeken voor elk niveau, van de basis op A0 tot beheersing op C1. Inclusief oefeningen, woordenlijsten en grammaticaoefeningen.</div>
-        <span class="cw-badge">Alle niveaus</span>
-      </div>
-</div>
-</div>
-      <div class="cw-card">
-<div class="gflip-inner">
-<div class="gflip-front">
-        <div class="cw-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg></div>
-        <div class="cw-title">Videolessen</div>
-        <div class="cw-desc">Professioneel opgenomen video's over uitspraak, grammatica-uitleg en culturele context. Bekijk ze in je eigen tempo, zo vaak als je wilt.</div>
-        <span class="cw-badge">On demand</span>
-      </div>
-<div class="gflip-back">
-        <div class="cw-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg></div>
-        <div class="cw-title">Videolessen</div>
-        <div class="cw-desc">Professioneel opgenomen video's over uitspraak, grammatica-uitleg en culturele context. Bekijk ze in je eigen tempo, zo vaak als je wilt.</div>
-        <span class="cw-badge">On demand</span>
-      </div>
-</div>
-</div>
-      <div class="cw-card">
-<div class="gflip-inner">
-<div class="gflip-front">
-        <div class="cw-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></div>
-        <div class="cw-title">PowerPoints</div>
-        <div class="cw-desc">De presentaties die tijdens de live lessen worden gebruikt, deel ik na elke les zodat je de stof kunt herhalen en verder kunt inslijpen. Duidelijke, visuele hulpmiddelen.</div>
-        <span class="cw-badge">Na de les</span>
-      </div>
-<div class="gflip-back">
-        <div class="cw-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></div>
-        <div class="cw-title">PowerPoints</div>
-        <div class="cw-desc">De presentaties die tijdens de live lessen worden gebruikt, deel ik na elke les zodat je de stof kunt herhalen en verder kunt inslijpen. Duidelijke, visuele hulpmiddelen.</div>
-        <span class="cw-badge">Na de les</span>
-      </div>
-</div>
-</div>
-      <div class="cw-card">
-<div class="gflip-inner">
-<div class="gflip-front">
-        <div class="cw-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6v11l3.5 6H5.5L9 14V3z"></path><line x1="6" y1="3" x2="18" y2="3"></line></svg></div>
-        <div class="cw-title">Oefenexamens</div>
-        <div class="cw-desc">Proefexamens ter voorbereiding op NT2 en inburgering. Tests met tijdslimiet die echte examenomstandigheden nabootsen, inclusief antwoordmodellen en feedback.</div>
-        <span class="cw-badge">Examenvoorbereiding</span>
-      </div>
-<div class="gflip-back">
-        <div class="cw-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6v11l3.5 6H5.5L9 14V3z"></path><line x1="6" y1="3" x2="18" y2="3"></line></svg></div>
-        <div class="cw-title">Oefenexamens</div>
-        <div class="cw-desc">Proefexamens ter voorbereiding op NT2 en inburgering. Tests met tijdslimiet die echte examenomstandigheden nabootsen, inclusief antwoordmodellen en feedback.</div>
-        <span class="cw-badge">Examenvoorbereiding</span>
-      </div>
-</div>
-</div>
-      <div class="cw-card">
-<div class="gflip-inner">
-<div class="gflip-front">
-        <div class="cw-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg></div>
-        <div class="cw-title">Audiomateriaal</div>
-        <div class="cw-desc">Luisteroefeningen en uitspraakgidsen ingesproken door Nederlandse moedertaalsprekers. Train je oor met authentiek audiomateriaal.</div>
-        <span class="cw-badge">Luisteren</span>
-      </div>
-<div class="gflip-back">
-        <div class="cw-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg></div>
-        <div class="cw-title">Audiomateriaal</div>
-        <div class="cw-desc">Luisteroefeningen en uitspraakgidsen ingesproken door Nederlandse moedertaalsprekers. Train je oor met authentiek audiomateriaal.</div>
-        <span class="cw-badge">Luisteren</span>
-      </div>
-</div>
-</div>
-      <div class="cw-card">
-<div class="gflip-inner">
-<div class="gflip-front">
-        <div class="cw-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div>
-        <div class="cw-title">Cultuur &amp; samenleving</div>
-        <div class="cw-desc">Fascinerende inzichten in de Nederlandse cultuur, tradities, Nederland zelf, en de maatschappijkennis die nodig is voor het inburgeringsexamen.</div>
-        <span class="cw-badge">Cultureel</span>
-      </div>
-<div class="gflip-back">
-        <div class="cw-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div>
-        <div class="cw-title">Cultuur &amp; samenleving</div>
-        <div class="cw-desc">Fascinerende inzichten in de Nederlandse cultuur, tradities, Nederland zelf, en de maatschappijkennis die nodig is voor het inburgeringsexamen.</div>
-        <span class="cw-badge">Cultureel</span>
-      </div>
-</div>
-</div>
-    </div>
+    
   </div>
   <!-- ── BOOKING SECTION ── -->
   <div class="booking-section">
@@ -3323,6 +3231,106 @@
       </div>
     </div>
   </div>
+<div class="content cw-end">
+<div class="courseware-grid">
+      <div class="cw-card">
+<div class="gflip-inner">
+<div class="gflip-front">
+        <div class="cw-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></div>
+        <div class="cw-title">Werkboeken</div>
+        <div class="cw-desc">Uitgebreide werkboeken voor elk niveau, van de basis op A0 tot beheersing op C1. Inclusief oefeningen, woordenlijsten en grammaticaoefeningen.</div>
+        <span class="cw-badge">Alle niveaus</span>
+      </div>
+<div class="gflip-back">
+        <div class="cw-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></div>
+        <div class="cw-title">Werkboeken</div>
+        <div class="cw-desc">Uitgebreide werkboeken voor elk niveau, van de basis op A0 tot beheersing op C1. Inclusief oefeningen, woordenlijsten en grammaticaoefeningen.</div>
+        <span class="cw-badge">Alle niveaus</span>
+      </div>
+</div>
+</div>
+      <div class="cw-card">
+<div class="gflip-inner">
+<div class="gflip-front">
+        <div class="cw-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg></div>
+        <div class="cw-title">Videolessen</div>
+        <div class="cw-desc">Professioneel opgenomen video's over uitspraak, grammatica-uitleg en culturele context. Bekijk ze in je eigen tempo, zo vaak als je wilt.</div>
+        <span class="cw-badge">On demand</span>
+      </div>
+<div class="gflip-back">
+        <div class="cw-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg></div>
+        <div class="cw-title">Videolessen</div>
+        <div class="cw-desc">Professioneel opgenomen video's over uitspraak, grammatica-uitleg en culturele context. Bekijk ze in je eigen tempo, zo vaak als je wilt.</div>
+        <span class="cw-badge">On demand</span>
+      </div>
+</div>
+</div>
+      <div class="cw-card">
+<div class="gflip-inner">
+<div class="gflip-front">
+        <div class="cw-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></div>
+        <div class="cw-title">PowerPoints</div>
+        <div class="cw-desc">De presentaties die tijdens de live lessen worden gebruikt, deel ik na elke les zodat je de stof kunt herhalen en verder kunt inslijpen. Duidelijke, visuele hulpmiddelen.</div>
+        <span class="cw-badge">Na de les</span>
+      </div>
+<div class="gflip-back">
+        <div class="cw-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></div>
+        <div class="cw-title">PowerPoints</div>
+        <div class="cw-desc">De presentaties die tijdens de live lessen worden gebruikt, deel ik na elke les zodat je de stof kunt herhalen en verder kunt inslijpen. Duidelijke, visuele hulpmiddelen.</div>
+        <span class="cw-badge">Na de les</span>
+      </div>
+</div>
+</div>
+      <div class="cw-card">
+<div class="gflip-inner">
+<div class="gflip-front">
+        <div class="cw-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6v11l3.5 6H5.5L9 14V3z"></path><line x1="6" y1="3" x2="18" y2="3"></line></svg></div>
+        <div class="cw-title">Oefenexamens</div>
+        <div class="cw-desc">Proefexamens ter voorbereiding op NT2 en inburgering. Tests met tijdslimiet die echte examenomstandigheden nabootsen, inclusief antwoordmodellen en feedback.</div>
+        <span class="cw-badge">Examenvoorbereiding</span>
+      </div>
+<div class="gflip-back">
+        <div class="cw-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6v11l3.5 6H5.5L9 14V3z"></path><line x1="6" y1="3" x2="18" y2="3"></line></svg></div>
+        <div class="cw-title">Oefenexamens</div>
+        <div class="cw-desc">Proefexamens ter voorbereiding op NT2 en inburgering. Tests met tijdslimiet die echte examenomstandigheden nabootsen, inclusief antwoordmodellen en feedback.</div>
+        <span class="cw-badge">Examenvoorbereiding</span>
+      </div>
+</div>
+</div>
+      <div class="cw-card">
+<div class="gflip-inner">
+<div class="gflip-front">
+        <div class="cw-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg></div>
+        <div class="cw-title">Audiomateriaal</div>
+        <div class="cw-desc">Luisteroefeningen en uitspraakgidsen ingesproken door Nederlandse moedertaalsprekers. Train je oor met authentiek audiomateriaal.</div>
+        <span class="cw-badge">Luisteren</span>
+      </div>
+<div class="gflip-back">
+        <div class="cw-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg></div>
+        <div class="cw-title">Audiomateriaal</div>
+        <div class="cw-desc">Luisteroefeningen en uitspraakgidsen ingesproken door Nederlandse moedertaalsprekers. Train je oor met authentiek audiomateriaal.</div>
+        <span class="cw-badge">Luisteren</span>
+      </div>
+</div>
+</div>
+      <div class="cw-card">
+<div class="gflip-inner">
+<div class="gflip-front">
+        <div class="cw-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div>
+        <div class="cw-title">Cultuur &amp; samenleving</div>
+        <div class="cw-desc">Fascinerende inzichten in de Nederlandse cultuur, tradities, Nederland zelf, en de maatschappijkennis die nodig is voor het inburgeringsexamen.</div>
+        <span class="cw-badge">Cultureel</span>
+      </div>
+<div class="gflip-back">
+        <div class="cw-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div>
+        <div class="cw-title">Cultuur &amp; samenleving</div>
+        <div class="cw-desc">Fascinerende inzichten in de Nederlandse cultuur, tradities, Nederland zelf, en de maatschappijkennis die nodig is voor het inburgeringsexamen.</div>
+        <span class="cw-badge">Cultureel</span>
+      </div>
+</div>
+</div>
+    </div>
+</div>
 </div>
 
 <!-- ══════════ SERVICES ══════════ -->
