@@ -778,6 +778,30 @@
   html body #services.page.page .flip-card .flip-card-back.flip-card-back {
     background: rgba(10,7,5,0.78) !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important;
   }
+  /* ── PACKAGE CARDS: refined glass design, charcoal backs ── */
+  html body #home.page.page .pricing-grid { gap: 1.6rem; }
+  html body #home.page.page .price-card::before { display: none; }
+  html body #home.page.page .price-card .gflip-front.gflip-front {
+    background: linear-gradient(180deg, rgba(140,70,20,0.5), rgba(60,28,8,0.5)) !important;
+    border: 1px solid rgba(247,236,217,0.16) !important; border-top: 2px solid var(--accent) !important;
+    border-radius: 14px; padding: 2.2rem 1.6rem 2rem;
+    -webkit-backdrop-filter: blur(6px) !important; backdrop-filter: blur(6px) !important;
+  }
+  html body #home.page.page .price-card .gflip-back.gflip-back {
+    background: rgba(10,7,5,0.78) !important; border: 1px solid rgba(247,236,217,0.16) !important; border-top: 2px solid var(--accent) !important;
+    -webkit-backdrop-filter: none !important; backdrop-filter: none !important; border-radius: 14px;
+  }
+  html body #home.page.page .price-card.featured .gflip-front.gflip-front { border-color: rgba(232,119,34,0.7) !important; box-shadow: 0 0 34px rgba(232,119,34,0.22); }
+  html body #home.page.page .price-card .price-days { font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); }
+  html body #home.page.page .price-card .price-trial { color: rgba(247,236,217,0.65); }
+  html body #home.page.page .price-card .price-amount { color: #f7ecd9; text-shadow: 0 0 24px rgba(232,119,34,0.4); }
+  html body #home.page.page .price-card .price-per { color: rgba(247,236,217,0.65); }
+  html body #home.page.page .price-card .price-tier { color: #f7ecd9; letter-spacing: 0.18em; }
+  html body #home.page.page .price-card .price-note { color: rgba(247,236,217,0.7); }
+  html body #home.page.page .price-card .price-features li { color: rgba(247,236,217,0.88); }
+  /* Page titles: same size, centered under the tab bar on every page */
+  html body .page:not(#contact) .page-title { font-size: 2.4rem; justify-content: center !important; text-align: center !important; width: 100%; }
+  html body .page:not(#contact) .page-hero-inner { justify-content: center; text-align: center; }
   .fc-hint {
     margin-top: auto;
     font-family: 'Orbitron', sans-serif;
