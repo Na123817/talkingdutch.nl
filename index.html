@@ -1602,6 +1602,7 @@
     border-bottom: 1px solid rgba(232,119,34,0.45);
   }
   .price-table tr.pt-featured .pt-pkg::after {
+    display: none !important;
     content: 'Beste keuze';
     font-family: 'Orbitron', sans-serif;
     font-size: 0.52rem; letter-spacing: 0.1em; text-transform: uppercase;
@@ -1741,6 +1742,24 @@
     border-radius: 14px;
     padding: 2rem 1.8rem;
   }
+  /* ── HOW IT WORKS: open design, no boxes ── */
+  html body #home.page.page .home-services-grid { gap: 3rem 3rem; }
+  @media (max-width: 800px) { html body #home.page.page .home-services-grid { grid-template-columns: 1fr; gap: 2rem; } }
+  html body #home.page.page .home-services-grid .hs-card { perspective: none; }
+  html body #home.page.page .home-services-grid .hs-card:hover .gflip-inner,
+  html body #home.page.page .home-services-grid .hs-card:focus-within .gflip-inner { transform: none !important; }
+  html body #home.page.page .home-services-grid .hs-card .gflip-back { display: none !important; }
+  html body #home.page.page .home-services-grid .hs-card .gflip-front.gflip-front {
+    background: none !important; border: none !important; border-radius: 0; box-shadow: none;
+    -webkit-backdrop-filter: none !important; backdrop-filter: none !important;
+    border-top: 1px solid rgba(247,236,217,0.25) !important; padding: 1.5rem 0 0; position: relative;
+  }
+  html body #home.page.page .home-services-grid .hs-card .gflip-front::before {
+    content: ''; position: absolute; top: -4px; left: 0; width: 7px; height: 7px; border-radius: 50%;
+    background: var(--accent); box-shadow: 0 0 12px rgba(232,119,34,0.8);
+  }
+  html body #home.page.page .home-services-grid .hs-title { font-size: 0.9rem; letter-spacing: 0.06em; margin-bottom: 0.8rem; }
+  html body #home.page.page .home-services-grid .hs-desc { font-size: 0.92rem; color: rgba(247,236,217,0.78); line-height: 1.75; }
   .hs-num {
     font-family: 'Orbitron', sans-serif;
     font-size: 0.5rem; font-weight: 700;
