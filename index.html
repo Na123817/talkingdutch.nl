@@ -1006,6 +1006,14 @@
   /* Orange section labels: brighter, bolder, with a dark shadow so they read over the photos */
   html body :is(.home-section-label, .blog-outro-kicker, .fa-kicker, .services-label, .services-left .services-label, #faq .faq-aside .fa-kicker) { color: #ffa24d !important; font-size: 0.74rem !important; font-weight: 700 !important; letter-spacing: 0.24em !important; text-shadow: 0 0 8px rgba(0,0,0,0.95), 0 1px 3px rgba(0,0,0,0.9), 0 2px 14px rgba(0,0,0,0.8); }
   html body #contact.page .payment-methods-title { color: #ffa24d !important; text-transform: uppercase; font-size: 0.95rem !important; font-weight: 700; letter-spacing: 0.24em; text-shadow: 0 0 8px rgba(0,0,0,0.95), 0 1px 3px rgba(0,0,0,0.9), 0 2px 14px rgba(0,0,0,0.8); }
+  html body #syllabus.page.page .toc-study-title { color: #f7ecd9 !important; font-family: 'Orbitron', sans-serif; font-size: clamp(1.1rem, 2.4vw, 1.5rem) !important; font-weight: 700; letter-spacing: 0.02em !important; text-transform: none !important; margin-bottom: 2rem; text-shadow: 0 1px 10px rgba(0,0,0,0.75); }
+  /* Creamy white titles with small orange kickers (Packages, Courseware, Syllabus) */
+  html body :is(#services, #courseware, #syllabus).page .home-section-title.sec-title { color: #f7ecd9 !important; text-align: center; margin: 0 0 1.1rem; text-shadow: 0 1px 10px rgba(0,0,0,0.85); }
+  html body #courseware.page .cw-kicker { margin-bottom: 0.5rem; }
+  html body #syllabus.page .syl-head { text-align: center; margin-top: calc(clamp(6rem, 34vh, 20rem) - 9px); margin-bottom: 1.6rem; }
+  html body #syllabus.page .syl-head .home-section-label { text-align: center; }
+  html body #syllabus.page .toc-tabs { margin-top: 0 !important; }
+  html body #services.page .services-left .services-label { text-align: center; }
   .fc-hint {
     margin-top: auto;
     font-family: 'Orbitron', sans-serif;
@@ -3223,6 +3231,7 @@
     <div class="page-title" id="coursewareTitle"></div>
     
     <div class="home-section-label cw-kicker">Wat je krijgt</div>
+    <h2 class="home-section-title sec-title">Alles wat je nodig hebt</h2>
     <p>Alles wat je nodig hebt om het Nederlands onder de knie te krijgen — werkboeken, boeiende videolessen, interactieve oefeningen en PowerPoint-presentaties. Al het materiaal wordt digitaal aangeboden en regelmatig bijgewerkt.</p>
 
     
@@ -3374,6 +3383,7 @@
     <div class="services-layout">
       <div class="services-left">
         <div class="services-label">Diensten</div>
+        <h2 class="home-section-title sec-title">Spreek Nederlands met vertrouwen</h2>
         <p class="services-intro">Elk pakket is ontworpen om je met echt zelfvertrouwen Nederlands te laten spreken — of je nu een examen voorbereidt, inburgert in de Nederlandse samenleving, of gewoon contact wilt maken met de mensen en cultuur om je heen.</p>
         <div class="services-pillars">
           <div class="sp-item">
@@ -3744,6 +3754,7 @@
       <h2 style="font-family:'Orbitron',sans-serif;font-size:clamp(1rem,2.2vw,1.5rem);font-weight:700;color:var(--text);margin:2.2rem 0 0;line-height:1.3;">Hoe Ik Lesgeef</h2>
     </div>
 
+    <div class="syl-head"><div class="home-section-label">Curriculum</div><h2 class="home-section-title sec-title">Kies je niveau</h2></div>
     <div class="toc-tabs">
       <button class="toc-tab active" onclick="switchToc('a1a2',this)">A1 – A2</button>
       <button class="toc-tab" onclick="switchToc('b1b2',this)">B1 – B2</button>
@@ -3845,7 +3856,7 @@
 
 
       <div class="toc-study">
-        <div class="toc-study-title">📚 Studiemateriaal — A1–A2</div>
+        <div class="toc-study-title">Studiemateriaal — A1–A2</div>
         <div class="toc-study-grid">
           <div>
             <div class="toc-study-cat">
@@ -3960,7 +3971,7 @@
 
 
       <div class="toc-study">
-        <div class="toc-study-title">📚 Studiemateriaal — B1–B2</div>
+        <div class="toc-study-title">Studiemateriaal — B1–B2</div>
         <div class="toc-study-grid">
           <div>
             <div class="toc-study-cat">
@@ -4075,7 +4086,7 @@
 
 
       <div class="toc-study">
-        <div class="toc-study-title">📚 Studiemateriaal — C1–C2</div>
+        <div class="toc-study-title">Studiemateriaal — C1–C2</div>
         <div class="toc-study-grid">
           <div>
             <div class="toc-study-cat">
