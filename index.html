@@ -976,6 +976,22 @@
   html body #contact.page .contact-page { display: flex; flex-direction: column; }
   html body #contact.page .contact-page > .contact-hero { order: 99; margin-top: 2rem !important; }
   html body #contact.page .payment-methods { margin-top: calc(clamp(5rem, 62vh, 36rem) - 5rem); margin-bottom: 2rem; }
+  /* Blog: boxes removed — articles as a clean text list straight on the photo */
+  html body #blog.page:not(#zz):not(#zy) #blog-list .blog-grid { display: block !important; max-width: 780px; margin-left: auto; margin-right: auto; counter-reset: post; }
+  html body #blog.page:not(#zz):not(#zy) .blog-card.blog-card { background: none !important; border: 0 !important; border-top: 1px solid rgba(232,119,34,0.4) !important; border-radius: 0 !important; box-shadow: none !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important; height: auto !important; margin: 0 !important; padding: 0 0 0 4.2rem; counter-increment: post; position: relative; transition: padding-left .3s; }
+  html body #blog.page:not(#zz):not(#zy) .blog-card.blog-card:last-child { border-bottom: 1px solid rgba(232,119,34,0.4) !important; }
+  html body #blog.page:not(#zz):not(#zy) .blog-card.blog-card::before { content: counter(post, decimal-leading-zero); position: absolute; left: 0; top: 1.7rem; font-family: 'Orbitron', sans-serif; font-size: 1.5rem; font-weight: 700; color: rgba(232,119,34,0.75); text-shadow: 0 1px 8px rgba(0,0,0,0.8); }
+  html body #blog.page:not(#zz):not(#zy) .blog-card.blog-card:hover { padding-left: 4.8rem; }
+  html body #blog.page:not(#zz):not(#zy) .blog-card .gflip-inner, html body #blog.page:not(#zz):not(#zy) .blog-card:hover .gflip-inner, html body #blog.page:not(#zz):not(#zy) .blog-card:focus-within .gflip-inner { transform: none !important; height: auto; }
+  html body #blog.page:not(#zz):not(#zy) .blog-card .gflip-back { display: none !important; }
+  html body #blog.page:not(#zz):not(#zy) .blog-card .gflip-front.gflip-front { background: none !important; border: 0 !important; height: auto; overflow: visible; }
+  html body #blog.page:not(#zz):not(#zy) .blog-card-header { background: none !important; border: 0 !important; padding: 1.6rem 0 0.5rem !important; }
+  html body #blog.page:not(#zz):not(#zy) .blog-card-body { padding: 0 0 1.7rem !important; }
+  html body #blog.page:not(#zz):not(#zy) .blog-tag { color: var(--accent); text-shadow: 0 1px 6px rgba(0,0,0,0.8); }
+  html body #blog.page:not(#zz):not(#zy) .blog-card-title { font-size: 1.2rem; text-shadow: 0 1px 10px rgba(0,0,0,0.85); transition: color .25s; }
+  html body #blog.page:not(#zz):not(#zy) .blog-card:hover .blog-card-title { color: var(--accent); }
+  html body #blog.page:not(#zz):not(#zy) .blog-card-excerpt { color: #f0e6d6; text-shadow: 0 1px 8px rgba(0,0,0,0.85); max-width: 560px; }
+  html body #blog.page:not(#zz):not(#zy) .blog-read-more { color: var(--accent); margin-top: 0.7rem; text-shadow: 0 1px 6px rgba(0,0,0,0.8); }
   .fc-hint {
     margin-top: auto;
     font-family: 'Orbitron', sans-serif;
@@ -4826,7 +4842,7 @@
       <div class="blog-outro">
         <div class="blog-outro-kicker">Aan de slag</div>
         <h3>Klaar om het zelf te proberen?</h3>
-        <p>Kies een artikel hierboven om je op weg te helpen, en zet daarna de volgende stap: een proefles van 30 minuten waarin we samen kijken waar jij nu staat en welk pakket het best bij je doelen past.</p>
+        <p>Kies een artikel hieronder om je op weg te helpen, en zet daarna de volgende stap: een proefles van 30 minuten waarin we samen kijken waar jij nu staat en welk pakket het best bij je doelen past.</p>
         <button onclick="show('contact')" class="cta-secondary">Boek een proefles →</button>
       </div>
     </div>
