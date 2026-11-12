@@ -389,6 +389,8 @@
   .blog-outro h3 { margin: 0 0 0.8rem; font-size: 1.35rem; color: #f7ecd9; }
   .blog-outro p { color: #f0e6d6; font-size: 0.97rem; line-height: 1.85; margin: 0 0 1.4rem; text-align: center !important; }
   #blog.page:not(#contact) .blog-card .gflip-back { background: rgba(6,3,1,0.95) !important; -webkit-backdrop-filter: none; backdrop-filter: none; }
+  /* Photo runs up behind the tab bar so the bar is part of the background */
+  .page:not(#contact) .page-photo { top: calc(-1 * var(--nav-h, 62px)); height: calc(clamp(520px, 92vh, 860px) + var(--nav-h, 62px)); }
   #faq.page:not(#contact) .orange-panel { background: none !important; -webkit-backdrop-filter: none; backdrop-filter: none; }
   #faq.page:not(#contact) .faq-item { background: rgba(8,4,2,0.76) !important; -webkit-backdrop-filter: blur(10px) brightness(0.5); backdrop-filter: blur(10px) brightness(0.5); }
 
@@ -4825,5 +4827,9 @@
   document.addEventListener('click', function(){ setTimeout(req, 80); });
   req();
 })();
+</script>
+<script>
+/* Keep --nav-h in sync with the tab bar height so the page photo can run behind it */
+(function(){var n=document.querySelector('nav');if(!n)return;function f(){document.documentElement.style.setProperty('--nav-h',n.offsetHeight+'px');}f();addEventListener('resize',f);addEventListener('load',f);})();
 </script>
 </body></html>
