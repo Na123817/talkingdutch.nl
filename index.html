@@ -1426,6 +1426,22 @@
   }
   .payment-method-detail a { color: var(--accent); word-break: break-all; }
   .payment-method-detail a:hover { text-decoration: underline; }
+  /* ── PAYMENT METHODS: open design, no boxes ── */
+  html body .payment-methods { max-width: 980px; }
+  html body .payment-methods .payment-methods-grid { grid-template-columns: repeat(3, 1fr); gap: 2.6rem 3rem; }
+  @media (max-width: 800px) { html body .payment-methods .payment-methods-grid { grid-template-columns: 1fr; gap: 2rem; } }
+  html body .payment-methods .payment-method-card {
+    background: none !important; border: none !important; border-radius: 0; box-shadow: none;
+    -webkit-backdrop-filter: none !important; backdrop-filter: none !important;
+    border-top: 1px solid rgba(247,236,217,0.25) !important; padding: 1.4rem 0 0; position: relative;
+  }
+  html body .payment-methods .payment-method-card::before {
+    content: ''; position: absolute; top: -4px; left: 0; width: 7px; height: 7px; border-radius: 50%;
+    background: var(--accent); box-shadow: 0 0 12px rgba(232,119,34,0.8);
+  }
+  html body .payment-methods .payment-method-icon { margin-bottom: 0.9rem; }
+  html body .payment-methods .payment-method-name { font-size: 0.82rem; letter-spacing: 0.08em; margin-bottom: 0.6rem; }
+  html body .payment-methods .payment-method-detail { font-size: 0.9rem; color: rgba(247,236,217,0.78); line-height: 1.7; }
 
   @media(max-width:980px) {
     nav a {
