@@ -2131,6 +2131,31 @@
     margin-bottom: 0.6rem;
   }
   .booking-step-desc { font-size: 0.9rem; color: #f0e6d6; line-height: 1.7; }
+  /* ── BOOKING: open design, no box ── */
+  html body .booking-section .booking-cal-wrap {
+    background: none; border: none; border-radius: 0; padding: 0; box-shadow: none;
+    -webkit-backdrop-filter: none; backdrop-filter: none; margin-top: 2.5rem;
+  }
+  .booking-section .booking-cal-header { justify-content: center; margin-bottom: 1.6rem; }
+  .booking-section .booking-cal-header span { color: var(--accent); letter-spacing: 0.28em; font-size: 0.65rem; }
+  .booking-section .booking-freeline { max-width: 640px; margin: 0 auto 3.5rem; line-height: 1.8; color: rgba(247,236,217,0.85); }
+  .booking-section .booking-steps { gap: 0; margin-bottom: 1rem; border-top: 1px solid rgba(247,236,217,0.25); }
+  .booking-section .booking-step { padding: 2rem 1.6rem 0.5rem; border-left: 1px solid rgba(247,236,217,0.12); position: relative; }
+  .booking-section .booking-step:first-child { border-left: none; padding-left: 0; }
+  .booking-section .booking-step::before {
+    content: ''; position: absolute; top: -4px; left: 0; width: 7px; height: 7px; border-radius: 50%;
+    background: var(--accent); box-shadow: 0 0 12px rgba(232,119,34,0.8);
+  }
+  .booking-section .booking-step:not(:first-child)::before { left: 1.6rem; }
+  .booking-section .booking-step-num { font-size: 3rem; line-height: 1; color: transparent; -webkit-text-stroke: 1.5px var(--accent); text-shadow: 0 0 22px rgba(232,119,34,0.35); }
+  .booking-section .booking-step-title { color: #f7ecd9; margin-top: 0.4rem; }
+  .booking-section .booking-step-desc { color: rgba(247,236,217,0.78); }
+  @media (max-width: 600px) {
+    .booking-section .booking-step { border-left: none; padding-left: 0 !important; border-top: 1px solid rgba(247,236,217,0.12); }
+    .booking-section .booking-step:first-child { border-top: none; }
+    .booking-section .booking-step::before { display: none; }
+  }
+
   .booking-cta-row {
     display: flex; flex-direction: column; align-items: center;
     justify-content: center; gap: 1rem; flex-wrap: wrap;
