@@ -379,10 +379,11 @@
   .page:not(#contact) :is(.orange-panel, .hero-body, .gflip-back, .flip-card-back, .toc-study, .toc-panel, .faq-item, .faq-aside, .price-table, .blog-card, .about-language-card, .about-approach-card) {
     -webkit-backdrop-filter: blur(10px) brightness(0.55); backdrop-filter: blur(10px) brightness(0.55); }
   .page:not(#contact) :is(.page-title, .hero-title, h1, h2, h3, p, li) { text-shadow: 0 1px 10px rgba(0,0,0,0.75); }
-  /* Blog, Packages, Courseware: boxes look like the About cards (orange gradient on dark base) */
-  #blog .blog-card, #courseware .gflip-front, #courseware .gflip-back, #services .flip-card-front, #services .flip-card-back, #services .price-table {
+  /* One orange for all boxes (every page except Contact) */
+  .page:not(#contact) :is(.orange-panel, .hero-body, .gflip-front, .gflip-back, .flip-card-front, .flip-card-back, .toc-panel, .faq-aside, .price-table, .blog-card, .about-language-card .gflip-front, .about-language-card .gflip-back, .about-approach-card) {
     background: linear-gradient(160deg, rgba(125,60,14,0.6), rgba(95,45,10,0.58), rgba(65,30,7,0.58)) !important;
-    -webkit-backdrop-filter: blur(6px) brightness(0.5); backdrop-filter: blur(6px) brightness(0.5); border-radius: 14px; }
+    -webkit-backdrop-filter: blur(6px) brightness(0.5); backdrop-filter: blur(6px) brightness(0.5); }
+  #faq.page:not(#contact) .orange-panel { background: none !important; -webkit-backdrop-filter: none; backdrop-filter: none; }
 
   /* ── PAGES ── */
   .page { display: none; }
