@@ -943,6 +943,14 @@
   /* Contact: new horses photo, not too bright */
   html body #contact.page > .page-photo img { filter: brightness(0.9) contrast(1.05) saturate(1.05) !important; object-position: center 45% !important; }
   html body #contact.page > .page-photo::after { background: linear-gradient(180deg, rgba(10,6,3,0.3), rgba(10,6,3,0.05) 22%, rgba(10,6,3,0.05) 62%, rgba(10,6,3,0.4)) !important; }
+  /* Packages: calmer photo so the text is easy to read */
+  html body #services.page .page-photo img { filter: sepia(0.15) saturate(0.9) brightness(0.42) blur(3px) !important; inset: -14px !important; width: calc(100% + 28px) !important; height: calc(100% + 28px) !important; }
+  html body #services.page .page-photo::after { background: radial-gradient(ellipse 70% 90% at 50% 45%, rgba(10,6,3,0.55), rgba(10,6,3,0.25) 75%, rgba(10,6,3,0.1)), linear-gradient(180deg, rgba(10,6,3,0.4), rgba(10,6,3,0.1) 22%, rgba(10,6,3,0.1) 60%, rgba(10,6,3,0.5)) !important; }
+  /* Blog, Contact, Syllabus: same calm photo treatment as Packages */
+  html body :is(#blog, #syllabus).page .page-photo img { filter: sepia(0.15) saturate(0.9) brightness(0.42) blur(3px) !important; inset: -14px !important; width: calc(100% + 28px) !important; height: calc(100% + 28px) !important; }
+  html body :is(#blog, #syllabus).page .page-photo::after { background: radial-gradient(ellipse 70% 90% at 50% 45%, rgba(10,6,3,0.55), rgba(10,6,3,0.25) 75%, rgba(10,6,3,0.1)), linear-gradient(180deg, rgba(10,6,3,0.4), rgba(10,6,3,0.1) 22%, rgba(10,6,3,0.1) 60%, rgba(10,6,3,0.5)) !important; }
+  html body #contact.page > .page-photo img { filter: sepia(0.15) saturate(0.9) brightness(0.5) blur(3px) !important; inset: -14px !important; width: calc(100% + 28px) !important; height: calc(100% + 28px) !important; }
+  html body #contact.page > .page-photo::after { background: radial-gradient(ellipse 70% 90% at 50% 45%, rgba(10,6,3,0.5), rgba(10,6,3,0.2) 75%, rgba(10,6,3,0.08)), linear-gradient(180deg, rgba(10,6,3,0.4), rgba(10,6,3,0.1) 22%, rgba(10,6,3,0.1) 60%, rgba(10,6,3,0.5)) !important; }
   .fc-hint {
     margin-top: auto;
     font-family: 'Orbitron', sans-serif;
