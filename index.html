@@ -2209,6 +2209,30 @@
   #syllabus .toc-module-title, #syllabus .toc-module-num {
     text-shadow: 0 1px 6px rgba(0,0,0,0.9);
   }
+  /* ── STUDY PROGRAM: open design, no box ── */
+  html body #syllabus.page.page .toc-panel.toc-panel.active {
+    background: none !important; border: none !important; border-radius: 0; padding: 0;
+    -webkit-backdrop-filter: none !important; backdrop-filter: none !important; box-shadow: none;
+  }
+  html body #syllabus.page.page .toc-tabs { gap: 2.2rem; justify-content: center; margin: 1rem 0 2.5rem; border-bottom: 1px solid rgba(247,236,217,0.15); }
+  html body #syllabus.page.page .toc-tab {
+    border: none; border-radius: 0; background: none !important; box-shadow: none !important;
+    padding: 0.8rem 0.2rem; font-size: 0.72rem; letter-spacing: 0.2em; color: rgba(247,236,217,0.5);
+    border-bottom: 2px solid transparent; margin-bottom: -1px;
+  }
+  html body #syllabus.page.page .toc-tab.active, html body #syllabus.page.page .toc-tab:hover { color: #f7ecd9; border-bottom-color: var(--accent); }
+  html body #syllabus.page.page .toc-module { border-bottom: 1px solid rgba(247,236,217,0.14); }
+  html body #syllabus.page.page .toc-module-header { padding: 1.5rem 0.4rem 1.5rem 0; }
+  html body #syllabus.page.page .toc-module-num { font-size: 1.15rem; min-width: 4.2rem; }
+  html body #syllabus.page.page .toc-module-title { font-size: 0.85rem; letter-spacing: 0.12em; }
+  html body #syllabus.page.page .toc-lessons.open { background: none; border-top: none; }
+  html body #syllabus.page.page .toc-study.toc-study {
+    background: none !important; border: none !important; border-top: 1px solid rgba(247,236,217,0.28) !important;
+    border-radius: 0; padding: 2.2rem 0 0; margin-top: 3rem;
+  }
+  html body #syllabus.page.page .toc-study-title { text-align: center; letter-spacing: 0.28em; font-size: 0.65rem; margin-bottom: 2rem; }
+  html body #syllabus.page.page .toc-study-cat-title { color: #f7ecd9; }
+
   .syllabus-call-overlay {
     display: none;
     position: fixed;
@@ -3345,6 +3369,70 @@
   <div class="page-content">
     
 
+    <!-- Teaching approach -->
+    <div style="margin-bottom:3rem;">
+      <div class="home-section-label">De aanpak</div>
+      <h2 style="font-family:'Orbitron',sans-serif;font-size:clamp(1rem,2.2vw,1.5rem);font-weight:700;color:var(--text);margin-bottom:1.8rem;line-height:1.3;">Hoe Ik Lesgeef</h2>
+      <div class="about-approach-grid">
+        <div class="about-approach-card">
+<div class="gflip-inner">
+<div class="gflip-front">
+          <div style="margin-bottom:0.8rem;"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="15" stroke="#f7ecd9" stroke-width="2"></circle><path d="M12 18l4 4 8-8" stroke="#f7ecd9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M22 10l2 2" stroke="#f7ecd9" stroke-width="1.5" stroke-linecap="round"></path></svg></div>
+          <div style="font-family:'Orbitron',sans-serif;font-size:0.7rem;font-weight:700;color:#f7ecd9;margin-bottom:0.5rem;">Doelgericht</div>
+          <div style="font-size:0.84rem;color:rgba(255,255,255,0.9);line-height:1.75;">Elke les is opgebouwd rond jouw specifieke doelen — examenvoorbereiding, gesprek, werk of inburgering.</div>
+        </div>
+<div class="gflip-back">
+          <div style="margin-bottom:0.8rem;"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="15" stroke="#f7ecd9" stroke-width="2"></circle><path d="M12 18l4 4 8-8" stroke="#f7ecd9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M22 10l2 2" stroke="#f7ecd9" stroke-width="1.5" stroke-linecap="round"></path></svg></div>
+          <div style="font-family:'Orbitron',sans-serif;font-size:0.7rem;font-weight:700;color:#f7ecd9;margin-bottom:0.5rem;">Doelgericht</div>
+          <div style="font-size:0.84rem;color:rgba(255,255,255,0.9);line-height:1.75;">Elke les is opgebouwd rond jouw specifieke doelen — examenvoorbereiding, gesprek, werk of inburgering.</div>
+        </div>
+</div>
+</div>
+        <div class="about-approach-card">
+<div class="gflip-inner">
+<div class="gflip-front">
+          <div style="margin-bottom:0.8rem;"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="8" width="20" height="14" rx="3" stroke="#f7ecd9" stroke-width="2"></rect><rect x="12" y="8" width="20" height="14" rx="3" stroke="#f7ecd9" stroke-width="2"></rect><path d="M16 22v4M20 22v4M13 26h10" stroke="#f7ecd9" stroke-width="2" stroke-linecap="round"></path></svg></div>
+          <div style="font-family:'Orbitron',sans-serif;font-size:0.7rem;font-weight:700;color:#f7ecd9;margin-bottom:0.5rem;">Geen Drempels</div>
+          <div style="font-size:0.84rem;color:rgba(255,255,255,0.9);line-height:1.75;">Vloeiendheid ontstaat door spreken, niet door grammaticatabellen te lezen. Je spreekt Nederlands vanaf de allereerste les.</div>
+        </div>
+<div class="gflip-back">
+          <div style="margin-bottom:0.8rem;"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="8" width="20" height="14" rx="3" stroke="#f7ecd9" stroke-width="2"></rect><rect x="12" y="8" width="20" height="14" rx="3" stroke="#f7ecd9" stroke-width="2"></rect><path d="M16 22v4M20 22v4M13 26h10" stroke="#f7ecd9" stroke-width="2" stroke-linecap="round"></path></svg></div>
+          <div style="font-family:'Orbitron',sans-serif;font-size:0.7rem;font-weight:700;color:#f7ecd9;margin-bottom:0.5rem;">Geen Drempels</div>
+          <div style="font-size:0.84rem;color:rgba(255,255,255,0.9);line-height:1.75;">Vloeiendheid ontstaat door spreken, niet door grammaticatabellen te lezen. Je spreekt Nederlands vanaf de allereerste les.</div>
+        </div>
+</div>
+</div>
+        <div class="about-approach-card">
+<div class="gflip-inner">
+<div class="gflip-front">
+          <div style="margin-bottom:0.8rem;"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="6" width="5" height="24" rx="1" stroke="#f7ecd9" stroke-width="2"></rect><rect x="14" y="10" width="5" height="20" rx="1" stroke="#f7ecd9" stroke-width="2"></rect><rect x="22" y="4" width="5" height="26" rx="1" stroke="#f7ecd9" stroke-width="2"></rect></svg></div>
+          <div style="font-family:'Orbitron',sans-serif;font-size:0.7rem;font-weight:700;color:#f7ecd9;margin-bottom:0.5rem;">Gestructureerd Materiaal</div>
+          <div style="font-size:0.84rem;color:rgba(255,255,255,0.9);line-height:1.75;">Op maat gemaakte werkboeken, pdf's, audiofragmenten en presentaties — allemaal aangeleverd en bijgewerkt per student.</div>
+        </div>
+<div class="gflip-back">
+          <div style="margin-bottom:0.8rem;"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="6" width="5" height="24" rx="1" stroke="#f7ecd9" stroke-width="2"></rect><rect x="14" y="10" width="5" height="20" rx="1" stroke="#f7ecd9" stroke-width="2"></rect><rect x="22" y="4" width="5" height="26" rx="1" stroke="#f7ecd9" stroke-width="2"></rect></svg></div>
+          <div style="font-family:'Orbitron',sans-serif;font-size:0.7rem;font-weight:700;color:#f7ecd9;margin-bottom:0.5rem;">Gestructureerd Materiaal</div>
+          <div style="font-size:0.84rem;color:rgba(255,255,255,0.9);line-height:1.75;">Op maat gemaakte werkboeken, pdf's, audiofragmenten en presentaties — allemaal aangeleverd en bijgewerkt per student.</div>
+        </div>
+</div>
+</div>
+        <div class="about-approach-card">
+<div class="gflip-inner">
+<div class="gflip-front">
+          <div style="margin-bottom:0.8rem;"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 10a4 4 0 0 1 4-4h16a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H20l-6 6v-6H10a4 4 0 0 1-4-4V10z" stroke="#f7ecd9" stroke-width="2" stroke-linejoin="round"></path><path d="M12 18h3M12 13h12" stroke="#f7ecd9" stroke-width="2" stroke-linecap="round"></path></svg></div>
+          <div style="font-family:'Orbitron',sans-serif;font-size:0.7rem;font-weight:700;color:#f7ecd9;margin-bottom:0.5rem;">Toegankelijk</div>
+          <div style="font-size:0.84rem;color:rgba(255,255,255,0.9);line-height:1.75;">Dankzij WhatsApp-ondersteuning tussen de lessen door hoeven vragen nooit tot de volgende les te wachten.</div>
+        </div>
+<div class="gflip-back">
+          <div style="margin-bottom:0.8rem;"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 10a4 4 0 0 1 4-4h16a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H20l-6 6v-6H10a4 4 0 0 1-4-4V10z" stroke="#f7ecd9" stroke-width="2" stroke-linejoin="round"></path><path d="M12 18h3M12 13h12" stroke="#f7ecd9" stroke-width="2" stroke-linecap="round"></path></svg></div>
+          <div style="font-family:'Orbitron',sans-serif;font-size:0.7rem;font-weight:700;color:#f7ecd9;margin-bottom:0.5rem;">Toegankelijk</div>
+          <div style="font-size:0.84rem;color:rgba(255,255,255,0.9);line-height:1.75;">Dankzij WhatsApp-ondersteuning tussen de lessen door hoeven vragen nooit tot de volgende les te wachten.</div>
+        </div>
+</div>
+</div>
+      </div>
+    </div>
+
     <div class="toc-tabs">
       <button class="toc-tab active" onclick="switchToc('a1a2',this)">A1 – A2</button>
       <button class="toc-tab" onclick="switchToc('b1b2',this)">B1 – B2</button>
@@ -3710,69 +3798,6 @@
       </div>
     </div>
 
-    <!-- Teaching approach -->
-    <div style="margin-bottom:3rem;">
-      <div class="home-section-label">De aanpak</div>
-      <h2 style="font-family:'Orbitron',sans-serif;font-size:clamp(1rem,2.2vw,1.5rem);font-weight:700;color:var(--text);margin-bottom:1.8rem;line-height:1.3;">Hoe Ik Lesgeef</h2>
-      <div class="about-approach-grid">
-        <div class="about-approach-card">
-<div class="gflip-inner">
-<div class="gflip-front">
-          <div style="margin-bottom:0.8rem;"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="15" stroke="#f7ecd9" stroke-width="2"></circle><path d="M12 18l4 4 8-8" stroke="#f7ecd9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M22 10l2 2" stroke="#f7ecd9" stroke-width="1.5" stroke-linecap="round"></path></svg></div>
-          <div style="font-family:'Orbitron',sans-serif;font-size:0.7rem;font-weight:700;color:#f7ecd9;margin-bottom:0.5rem;">Doelgericht</div>
-          <div style="font-size:0.84rem;color:rgba(255,255,255,0.9);line-height:1.75;">Elke les is opgebouwd rond jouw specifieke doelen — examenvoorbereiding, gesprek, werk of inburgering.</div>
-        </div>
-<div class="gflip-back">
-          <div style="margin-bottom:0.8rem;"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="15" stroke="#f7ecd9" stroke-width="2"></circle><path d="M12 18l4 4 8-8" stroke="#f7ecd9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M22 10l2 2" stroke="#f7ecd9" stroke-width="1.5" stroke-linecap="round"></path></svg></div>
-          <div style="font-family:'Orbitron',sans-serif;font-size:0.7rem;font-weight:700;color:#f7ecd9;margin-bottom:0.5rem;">Doelgericht</div>
-          <div style="font-size:0.84rem;color:rgba(255,255,255,0.9);line-height:1.75;">Elke les is opgebouwd rond jouw specifieke doelen — examenvoorbereiding, gesprek, werk of inburgering.</div>
-        </div>
-</div>
-</div>
-        <div class="about-approach-card">
-<div class="gflip-inner">
-<div class="gflip-front">
-          <div style="margin-bottom:0.8rem;"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="8" width="20" height="14" rx="3" stroke="#f7ecd9" stroke-width="2"></rect><rect x="12" y="8" width="20" height="14" rx="3" stroke="#f7ecd9" stroke-width="2"></rect><path d="M16 22v4M20 22v4M13 26h10" stroke="#f7ecd9" stroke-width="2" stroke-linecap="round"></path></svg></div>
-          <div style="font-family:'Orbitron',sans-serif;font-size:0.7rem;font-weight:700;color:#f7ecd9;margin-bottom:0.5rem;">Geen Drempels</div>
-          <div style="font-size:0.84rem;color:rgba(255,255,255,0.9);line-height:1.75;">Vloeiendheid ontstaat door spreken, niet door grammaticatabellen te lezen. Je spreekt Nederlands vanaf de allereerste les.</div>
-        </div>
-<div class="gflip-back">
-          <div style="margin-bottom:0.8rem;"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="8" width="20" height="14" rx="3" stroke="#f7ecd9" stroke-width="2"></rect><rect x="12" y="8" width="20" height="14" rx="3" stroke="#f7ecd9" stroke-width="2"></rect><path d="M16 22v4M20 22v4M13 26h10" stroke="#f7ecd9" stroke-width="2" stroke-linecap="round"></path></svg></div>
-          <div style="font-family:'Orbitron',sans-serif;font-size:0.7rem;font-weight:700;color:#f7ecd9;margin-bottom:0.5rem;">Geen Drempels</div>
-          <div style="font-size:0.84rem;color:rgba(255,255,255,0.9);line-height:1.75;">Vloeiendheid ontstaat door spreken, niet door grammaticatabellen te lezen. Je spreekt Nederlands vanaf de allereerste les.</div>
-        </div>
-</div>
-</div>
-        <div class="about-approach-card">
-<div class="gflip-inner">
-<div class="gflip-front">
-          <div style="margin-bottom:0.8rem;"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="6" width="5" height="24" rx="1" stroke="#f7ecd9" stroke-width="2"></rect><rect x="14" y="10" width="5" height="20" rx="1" stroke="#f7ecd9" stroke-width="2"></rect><rect x="22" y="4" width="5" height="26" rx="1" stroke="#f7ecd9" stroke-width="2"></rect></svg></div>
-          <div style="font-family:'Orbitron',sans-serif;font-size:0.7rem;font-weight:700;color:#f7ecd9;margin-bottom:0.5rem;">Gestructureerd Materiaal</div>
-          <div style="font-size:0.84rem;color:rgba(255,255,255,0.9);line-height:1.75;">Op maat gemaakte werkboeken, pdf's, audiofragmenten en presentaties — allemaal aangeleverd en bijgewerkt per student.</div>
-        </div>
-<div class="gflip-back">
-          <div style="margin-bottom:0.8rem;"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="6" width="5" height="24" rx="1" stroke="#f7ecd9" stroke-width="2"></rect><rect x="14" y="10" width="5" height="20" rx="1" stroke="#f7ecd9" stroke-width="2"></rect><rect x="22" y="4" width="5" height="26" rx="1" stroke="#f7ecd9" stroke-width="2"></rect></svg></div>
-          <div style="font-family:'Orbitron',sans-serif;font-size:0.7rem;font-weight:700;color:#f7ecd9;margin-bottom:0.5rem;">Gestructureerd Materiaal</div>
-          <div style="font-size:0.84rem;color:rgba(255,255,255,0.9);line-height:1.75;">Op maat gemaakte werkboeken, pdf's, audiofragmenten en presentaties — allemaal aangeleverd en bijgewerkt per student.</div>
-        </div>
-</div>
-</div>
-        <div class="about-approach-card">
-<div class="gflip-inner">
-<div class="gflip-front">
-          <div style="margin-bottom:0.8rem;"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 10a4 4 0 0 1 4-4h16a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H20l-6 6v-6H10a4 4 0 0 1-4-4V10z" stroke="#f7ecd9" stroke-width="2" stroke-linejoin="round"></path><path d="M12 18h3M12 13h12" stroke="#f7ecd9" stroke-width="2" stroke-linecap="round"></path></svg></div>
-          <div style="font-family:'Orbitron',sans-serif;font-size:0.7rem;font-weight:700;color:#f7ecd9;margin-bottom:0.5rem;">Toegankelijk</div>
-          <div style="font-size:0.84rem;color:rgba(255,255,255,0.9);line-height:1.75;">Dankzij WhatsApp-ondersteuning tussen de lessen door hoeven vragen nooit tot de volgende les te wachten.</div>
-        </div>
-<div class="gflip-back">
-          <div style="margin-bottom:0.8rem;"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 10a4 4 0 0 1 4-4h16a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H20l-6 6v-6H10a4 4 0 0 1-4-4V10z" stroke="#f7ecd9" stroke-width="2" stroke-linejoin="round"></path><path d="M12 18h3M12 13h12" stroke="#f7ecd9" stroke-width="2" stroke-linecap="round"></path></svg></div>
-          <div style="font-family:'Orbitron',sans-serif;font-size:0.7rem;font-weight:700;color:#f7ecd9;margin-bottom:0.5rem;">Toegankelijk</div>
-          <div style="font-size:0.84rem;color:rgba(255,255,255,0.9);line-height:1.75;">Dankzij WhatsApp-ondersteuning tussen de lessen door hoeven vragen nooit tot de volgende les te wachten.</div>
-        </div>
-</div>
-</div>
-      </div>
-    </div>
 
   </div>
 </div>
