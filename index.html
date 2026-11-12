@@ -906,6 +906,19 @@
   /* Home: hero box and title as wide as the tab bar */
   html body #home.page .hero-text { max-width: var(--nav-w, 740px) !important; flex: 0 1 var(--nav-w, 740px); width: 100%; margin-left: auto; margin-right: auto; }
   html body #home.page .hero-body { max-width: none !important; width: 100%; box-sizing: border-box; }
+  /* ── CONTACT: horses photo as full-width background ── */
+  #contact.page { position: relative; }
+  #contact.page > .page-photo { position: absolute !important; top: calc(-1 * var(--nav-h, 62px)); left: 0; right: 0; width: 100% !important; max-width: none !important;
+    height: calc(clamp(520px, 92vh, 860px) + var(--nav-h, 62px)); aspect-ratio: auto !important; margin: 0 !important; transform: none !important;
+    border: 0; border-radius: 0; box-shadow: none; z-index: 0; pointer-events: none;
+    -webkit-mask-image: linear-gradient(to bottom, #000 62%, transparent); mask-image: linear-gradient(to bottom, #000 62%, transparent); }
+  #contact.page > .page-photo img { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; aspect-ratio: auto !important;
+    transform: none !important; object-fit: cover; object-position: center 55%; filter: sepia(0.2) saturate(1.1) brightness(0.8); }
+  #contact.page > .page-photo::after { background:
+    radial-gradient(ellipse 60% 85% at 50% 45%, rgba(10,6,3,0.6), rgba(10,6,3,0.3) 70%, rgba(10,6,3,0.1) 100%),
+    linear-gradient(180deg, rgba(10,6,3,0.5), rgba(10,6,3,0.1) 22%, rgba(10,6,3,0.1) 60%, rgba(10,6,3,0.5)); }
+  #contact.page > .page-photo ~ * { position: relative; z-index: 1; }
+
   .fc-hint {
     margin-top: auto;
     font-family: 'Orbitron', sans-serif;
@@ -4859,13 +4872,13 @@
 
 <!-- ══════════ CONTACT ══════════ -->
 <div class="page" id="contact">
+  <figure class="page-photo"><img src="contact-bg-horses.webp" alt="Paarden in de duinen" loading="lazy" decoding="async"></figure>
   <div class="contact-page">
     <div class="contact-hero">
       <div class="contact-kicker">Boek een les / Neem contact op</div>
       <div class="page-title" id="contactTitle"></div>
       <p class="contact-subtitle">Gebruik onderstaand formulier om je pakket en gewenste planning aan te vragen. Ik bevestig de beschikbaarheid en stuur de betaalgegevens per e-mail.</p>
 
-      <figure class="page-photo"><img src="contact-bg-horses.webp" alt="Paarden in de duinen" loading="lazy" decoding="async"></figure>
     <div class="booking-form-wrap">
         <iframe id="bookingFormFrame" class="booking-form-frame" style="display:none;" title="Boekingsformulier" loading="lazy"></iframe>
         <p id="bookingFormOpenLink" style="display:none; margin-top:0.8rem;">
