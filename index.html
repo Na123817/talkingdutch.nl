@@ -994,6 +994,14 @@
   html body #blog.page:not(#zz):not(#zy) .blog-card:hover .blog-card-title { color: var(--accent); }
   html body #blog.page:not(#zz):not(#zy) .blog-card-excerpt { color: #f0e6d6; text-shadow: 0 1px 8px rgba(0,0,0,0.85); max-width: 560px; }
   html body #blog.page:not(#zz):not(#zy) .blog-read-more { color: var(--accent); margin-top: 0.7rem; text-shadow: 0 1px 6px rgba(0,0,0,0.8); }
+  /* Same title-to-content gap as FAQ on every tab (photo shows between title and the first block) */
+  html body #home.page .hero + .home-section { margin-top: calc(clamp(6rem, 34vh, 20rem) - 24px) !important; }
+  html body #about.page .content > .reveal-scroll:not(.orange-panel):not(.page-title) { margin-top: calc(clamp(6rem, 34vh, 20rem) + 12px); }
+  html body #courseware.page .content > p:first-of-type { margin-top: calc(clamp(6rem, 34vh, 20rem) + 21px) !important; }
+  html body #services.page.page .services-left { margin-top: calc(clamp(6rem, 34vh, 20rem) - 28px); }
+  html body #syllabus.page .toc-tabs { margin-top: calc(clamp(6rem, 34vh, 20rem) - 9px) !important; }
+  html body #blog.page #blog-list .blog-outro { margin-top: calc(clamp(6rem, 34vh, 20rem) - 33px) !important; }
+  html body #contact.page .payment-methods { margin-top: clamp(6rem, 34vh, 20rem); }
   .fc-hint {
     margin-top: auto;
     font-family: 'Orbitron', sans-serif;
