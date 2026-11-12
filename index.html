@@ -5122,4 +5122,13 @@
 (function(){function f(){var a=document.querySelectorAll('nav a');if(!a.length)return;var l=1e9,r=0;a.forEach(function(x){var b=x.getBoundingClientRect();if(b.width){l=Math.min(l,b.left);r=Math.max(r,b.right);}});if(r>l)document.documentElement.style.setProperty('--nav-w',Math.round(r-l)+'px');}
 f();addEventListener('resize',f);addEventListener('load',f);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(f);})();
 </script>
+<script>
+/* Deep links: talkingdutch.xx/#about opens that page; the address bar follows the tabs */
+(function(){
+  var ids=['home','about','courseware','services','syllabus','faq','blog','contact','terms','privacy'];
+  function fromHash(){var h=(location.hash||'').replace('#','');if(ids.indexOf(h)>-1&&document.getElementById(h)&&typeof show==='function'){show(h);}}
+  window.addEventListener('load',fromHash);window.addEventListener('hashchange',fromHash);
+  if(typeof show==='function'){var o=show;window.show=show=function(id){o.apply(this,arguments);try{if(ids.indexOf(id)>-1&&history.replaceState)history.replaceState(null,'','#'+id);}catch(e){}};}
+})();
+</script>
 </body></html>
