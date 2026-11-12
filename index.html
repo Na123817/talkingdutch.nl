@@ -953,6 +953,8 @@
   html body #contact.page > .page-photo::after { background: radial-gradient(ellipse 70% 90% at 50% 45%, rgba(10,6,3,0.5), rgba(10,6,3,0.2) 75%, rgba(10,6,3,0.08)), linear-gradient(180deg, rgba(10,6,3,0.4), rgba(10,6,3,0.1) 22%, rgba(10,6,3,0.1) 60%, rgba(10,6,3,0.5)) !important; }
   /* Darker transparent orange boxes (Packages) */
   html body .page.page:not(#zz):not(#zy) .flip-card-front.flip-card-front { background: linear-gradient(160deg, rgba(95,45,9,0.8), rgba(55,25,5,0.84)) !important; }
+  /* Contact: form sits below the photo so the cyclists stay visible */
+  @media (min-width: 900px) { html body #contact.page .contact-page { padding-top: clamp(5rem, 62vh, 36rem); } }
   .fc-hint {
     margin-top: auto;
     font-family: 'Orbitron', sans-serif;
@@ -4580,7 +4582,7 @@
 
 <!-- ══════════ ABOUT ══════════ -->
 <div class="page" id="about">
-  <figure class="page-photo"><img src="about-bg-giethoorn.webp" alt="Thatched houses along a canal in Giethoorn" loading="lazy" decoding="async"></figure>
+  <figure class="page-photo"><img src="about-bg-canalhouse.webp" alt="Rietgedekt huis met bloementuin en bootjes aan een gracht in Giethoorn" loading="lazy" decoding="async"></figure>
   <div class="content" style="max-width:860px;">
     <div class="page-title" id="aboutTitle"></div>
     
