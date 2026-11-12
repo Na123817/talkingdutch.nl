@@ -768,6 +768,30 @@
   .flip-card.exam .flip-card-back { background: rgba(42,22,8,0.32); border: 1px solid var(--accent); }
   .flip-card.exam .fc-back-title  { color: #f7ecd9; }
   .flip-card.exam .fc-back-list   { color: rgba(255,255,255,0.85); }
+  /* ── SERVICE CARDS: open design, no boxes, no flip (front + back shown together) ── */
+  html body #services.page.page .services-grid { gap: 2.6rem 2.6rem; }
+  @media (max-width: 700px) { html body #services.page.page .services-grid { grid-template-columns: 1fr; } }
+  html body #services.page.page .flip-card { height: auto; perspective: none; cursor: default; }
+  html body #services.page.page .flip-card-inner { height: auto; transform: none !important; transform-style: flat; }
+  html body #services.page.page .flip-card:hover .flip-card-inner { transform: none !important; }
+  html body #services.page.page .flip-card .flip-card-front.flip-card-front,
+  html body #services.page.page .flip-card .flip-card-back.flip-card-back {
+    position: static; height: auto; width: auto; transform: none; backface-visibility: visible; -webkit-backface-visibility: visible;
+    background: none !important; border: none !important; border-radius: 0; box-shadow: none;
+    -webkit-backdrop-filter: none !important; backdrop-filter: none !important;
+  }
+  html body #services.page.page .flip-card .flip-card-front.flip-card-front {
+    border-top: 1px solid rgba(247,236,217,0.25) !important; padding: 1.5rem 0 0; position: relative;
+  }
+  html body #services.page.page .flip-card .flip-card-front::before {
+    content: ''; position: absolute; top: -4px; left: 0; width: 7px; height: 7px; border-radius: 50%;
+    background: var(--accent); box-shadow: 0 0 12px rgba(232,119,34,0.8);
+  }
+  html body #services.page.page .flip-card .flip-card-back.flip-card-back { padding: 1.1rem 0 0; }
+  html body #services.page.page .fc-title { font-size: 0.9rem !important; letter-spacing: 0.06em; color: #f7ecd9; margin-bottom: 0.6rem; }
+  html body #services.page.page .fc-back-title { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
+  html body #services.page.page .fc-sub, html body #services.page.page .fc-back-list, html body #services.page.page .flip-card-front ul { font-size: 0.9rem; color: rgba(247,236,217,0.8); }
+  html body #services.page.page .fc-hint { display: none; }
   .fc-hint {
     margin-top: auto;
     font-family: 'Orbitron', sans-serif;
@@ -1822,6 +1846,28 @@
     color: rgba(255,255,255,0.9);
     line-height: 1.85;
   }
+  /* ── HOW I TEACH (approach): open design, no boxes ── */
+  html body :is(#syllabus,#about).page.page .about-approach-grid { gap: 2.8rem 3rem; }
+  html body :is(#syllabus,#about).page.page .about-approach-card { perspective: none; }
+  html body :is(#syllabus,#about).page.page .about-approach-card:hover .gflip-inner,
+  html body :is(#syllabus,#about).page.page .about-approach-card:focus-within .gflip-inner { transform: none !important; }
+  html body :is(#syllabus,#about).page.page .about-approach-card .gflip-back { display: none !important; }
+  html body :is(#syllabus,#about).page.page .about-approach-card .gflip-front.gflip-front {
+    background: none !important; border: none !important; border-radius: 0; box-shadow: none; text-align: left;
+    -webkit-backdrop-filter: none !important; backdrop-filter: none !important;
+    border-top: 1px solid rgba(247,236,217,0.25) !important; padding: 1.6rem 0 0; position: relative;
+  }
+  html body :is(#syllabus,#about).page.page .about-approach-card .gflip-front::before {
+    content: ''; position: absolute; top: -4px; left: 0; width: 7px; height: 7px; border-radius: 50%;
+    background: var(--accent); box-shadow: 0 0 12px rgba(232,119,34,0.8);
+  }
+  html body :is(#syllabus,#about).page.page .about-approach-card .gflip-front > div:nth-child(2) { font-size: 0.9rem !important; letter-spacing: 0.06em; }
+  html body :is(#syllabus,#about).page.page .about-approach-card .gflip-front > div:nth-child(3) { font-size: 0.92rem !important; color: rgba(247,236,217,0.78) !important; line-height: 1.75 !important; }
+  /* ── COURSEWARE CARDS: no flip (the back repeated the front) ── */
+  html body .cw-card { perspective: none; }
+  html body .cw-card:hover .gflip-inner, html body .cw-card:focus-within .gflip-inner { transform: none !important; }
+  html body .cw-card .gflip-back { display: none !important; }
+  html body :is(#syllabus,#about).page.page .about-approach-card { background: none !important; border: none !important; box-shadow: none; -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
   .about-approach-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
