@@ -958,6 +958,15 @@
   /* Contact: title above the box */
   @media (min-width: 900px) { html body #contact.page .contact-page { padding-top: 5rem; } html body #contact.page .contact-hero { margin-top: calc(clamp(5rem, 62vh, 36rem) - 5rem); } }
   html body #contact.page > .contact-page > .page-title { font-size: 2.4rem; text-align: center; justify-content: center; width: 100%; margin: 0 0 1.5rem; text-shadow: 0 1px 10px rgba(0,0,0,0.75); }
+  /* Boxes sit exactly as low as on Contact (all tabs except FAQ); titles stay under the tab bar */
+  @media (min-width: 900px) {
+    html body #home.page .hero-body { margin-top: calc(clamp(5rem, 62vh, 36rem) - 47px) !important; }
+    html body #about.page .orange-panel { margin-top: calc(clamp(5rem, 62vh, 36rem) - 55px) !important; }
+    html body #courseware.page .courseware-grid { margin-top: calc(clamp(5rem, 62vh, 36rem) - 113px) !important; }
+    html body #services.page .services-layout { margin-top: calc(clamp(5rem, 62vh, 36rem) - 80px) !important; }
+    html body #syllabus.page .page-content { margin-top: calc(clamp(5rem, 62vh, 36rem) - 112px) !important; }
+    html body #blog.page #blog-list .blog-grid { margin-top: calc(clamp(5rem, 62vh, 36rem) - 113px) !important; }
+  }
   .fc-hint {
     margin-top: auto;
     font-family: 'Orbitron', sans-serif;
