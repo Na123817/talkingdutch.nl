@@ -768,30 +768,12 @@
   .flip-card.exam .flip-card-back { background: rgba(42,22,8,0.32); border: 1px solid var(--accent); }
   .flip-card.exam .fc-back-title  { color: #f7ecd9; }
   .flip-card.exam .fc-back-list   { color: rgba(255,255,255,0.85); }
-  /* ── SERVICE CARDS: open design, no boxes, no flip (front + back shown together) ── */
-  html body #services.page.page .services-grid { gap: 2.6rem 2.6rem; }
-  @media (max-width: 700px) { html body #services.page.page .services-grid { grid-template-columns: 1fr; } }
-  html body #services.page.page .flip-card { height: auto; perspective: none; cursor: default; }
-  html body #services.page.page .flip-card-inner { height: auto; transform: none !important; transform-style: flat; }
-  html body #services.page.page .flip-card:hover .flip-card-inner { transform: none !important; }
-  html body #services.page.page .flip-card .flip-card-front.flip-card-front,
-  html body #services.page.page .flip-card .flip-card-back.flip-card-back {
-    position: static; height: auto; width: auto; transform: none; backface-visibility: visible; -webkit-backface-visibility: visible;
-    background: none !important; border: none !important; border-radius: 0; box-shadow: none;
-    -webkit-backdrop-filter: none !important; backdrop-filter: none !important;
-  }
-  html body #services.page.page .flip-card .flip-card-front.flip-card-front {
-    border-top: 1px solid rgba(247,236,217,0.25) !important; padding: 1.5rem 0 0; position: relative;
-  }
-  html body #services.page.page .flip-card .flip-card-front::before {
-    content: ''; position: absolute; top: -4px; left: 0; width: 7px; height: 7px; border-radius: 50%;
-    background: var(--accent); box-shadow: 0 0 12px rgba(232,119,34,0.8);
-  }
-  html body #services.page.page .flip-card .flip-card-back.flip-card-back { padding: 1.1rem 0 0; }
-  html body #services.page.page .fc-title { font-size: 0.9rem !important; letter-spacing: 0.06em; color: #f7ecd9; margin-bottom: 0.6rem; }
-  html body #services.page.page .fc-back-title { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
-  html body #services.page.page .fc-sub, html body #services.page.page .fc-back-list, html body #services.page.page .flip-card-front ul { font-size: 0.9rem; color: rgba(247,236,217,0.8); }
-  html body #services.page.page .fc-hint { display: none; }
+  /* ── SERVICES: intro text underneath the cards ── */
+  html body #services.page.page .services-layout { flex-direction: column; align-items: stretch; gap: 3rem; }
+  html body #services.page.page .services-grid { order: 1; width: 100%; flex: none; }
+  html body #services.page.page .services-left { order: 2; flex: none; width: 100%; max-width: 720px; margin: 0 auto; text-align: center; }
+  html body #services.page.page .services-left .services-intro { text-align: center; }
+  html body #services.page.page .services-left .sp-item { text-align: left; max-width: 560px; margin-left: auto; margin-right: auto; }
   .fc-hint {
     margin-top: auto;
     font-family: 'Orbitron', sans-serif;
