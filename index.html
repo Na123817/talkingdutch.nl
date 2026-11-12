@@ -370,6 +370,15 @@
   .page:not(#contact) .page-photo::after { background: linear-gradient(180deg, rgba(10,6,3,0.45), rgba(10,6,3,0) 22%, rgba(10,6,3,0) 60%, rgba(10,6,3,0.5)),
     linear-gradient(160deg, rgba(222,125,52,0.14), rgba(138,71,21,0.06)); }
   .page:not(#contact) .page-photo ~ * { position: relative; z-index: 1; }
+  /* Readability over the photo */
+  .page:not(#contact) .page-photo::after { background:
+    radial-gradient(ellipse 60% 85% at 50% 45%, rgba(10,6,3,0.72), rgba(10,6,3,0.38) 70%, rgba(10,6,3,0.12) 100%),
+    linear-gradient(180deg, rgba(10,6,3,0.5), rgba(10,6,3,0.1) 22%, rgba(10,6,3,0.1) 60%, rgba(10,6,3,0.5)),
+    linear-gradient(160deg, rgba(222,125,52,0.14), rgba(138,71,21,0.06)); }
+  .page:not(#contact) .page-photo img { filter: sepia(0.2) saturate(1.1) brightness(0.8); }
+  .page:not(#contact) :is(.orange-panel, .hero-body, .gflip-back, .flip-card-back, .toc-study, .toc-panel, .faq-item, .faq-aside, .price-table, .blog-card, .about-language-card, .about-approach-card) {
+    -webkit-backdrop-filter: blur(10px) brightness(0.55); backdrop-filter: blur(10px) brightness(0.55); }
+  .page:not(#contact) :is(.page-title, .hero-title, h1, h2, h3, p, li) { text-shadow: 0 1px 10px rgba(0,0,0,0.75); }
 
   /* ── PAGES ── */
   .page { display: none; }
