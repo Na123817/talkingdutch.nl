@@ -1031,7 +1031,7 @@
   html body #contact.page > .page-photo::after { background: linear-gradient(rgba(255,140,50,0.2), rgba(255,140,50,0.2)), radial-gradient(ellipse 70% 90% at 50% 45%, rgba(10,6,3,0.45), rgba(10,6,3,0.18) 75%, rgba(10,6,3,0.06)), linear-gradient(180deg, rgba(10,6,3,0.4), rgba(10,6,3,0.08) 22%, rgba(10,6,3,0.08) 60%, rgba(10,6,3,0.55)) !important; }
   /* ===== Footer redesign ===== */
   html body .site-footer { background: radial-gradient(ellipse 60% 120% at 12% 0%, rgba(232,119,34,0.14), transparent 60%), linear-gradient(180deg, #170d06, #0a0603); padding: 4rem 2rem 1.6rem; }
-  html body .site-footer-inner { max-width: 1100px; grid-template-columns: 2.2fr 1fr 1fr; gap: 3rem; align-items: start; }
+  html body .site-footer-inner { max-width: 1100px; grid-template-columns: 2fr 0.9fr 0.9fr 1.5fr; gap: 2.5rem; align-items: start; }
   html body .site-footer-bottom { border-top: 0 !important; padding-top: 0 !important; }
   html body .footer-brand { gap: 1.2rem; }
   html body .footer-brand-icon { width: 112px; height: 112px; border-radius: 26px; box-shadow: 0 0 0 1px rgba(232,119,34,0.35), 0 10px 40px rgba(232,119,34,0.22); }
@@ -1049,7 +1049,11 @@
   html body .footer-legal-row { max-width: 1100px; justify-content: flex-start; gap: 1.8rem; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid rgba(232,119,34,0.22); }
   html body .footer-legal-row a { font-size: 0.82rem; opacity: 0.85; }
   html body .site-footer-bottom { max-width: 1100px; margin: 0.9rem auto 0; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; font-size: 0.78rem; opacity: 0.7; }
-  @media (max-width: 760px) { html body .site-footer-inner { grid-template-columns: 1fr 1fr; } html body .footer-brand { grid-column: 1 / -1; } }
+  html body .footer-cta-text { margin: 0 0 0.6rem; font-size: 0.92rem; line-height: 1.55; color: rgba(247,236,217,0.75); }
+  html body .footer-col-group a.footer-cta-btn { display: inline-flex; align-self: flex-start; padding: 0.7rem 1.3rem; border-radius: 999px; border: 1.5px solid rgba(240,120,30,0.9); background: rgba(240,120,30,0.16); color: #ffd9b0; font-weight: 600; transition: background .25s, transform .25s; }
+  html body .footer-col-group a.footer-cta-btn:hover { background: rgba(240,120,30,0.32); color: #fff; transform: translateY(-2px); }
+  html body .footer-col-group a.footer-cta-wa { margin-top: 0.4rem; color: #ffb067; }
+  @media (max-width: 760px) { html body .site-footer-inner { grid-template-columns: 1fr 1fr; } html body .footer-brand, html body .footer-cta-col { grid-column: 1 / -1; } }
   /* Footer logo blends into the background (no tile) */
   html body .footer-brand-icon { width: 112px; height: 112px; border-radius: 0; box-shadow: none; overflow: visible; background: none; margin: 4px 0 4px 2px; }
   html body .footer-brand-icon img { mix-blend-mode: screen; object-fit: contain; -webkit-mask-image: radial-gradient(circle at 50% 50%, #000 58%, transparent 74%); mask-image: radial-gradient(circle at 50% 50%, #000 58%, transparent 74%); }
@@ -4271,8 +4275,6 @@
       '.blog-article-body > *',
       '.contact-hero',
       '.site-footer-inner > *',
-      '.footer-legal-row',
-      '.site-footer-bottom',
       '.cta-primary',
       '.cta-secondary'
     ].join(','));
@@ -5202,6 +5204,12 @@
       <a href="contact.html" onclick="show('contact'); return false;">Contact</a>
     </div>
 
+    <div class="footer-col-group footer-cta-col">
+      <div class="footer-col-heading">Neem contact op</div>
+      <p class="footer-cta-text">Klaar om te beginnen? Boek een proefles of stuur me direct een bericht.</p>
+      <a class="footer-cta-btn" href="contact.html" onclick="show('contact'); return false;">Boek een proefles</a>
+      <a class="footer-cta-wa" href="https://wa.me/31614479334" target="_blank" rel="noopener noreferrer">Chat via WhatsApp</a>
+    </div>
 
   </div>
 
