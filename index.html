@@ -4283,7 +4283,7 @@
       '.toc-study-cat',
       '.blog-card',
       '.blog-article-body > *',
-      '.contact-hero',
+      '.contact-page > *:not(script):not(style)',
       '.site-footer-inner > *',
       '.cta-primary',
       '.cta-secondary'
@@ -4497,6 +4497,9 @@
 
   // ── TAB SWITCHING ──
   function show(id) {
+    // Reset the scroll-reveal while the target page is still hidden, so there is no flash
+    { const tgt = document.getElementById(id);
+      if (tgt && !tgt.classList.contains('active')) tgt.querySelectorAll('.reveal-scroll.is-visible').forEach(el => el.classList.remove('is-visible')); }
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
     const page = document.getElementById(id);
@@ -4504,8 +4507,6 @@
     if (page) page.classList.add('active');
     if (tab)  tab.classList.add('active');
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    // Replay the scroll-reveal every time a page is opened
-    if (page) page.querySelectorAll('.reveal-scroll.is-visible').forEach(el => el.classList.remove('is-visible'));
     __revealPending.clear();
     armRevealGate();
 
