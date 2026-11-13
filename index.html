@@ -4504,6 +4504,9 @@
     if (page) page.classList.add('active');
     if (tab)  tab.classList.add('active');
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Replay the scroll-reveal every time a page is opened
+    if (page) page.querySelectorAll('.reveal-scroll.is-visible').forEach(el => el.classList.remove('is-visible'));
+    __revealPending.clear();
     armRevealGate();
 
     // Animate titles for this tab
