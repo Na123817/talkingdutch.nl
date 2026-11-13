@@ -1029,6 +1029,27 @@
   /* Contact: warm orange hue over the background photo */
   html body #contact.page > .page-photo img { filter: sepia(0.35) saturate(1.45) hue-rotate(-10deg) brightness(0.95) contrast(1.05) !important; }
   html body #contact.page > .page-photo::after { background: linear-gradient(rgba(255,140,50,0.2), rgba(255,140,50,0.2)), radial-gradient(ellipse 70% 90% at 50% 45%, rgba(10,6,3,0.45), rgba(10,6,3,0.18) 75%, rgba(10,6,3,0.06)), linear-gradient(180deg, rgba(10,6,3,0.4), rgba(10,6,3,0.08) 22%, rgba(10,6,3,0.08) 60%, rgba(10,6,3,0.55)) !important; }
+  /* ===== Footer redesign ===== */
+  html body .site-footer { background: radial-gradient(ellipse 60% 120% at 12% 0%, rgba(232,119,34,0.14), transparent 60%), linear-gradient(180deg, #170d06, #0a0603); padding: 4rem 2rem 1.6rem; }
+  html body .site-footer-inner { max-width: 1100px; grid-template-columns: 2.2fr 1fr 1fr; gap: 3rem; align-items: start; }
+  html body .site-footer-bottom { border-top: 0 !important; padding-top: 0 !important; }
+  html body .footer-brand { gap: 1.2rem; }
+  html body .footer-brand-icon { width: 112px; height: 112px; border-radius: 26px; box-shadow: 0 0 0 1px rgba(232,119,34,0.35), 0 10px 40px rgba(232,119,34,0.22); }
+  html body .footer-brand-text { font-size: 0.95rem; max-width: 380px; color: #f0e6d6; }
+  .footer-social { display: flex; gap: 0.7rem; margin-top: 0.3rem; }
+  html body .footer-col-group a.social-btn { width: 42px; height: 42px; padding: 0; border-radius: 50%; border: 1px solid rgba(232,119,34,0.55); background: rgba(232,119,34,0.08); color: #ffb067; justify-content: center; transition: background .25s, color .25s, transform .25s, box-shadow .25s; }
+  .footer-social a.social-btn { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 50%; border: 1px solid rgba(232,119,34,0.55); background: rgba(232,119,34,0.08); color: #ffb067; transition: background .25s, color .25s, transform .25s, box-shadow .25s; }
+  .footer-social a.social-btn svg { width: 18px; height: 18px; fill: currentColor; }
+  .footer-social a.social-btn:hover { background: #f0781e; color: #1a0d03; transform: translateY(-3px); box-shadow: 0 8px 22px rgba(240,120,30,0.45); }
+  html body .footer-col-heading { color: #ffa24d; font-size: 0.78rem; letter-spacing: 0.24em; font-weight: 700; padding-bottom: 0.9rem; margin-bottom: 0.5rem; position: relative; }
+  html body .footer-col-heading::after { content: ''; position: absolute; left: 0; bottom: 0; width: 34px; height: 2px; background: linear-gradient(90deg, #f0781e, transparent); }
+  html body .footer-col-group { gap: 0.2rem; }
+  html body .footer-col-group a { font-size: 0.98rem; padding: 0.38rem 0; transition: color .2s, transform .2s; }
+  html body .footer-col-group a:hover { color: #ffa24d; transform: translateX(5px); }
+  html body .footer-legal-row { max-width: 1100px; justify-content: flex-start; gap: 1.8rem; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid rgba(232,119,34,0.22); }
+  html body .footer-legal-row a { font-size: 0.82rem; opacity: 0.85; }
+  html body .site-footer-bottom { max-width: 1100px; margin: 0.9rem auto 0; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; font-size: 0.78rem; opacity: 0.7; }
+  @media (max-width: 760px) { html body .site-footer-inner { grid-template-columns: 1fr 1fr; } html body .footer-brand { grid-column: 1 / -1; } }
   .fc-hint {
     margin-top: auto;
     font-family: 'Orbitron', sans-serif;
@@ -5154,6 +5175,12 @@
         </div>
       </div>
       <div class="footer-brand-text">Online Nederlandse lessen met moedertaaldocent Jonathan van Hassel. Praktische taalvaardigheid, examentraining en echt gespreksvertrouwen.</div>
+        <div class="footer-social">
+          <a class="social-btn" href="https://www.facebook.com/profile.php?id=61554589194003" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94Z"/></svg></a>
+          <a class="social-btn" href="https://wa.me/31614479334" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.33 4.95L2.05 22l5.28-1.38a9.87 9.87 0 0 0 4.71 1.2h.01c5.46 0 9.9-4.45 9.9-9.91S17.5 2 12.04 2Zm0 18.13h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.13.82.84-3.05-.2-.31a8.2 8.2 0 0 1-1.26-4.35c0-4.54 3.7-8.24 8.25-8.24a8.2 8.2 0 0 1 8.24 8.25c0 4.54-3.7 8.21-8.25 8.21Zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.15.17-.29.19-.54.06-.25-.12-1.04-.38-1.99-1.22-.73-.66-1.23-1.46-1.37-1.71-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42-.14-.01-.31-.01-.48-.01-.16 0-.43.06-.66.31-.23.25-.86.85-.86 2.06 0 1.22.88 2.4 1 2.56.13.17 1.73 2.64 4.2 3.7.59.25 1.04.4 1.4.52.59.19 1.12.16 1.54.1.47-.07 1.47-.6 1.68-1.18.2-.58.2-1.08.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg></a>
+          <a class="social-btn" href="https://www.linkedin.com/in/jonathan-van-hassel-19645b1a9/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.83v1.64h.05c.53-1 1.84-2.05 3.79-2.05 4.06 0 4.81 2.67 4.81 6.14V21h-4v-5.6c0-1.34-.02-3.05-1.86-3.05-1.87 0-2.16 1.46-2.16 2.96V21h-4V9Z"/></svg></a>
+          <a class="social-btn" href="https://www.youtube.com/@nathan8128" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-2C18.88 4 12 4 12 4s-6.88 0-8.59.42a2.78 2.78 0 0 0-1.95 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.95 1.95C5.12 19.5 12 19.5 12 19.5s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33ZM9.75 15.02V8.48l5.75 3.27-5.75 3.27Z"/></svg></a>
+        </div>
     </div>
 
     <div class="footer-col-group">
@@ -5172,25 +5199,6 @@
       <a href="contact.html" onclick="show('contact'); return false;">Contact</a>
     </div>
 
-    <div class="footer-col-group">
-      <div class="footer-col-heading">Volg Ons</div>
-      <a href="https://www.facebook.com/profile.php?id=61554589194003" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94Z"/></svg>
-        Facebook
-      </a>
-      <a href="https://wa.me/31614479334" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.33 4.95L2.05 22l5.28-1.38a9.87 9.87 0 0 0 4.71 1.2h.01c5.46 0 9.9-4.45 9.9-9.91S17.5 2 12.04 2Zm0 18.13h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.13.82.84-3.05-.2-.31a8.2 8.2 0 0 1-1.26-4.35c0-4.54 3.7-8.24 8.25-8.24a8.2 8.2 0 0 1 8.24 8.25c0 4.54-3.7 8.21-8.25 8.21Zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.15.17-.29.19-.54.06-.25-.12-1.04-.38-1.99-1.22-.73-.66-1.23-1.46-1.37-1.71-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42-.14-.01-.31-.01-.48-.01-.16 0-.43.06-.66.31-.23.25-.86.85-.86 2.06 0 1.22.88 2.4 1 2.56.13.17 1.73 2.64 4.2 3.7.59.25 1.04.4 1.4.52.59.19 1.12.16 1.54.1.47-.07 1.47-.6 1.68-1.18.2-.58.2-1.08.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg>
-        WhatsApp
-      </a>
-      <a href="https://www.linkedin.com/in/jonathan-van-hassel-19645b1a9/" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.83v1.64h.05c.53-1 1.84-2.05 3.79-2.05 4.06 0 4.81 2.67 4.81 6.14V21h-4v-5.6c0-1.34-.02-3.05-1.86-3.05-1.87 0-2.16 1.46-2.16 2.96V21h-4V9Z"/></svg>
-        LinkedIn
-      </a>
-      <a href="https://www.youtube.com/@nathan8128" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-2C18.88 4 12 4 12 4s-6.88 0-8.59.42a2.78 2.78 0 0 0-1.95 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.95 1.95C5.12 19.5 12 19.5 12 19.5s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33ZM9.75 15.02V8.48l5.75 3.27-5.75 3.27Z"/></svg>
-        YouTube
-      </a>
-    </div>
 
   </div>
 
