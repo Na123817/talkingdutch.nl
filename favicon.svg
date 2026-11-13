@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
 <defs><radialGradient id="g" cx="50%" cy="45%" r="65%"><stop offset="0" stop-color="#4a2208"/><stop offset="1" stop-color="#0a0503"/></radialGradient>
 <linearGradient id="t" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff1d6"/><stop offset="1" stop-color="#f0781e"/></linearGradient></defs>
-<rect width="256" height="256" rx="52" fill="url(#g)"/>
-<g transform="translate(5.06 178.18) scale(0.13939)"><path d="M302.0 0 403.52 -564H121.52L149.6 -720H869.6L841.52 -564H559.52L458.0 0Z M817.0 0 946.6 -720H1517.6Q1558.6 -720 1588.5 -700.0Q1618.4 -680 1632.8700000000001 -646.5Q1647.3400000000001 -613 1639.96 -572L1563.6399999999999 -148Q1556.44 -108 1529.8200000000002 -74.0Q1503.2 -40 1466.1 -20.0Q1429.0 0 1388.0 0ZM999.0799999999999 -156H1408.08L1481.52 -564H1072.52Z" fill="url(#t)" stroke="#ff9a3c" stroke-width="45.2" stroke-linejoin="round" paint-order="stroke"/></g></svg>
+<rect width="256" height="256" rx="44" fill="url(#g)"/>
+<g transform="translate(-11.18 216.05) scale(0.15780 0.24459)"><path d="M302.0 0 403.52 -564H121.52L149.6 -720H869.6L841.52 -564H559.52L458.0 0Z M817.0 0 946.6 -720H1517.6Q1558.6 -720 1588.5 -700.0Q1618.4 -680 1632.8700000000001 -646.5Q1647.3400000000001 -613 1639.96 -572L1563.6399999999999 -148Q1556.44 -108 1529.8200000000002 -74.0Q1503.2 -40 1466.1 -20.0Q1429.0 0 1388.0 0ZM999.0799999999999 -156H1408.08L1481.52 -564H1072.52Z" fill="url(#t)" stroke="#ff9a3c" stroke-width="14" stroke-linejoin="round" paint-order="stroke"/></g></svg>
