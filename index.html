@@ -1055,7 +1055,10 @@
   html body .footer-col-group a.footer-cta-wa { margin-top: 0.4rem; color: #ffb067; }
   @media (max-width: 760px) { html body .site-footer-inner { grid-template-columns: 1fr 1fr; } html body .footer-brand, html body .footer-cta-col { grid-column: 1 / -1; } }
   /* Footer logo blends into the background (no tile) */
-  html body .footer-brand-icon { width: 112px; height: 112px; border-radius: 0; box-shadow: none; overflow: visible; background: none; margin: 4px 0 4px 2px; }
+  html body .footer-brand-icon { width: 72px; height: 72px; border-radius: 0; box-shadow: none; overflow: visible; background: none; margin: 0; position: absolute; right: 4px; bottom: 0; }
+  html body .site-footer-inner { position: relative; }
+  html body .footer-brand { position: static; will-change: auto !important; transform: none !important; filter: none !important; }
+  @media (max-width: 760px) { html body .footer-brand-icon { position: static; } }
   html body .footer-brand-icon img { mix-blend-mode: screen; object-fit: contain; -webkit-mask-image: radial-gradient(circle at 50% 50%, #000 58%, transparent 74%); mask-image: radial-gradient(circle at 50% 50%, #000 58%, transparent 74%); }
   .fc-hint {
     margin-top: auto;
