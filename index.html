@@ -1060,6 +1060,67 @@
   html body .testimonial-card .gflip-front > div:first-child { gap: 1.1rem !important; }
   html body .testimonial-card .gflip-front > div:first-child > div:first-child { width: 84px !important; height: 84px !important; }
   html body .testimonial-card .testimonial-author { font-size: 0.9rem; }
+  /* ── Header tools (search, links, login, register, cart) ── */
+  html body nav .nav-right { position: absolute; right: 2rem; top: 50%; transform: translateY(-50%); display: flex; align-items: center; gap: 0.35rem; z-index: 2; }
+  html body .nav-right button { font-family: 'Orbitron', sans-serif; cursor: pointer; }
+  html body .nr-icon { position: relative; width: 38px; height: 38px; display: inline-flex; align-items: center; justify-content: center; background: transparent; border: 0; border-radius: 50%; color: #f7ecd9; transition: color .2s, background .2s; }
+  html body .nr-icon:hover, html body .nr-icon[aria-expanded="true"] { color: var(--accent); background: rgba(232,119,34,0.14); }
+  html body .nr-text { background: transparent; border: 0; color: #f7ecd9; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.6rem 0.6rem; transition: color .2s; text-shadow: 0 1px 6px rgba(0,0,0,0.85); }
+  html body .nr-text:hover { color: var(--accent); }
+  html body .nr-pill { background: rgba(240,120,30,0.16); border: 1.5px solid rgba(240,120,30,0.9); color: #ffd9b0; font-size: 0.58rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.6rem 1rem; border-radius: 999px; transition: background .2s, transform .2s; }
+  html body .nr-pill:hover { background: rgba(240,120,30,0.32); color: #fff; transform: translateY(-1px); }
+  html body .nr-badge { position: absolute; top: 1px; right: 0; min-width: 17px; height: 17px; padding: 0 4px; border-radius: 999px; background: var(--accent); color: #fff; font: 700 0.62rem/17px 'Barlow', sans-serif; text-align: center; }
+  html body .nr-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 1990; }
+  html body .nr-panel { position: fixed; z-index: 2000; background: rgba(14,9,5,0.97); border: 1px solid rgba(232,119,34,0.55); border-radius: 14px; color: #f7ecd9; box-shadow: 0 18px 60px rgba(0,0,0,0.6); }
+  html body .nr-panel[hidden], html body .nr-backdrop[hidden] { display: none; }
+  html body .nr-search { top: 76px; left: 50%; transform: translateX(-50%); width: min(660px, 92vw); padding: 0.9rem; }
+  html body .nr-search input { width: 100%; box-sizing: border-box; padding: 0.85rem 1rem; border-radius: 10px; border: 1px solid rgba(232,119,34,0.5); background: rgba(0,0,0,0.45); color: #f7ecd9; font-size: 1rem; font-family: 'Barlow', sans-serif; outline: none; }
+  html body .nr-search input:focus { border-color: var(--accent); }
+  html body .nr-results { max-height: min(50vh, 380px); overflow-y: auto; margin-top: 0.5rem; scrollbar-width: none; }
+  html body .nr-results::-webkit-scrollbar { display: none; }
+  html body .nr-res { display: block; width: 100%; text-align: left; background: transparent; border: 0; border-radius: 8px; padding: 0.65rem 0.8rem; color: #f7ecd9; cursor: pointer; font-family: 'Barlow', sans-serif; }
+  html body .nr-res:hover, html body .nr-res:focus { background: rgba(232,119,34,0.16); outline: none; }
+  html body .nr-res small { display: block; color: var(--accent); font: 700 0.6rem 'Orbitron', sans-serif; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.15rem; }
+  html body .nr-res span { font-size: 0.92rem; color: rgba(247,236,217,0.85); line-height: 1.45; }
+  html body .nr-res mark { background: rgba(232,119,34,0.35); color: #fff; border-radius: 3px; padding: 0 2px; }
+  html body .nr-empty { padding: 0.8rem; color: rgba(247,236,217,0.65); font-size: 0.92rem; }
+  html body .nr-menu { min-width: 230px; padding: 0.5rem; }
+  html body .nr-menu a { display: block; padding: 0.6rem 0.85rem; border-radius: 8px; color: #f7ecd9; text-decoration: none; font-size: 0.95rem; font-family: 'Barlow', sans-serif; }
+  html body .nr-menu a:hover { background: rgba(232,119,34,0.16); color: var(--accent); }
+  html body .nr-sep { height: 1px; margin: 0.35rem 0.5rem; background: rgba(232,119,34,0.28); }
+  html body .nr-modal { top: 50%; left: 50%; transform: translate(-50%, -50%); width: min(440px, 92vw); padding: 2rem 1.8rem 1.6rem; text-align: center; }
+  html body .nr-modal h3, html body .nr-drawer h3 { margin: 0 0 0.8rem; font: 700 0.95rem 'Orbitron', sans-serif; letter-spacing: 0.12em; text-transform: uppercase; color: #f7ecd9; }
+  html body .nr-modal p { margin: 0 0 1.3rem; line-height: 1.65; color: rgba(247,236,217,0.85); font-size: 0.96rem; }
+  html body .nr-x { position: absolute; top: 0.6rem; right: 0.8rem; background: transparent; border: 0; color: #f7ecd9; font-size: 1.7rem; line-height: 1; cursor: pointer; }
+  html body .nr-x:hover { color: var(--accent); }
+  html body .nr-cta { display: block; width: 100%; box-sizing: border-box; text-align: center; text-decoration: none; background: rgba(240,120,30,0.16); border: 1.5px solid rgba(240,120,30,0.9); color: #ffd9b0; font: 700 0.68rem 'Orbitron', sans-serif; letter-spacing: 0.14em; text-transform: uppercase; padding: 0.9rem 1rem; border-radius: 999px; cursor: pointer; transition: background .2s; }
+  html body .nr-cta:hover { background: rgba(240,120,30,0.32); color: #fff; }
+  html body .nr-link { margin-top: 0.9rem; background: transparent; border: 0; color: var(--accent); text-decoration: underline; cursor: pointer; font-size: 0.92rem; font-family: 'Barlow', sans-serif; }
+  html body .nr-drawer { top: 0; right: 0; bottom: 0; width: min(390px, 100vw); border-radius: 0; border-width: 0 0 0 1px; display: flex; flex-direction: column; padding: 1.3rem 1.3rem 1.1rem; }
+  html body .nr-drawer[hidden] { display: none; }
+  html body .nr-drawer-head { display: flex; align-items: center; justify-content: space-between; }
+  html body .nr-drawer .nr-x { position: static; }
+  html body .nr-drawer-body { flex: 1; overflow-y: auto; scrollbar-width: none; margin: 0.6rem 0; }
+  html body .nr-drawer-body::-webkit-scrollbar { display: none; }
+  html body .nr-item { display: flex; flex-direction: column; gap: 0.5rem; padding: 0.9rem 0; border-bottom: 1px solid rgba(232,119,34,0.25); }
+  html body .nr-item-name { font-size: 1rem; line-height: 1.4; }
+  html body .nr-item-row { display: flex; align-items: center; justify-content: space-between; }
+  html body .nr-qty { display: inline-flex; align-items: center; gap: 0.5rem; }
+  html body .nr-qty button { width: 28px; height: 28px; border-radius: 50%; border: 1px solid rgba(232,119,34,0.6); background: transparent; color: #f7ecd9; cursor: pointer; font-size: 1rem; line-height: 1; }
+  html body .nr-qty button:hover { background: rgba(232,119,34,0.2); }
+  html body .nr-rm { background: transparent; border: 0; color: rgba(247,236,217,0.6); text-decoration: underline; cursor: pointer; font-size: 0.82rem; font-family: 'Barlow', sans-serif; }
+  html body .nr-rm:hover { color: var(--accent); }
+  html body .nr-empty-cart { text-align: center; padding: 2.5rem 0.5rem; color: rgba(247,236,217,0.8); line-height: 1.6; }
+  html body .nr-empty-cart .nr-cta { margin-top: 1.2rem; }
+  html body .nr-total { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.9rem; font-size: 1rem; }
+  html body .nr-total strong { font: 700 1.3rem 'Orbitron', sans-serif; color: #f7ecd9; }
+  html body .nr-note { margin: 0.8rem 0 0; font-size: 0.82rem; color: rgba(247,236,217,0.65); line-height: 1.5; text-align: center; }
+  html body .nr-flash { outline: 2px solid var(--accent); outline-offset: 6px; border-radius: 6px; transition: outline-color 1.6s; }
+  @media (min-width: 1301px) { html body nav { padding-left: 90px !important; padding-right: 350px !important; } }
+  @media (max-width: 1300px) {
+    html body nav .nav-logo { display: none; }
+    html body nav .nav-right { position: static; transform: none; margin-left: 0.6rem; flex: 0 0 auto; order: 99; }
+  }
   html body .footer-cta-text { margin: 0 0 0.6rem; font-size: 0.92rem; line-height: 1.55; color: rgba(247,236,217,0.75); }
   html body .footer-col-group a.footer-cta-btn { display: inline-flex; align-self: flex-start; padding: 0.7rem 1.3rem; border-radius: 999px; border: 1.5px solid rgba(240,120,30,0.9); background: rgba(240,120,30,0.16); color: #ffd9b0; font-weight: 600; transition: background .25s, transform .25s; }
   html body .footer-col-group a.footer-cta-btn:hover { background: rgba(240,120,30,0.32); color: #fff; transform: translateY(-2px); }
@@ -2947,6 +3008,13 @@
 
 <nav>
   <div class="nav-logo" role="link" tabindex="0" aria-label="Talking Dutch – Home" onclick="show('home')" onkeydown="if(event.key==='Enter')show('home')">TD</div>
+  <div class="nav-right">
+    <button type="button" class="nr-icon" id="nrSearchBtn" aria-label="Zoeken" title="Zoeken"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+    <button type="button" class="nr-icon" id="nrLinksBtn" aria-label="Handige links" title="Handige links" aria-haspopup="true" aria-expanded="false"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></button>
+    <button type="button" class="nr-text" id="nrLoginBtn">Inloggen</button>
+    <button type="button" class="nr-pill" id="nrRegisterBtn">Registreren</button>
+    <button type="button" class="nr-icon" id="nrCartBtn" aria-label="Winkelwagen" title="Winkelwagen"><svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="nr-badge" id="nrBadge" hidden>0</span></button>
+  </div>
   <a href="index.html" onclick="show('home'); return false;" class="active" id="tab-home">Home</a>
   <a href="about.html" onclick="show('about'); return false;" id="tab-about">Over mij</a>
   <a href="courseware.html" onclick="show('courseware'); return false;" id="tab-courseware">Lesmateriaal</a>
@@ -2991,7 +3059,7 @@
             <div class="price-amount"><span class="dollar">€</span><span class="big">25</span></div>
             <div class="price-per">/1 Uur via Google Meet</div>
             <div class="price-tier">Losse Les</div>
-            <button class="btn-purchase" onclick="openBookingForm('1 Uur - €25')">Bestellen</button>
+            <button class="btn-purchase" onclick="addToCart('1 Uur - €25')">Bestellen</button>
             <p class="price-note">Eén volledige les — plan hem wanneer je wilt, binnen 30 dagen.</p>
             <ul class="price-features">
               <li>Volledige privéles van 60 minuten</li>
@@ -3005,7 +3073,7 @@
             <div class="price-amount"><span class="dollar">€</span><span class="big">25</span></div>
             <div class="price-per">/1 Uur via Google Meet</div>
             <div class="price-tier">Losse Les</div>
-            <button class="btn-purchase" onclick="openBookingForm('1 Uur - €25')">Bestellen</button>
+            <button class="btn-purchase" onclick="addToCart('1 Uur - €25')">Bestellen</button>
             <p class="price-note">Eén volledige les — plan hem wanneer je wilt, binnen 30 dagen.</p>
             <ul class="price-features">
               <li>1 les van 60 minuten</li>
@@ -3024,7 +3092,7 @@
             <div class="price-amount"><span class="dollar">€</span><span class="big">120</span></div>
             <div class="price-per">/5 Uur via Google Meet</div>
             <div class="price-tier">5-Uur Pakket</div>
-            <button class="btn-purchase" onclick="openBookingForm('5 Uur - €120')">Bestellen</button>
+            <button class="btn-purchase" onclick="addToCart('5 Uur - €120')">Bestellen</button>
             <p class="price-note">5 uur te gebruiken binnen 60 dagen — bijv. 1 uur per week.</p>
             <ul class="price-features">
               <li>Wekelijkse Nederlandse lessen</li>
@@ -3038,7 +3106,7 @@
             <div class="price-amount"><span class="dollar">€</span><span class="big">120</span></div>
             <div class="price-per">/5 Uur via Google Meet</div>
             <div class="price-tier">5-Uur Pakket</div>
-            <button class="btn-purchase" onclick="openBookingForm('5 Uur - €120')">Bestellen</button>
+            <button class="btn-purchase" onclick="addToCart('5 Uur - €120')">Bestellen</button>
             <p class="price-note">5 uur te gebruiken binnen 60 dagen — bijv. 1 uur per week.</p>
             <ul class="price-features">
               <li>5 × 60 min of 6 × 50 min lessen</li>
@@ -3057,7 +3125,7 @@
             <div class="price-amount"><span class="dollar">€</span><span class="big">230</span></div>
             <div class="price-per">/10 Uur via Google Meet</div>
             <div class="price-tier">10-Uur Pakket</div>
-            <button class="btn-purchase" onclick="openBookingForm('10 Uur - €230')">Bestellen</button>
+            <button class="btn-purchase" onclick="addToCart('10 Uur - €230')">Bestellen</button>
             <p class="price-note">10 uur te gebruiken binnen 90 dagen — bijv. 2 uur per week.</p>
             <ul class="price-features">
               <li>Toegang tot lesprogramma &amp; materialen</li>
@@ -3071,7 +3139,7 @@
             <div class="price-amount"><span class="dollar">€</span><span class="big">230</span></div>
             <div class="price-per">/10 Uur via Google Meet</div>
             <div class="price-tier">10-Uur Pakket</div>
-            <button class="btn-purchase" onclick="openBookingForm('10 Uur - €230')">Bestellen</button>
+            <button class="btn-purchase" onclick="addToCart('10 Uur - €230')">Bestellen</button>
             <p class="price-note">10 uur te gebruiken binnen 90 dagen — bijv. 2 uur per week.</p>
             <ul class="price-features">
               <li>10 × 60 min of 12 × 50 min lessen</li>
@@ -3090,7 +3158,7 @@
             <div class="price-amount"><span class="dollar">€</span><span class="big">1.050</span></div>
             <div class="price-per">/50 Uur via Google Meet</div>
             <div class="price-tier">Blok 1</div>
-            <button class="btn-purchase" onclick="openBookingForm('50 Uur (Blok 1) - €1.050')">Bestellen</button>
+            <button class="btn-purchase" onclick="addToCart('50 Uur (Blok 1) - €1.050')">Bestellen</button>
             <p class="price-note">2 uur per week gedurende 175 dagen — B1-verdieping.</p>
             <ul class="price-features">
               <li>Volledig Blok 1 (20 modules)</li>
@@ -3104,7 +3172,7 @@
             <div class="price-amount"><span class="dollar">€</span><span class="big">1.050</span></div>
             <div class="price-per">/50 Uur via Google Meet</div>
             <div class="price-tier">Blok 1</div>
-            <button class="btn-purchase" onclick="openBookingForm('50 Uur (Blok 1) - €1.050')">Bestellen</button>
+            <button class="btn-purchase" onclick="addToCart('50 Uur (Blok 1) - €1.050')">Bestellen</button>
             <p class="price-note">2 uur per week gedurende 175 dagen — B1-verdieping.</p>
             <ul class="price-features">
               <li>50 × 60 min of 60 × 50 min lessen</li>
@@ -3123,7 +3191,7 @@
             <div class="price-amount"><span class="dollar">€</span><span class="big">1.900</span></div>
             <div class="price-per">/100 Uur via Google Meet</div>
             <div class="price-tier">Blokken 1 + 2</div>
-            <button class="btn-purchase" onclick="openBookingForm('100 Uur (Blokken 1+2) - €1.900')">Bestellen</button>
+            <button class="btn-purchase" onclick="addToCart('100 Uur (Blokken 1+2) - €1.900')">Bestellen</button>
             <p class="price-note">3 uur per week gedurende 235 dagen.</p>
             <ul class="price-features">
               <li>Blokken 1 &amp; 2 (40 modules)</li>
@@ -3137,7 +3205,7 @@
             <div class="price-amount"><span class="dollar">€</span><span class="big">1.900</span></div>
             <div class="price-per">/100 Uur via Google Meet</div>
             <div class="price-tier">Blokken 1 + 2</div>
-            <button class="btn-purchase" onclick="openBookingForm('100 Uur (Blokken 1+2) - €1.900')">Bestellen</button>
+            <button class="btn-purchase" onclick="addToCart('100 Uur (Blokken 1+2) - €1.900')">Bestellen</button>
             <p class="price-note">3 uur per week gedurende 235 dagen.</p>
             <ul class="price-features">
               <li>100 × 60 min of 120 × 50 min lessen</li>
@@ -3156,7 +3224,7 @@
             <div class="price-amount"><span class="dollar">€</span><span class="big">2.550</span></div>
             <div class="price-per">/150 Uur via Google Meet</div>
             <div class="price-tier">Volledige Cursus B1 → B2</div>
-            <button class="btn-purchase" onclick="openBookingForm('150 Uur (Volledige Cursus) - €2.550')">Bestellen</button>
+            <button class="btn-purchase" onclick="addToCart('150 Uur (Volledige Cursus) - €2.550')">Bestellen</button>
             <p class="price-note">3 uur per week gedurende 350 dagen — het volledige programma tot B2.</p>
             <ul class="price-features">
               <li>Volledig B1 → B2 curriculum (60 modules)</li>
@@ -3170,7 +3238,7 @@
             <div class="price-amount"><span class="dollar">€</span><span class="big">2.550</span></div>
             <div class="price-per">/150 Uur via Google Meet</div>
             <div class="price-tier">Volledige Cursus B1 → B2</div>
-            <button class="btn-purchase" onclick="openBookingForm('150 Uur (Volledige Cursus) - €2.550')">Bestellen</button>
+            <button class="btn-purchase" onclick="addToCart('150 Uur (Volledige Cursus) - €2.550')">Bestellen</button>
             <p class="price-note">3 uur per week gedurende 350 dagen — het volledige programma tot B2.</p>
             <ul class="price-features">
               <li>150 × 60 min of 180 × 50 min lessen</li>
@@ -5313,4 +5381,187 @@ f();addEventListener('resize',f);addEventListener('load',f);if(document.fonts&&d
   if(typeof show==='function'){var o=show;window.show=show=function(id){o.apply(this,arguments);try{if(ids.indexOf(id)>-1&&history.replaceState)history.replaceState(null,'','#'+id);}catch(e){}};}
 })();
 </script>
+
+<!-- Header tools: search, links, login, cart -->
+<div class="nr-backdrop" id="nrBackdrop" hidden></div>
+
+<div class="nr-panel nr-search" id="nrSearchPanel" role="dialog" aria-label="Zoeken" hidden>
+  <input type="search" id="nrSearchInput" placeholder="Zoek pakketten, veelgestelde vragen, syllabus, blog…" autocomplete="off" aria-label="Zoeken">
+  <div class="nr-results" id="nrResults"></div>
+</div>
+
+<div class="nr-panel nr-menu" id="nrLinksMenu" hidden>
+  <a href="#" data-go="contact">Boek een proefles</a>
+  <a href="#" data-go="syllabus">Syllabus</a>
+  <a href="#" data-go="faq">Veelgestelde vragen</a>
+  <a href="#" data-go="terms">Algemene Voorwaarden</a>
+  <a href="#" data-go="privacy">Privacybeleid</a>
+  <div class="nr-sep"></div>
+  <a href="https://wa.me/31614479334" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+  <a href="#" data-social="Facebook" target="_blank" rel="noopener noreferrer">Facebook</a>
+  <a href="#" data-social="LinkedIn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  <a href="#" data-social="YouTube" target="_blank" rel="noopener noreferrer">YouTube</a>
+  <div class="nr-sep"></div>
+  <a href="https://talkingdutch.com">English version (.com)</a>
+</div>
+
+<div class="nr-panel nr-modal" id="nrLoginModal" role="dialog" aria-label="Inloggen voor studenten" hidden>
+  <button type="button" class="nr-x" data-close aria-label="Sluiten">&times;</button>
+  <h3>Inloggen voor studenten</h3>
+  <p>Je persoonlijke voortgangstracker is een privélink die Jonathan met je heeft gedeeld toen je met lessen begon. Kun je hem niet vinden? Stuur me een bericht en ik stuur hem opnieuw.</p>
+  <a class="nr-cta" href="https://wa.me/31614479334" target="_blank" rel="noopener noreferrer">Stuur Jonathan een WhatsApp-bericht</a>
+  <button type="button" class="nr-link" id="nrLoginToRegister">Nog geen student? Registreren</button>
+</div>
+
+<aside class="nr-panel nr-drawer" id="nrCartDrawer" role="dialog" aria-label="Je winkelwagen" hidden>
+  <div class="nr-drawer-head"><h3>Je winkelwagen</h3><button type="button" class="nr-x" data-close aria-label="Sluiten">&times;</button></div>
+  <div class="nr-drawer-body" id="nrCartBody"></div>
+  <div class="nr-drawer-foot" id="nrCartFoot">
+    <div class="nr-total"><span>Totaal</span><strong id="nrCartTotal">€0</strong></div>
+    <button type="button" class="nr-cta" id="nrCheckout">Bestelling aanvragen</button>
+    <p class="nr-note">Nu nog niets betalen. Ik bevestig je bestelling en stuur de betaalgegevens per e-mail.</p>
+  </div>
+</aside>
+
+<script>
+(function () {
+  var L = {"search": "Zoeken", "searchph": "Zoek pakketten, veelgestelde vragen, syllabus, blog…", "nores": "Geen resultaten. Probeer een ander trefwoord.", "links": "Handige links", "login": "Inloggen", "register": "Registreren", "cart": "Winkelwagen", "close": "Sluiten", "l_book": "Boek een proefles", "l_syl": "Syllabus", "l_faq": "Veelgestelde vragen", "l_terms": "Algemene Voorwaarden", "l_priv": "Privacybeleid", "l_other": "English version (.com)", "other_url": "https://talkingdutch.com", "lg_title": "Inloggen voor studenten", "lg_text": "Je persoonlijke voortgangstracker is een privélink die Jonathan met je heeft gedeeld toen je met lessen begon. Kun je hem niet vinden? Stuur me een bericht en ik stuur hem opnieuw.", "lg_wa": "Stuur Jonathan een WhatsApp-bericht", "lg_new": "Nog geen student? Registreren", "c_title": "Je winkelwagen", "c_empty": "Je winkelwagen is leeg. Kies een pakket op de pagina Pakketten.", "c_browse": "Bekijk pakketten", "c_total": "Totaal", "c_go": "Bestelling aanvragen", "c_note": "Nu nog niets betalen. Ik bevestig je bestelling en stuur de betaalgegevens per e-mail.", "c_remove": "Verwijderen", "order": "Bestelaanvraag:", "pages": {"home": "Home", "about": "Over mij", "courseware": "Lesmateriaal", "services": "Pakketten", "syllabus": "Lesprogramma", "faq": "FAQ", "blog": "Blog", "contact": "Contact", "terms": "Voorwaarden", "privacy": "Privacy"}};
+  var $ = function (id) { return document.getElementById(id); };
+  var KEY = 'td_cart_v1';
+  var cart = [];
+  try { cart = JSON.parse(localStorage.getItem(KEY) || '[]') || []; } catch (e) { cart = []; }
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(cart)); } catch (e) {} }
+  function priceOf(name) {
+    var m = /€\s*([\d.,]+)/.exec(name); if (!m) return 0;
+    return parseInt(m[1].replace(/[.,](?=\d{3}\b)/g, '').replace(/[.,]\d+$/, ''), 10) || 0;
+  }
+  function fmt(n) { return '€' + String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+  var panels = ['nrSearchPanel', 'nrLinksMenu', 'nrLoginModal', 'nrCartDrawer'];
+  function closeAll() {
+    panels.forEach(function (id) { $(id).hidden = true; });
+    $('nrBackdrop').hidden = true; $('nrBackdrop').style.background = '';
+    $('nrLinksBtn').setAttribute('aria-expanded', 'false');
+  }
+  function open(id, withBackdrop) {
+    closeAll(); $(id).hidden = false; if (withBackdrop !== false) $('nrBackdrop').hidden = false;
+  }
+  $('nrBackdrop').addEventListener('click', closeAll);
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeAll(); });
+  document.querySelectorAll('.nr-panel [data-close]').forEach(function (b) { b.addEventListener('click', closeAll); });
+
+  // ── Cart ──
+  function count() { return cart.reduce(function (a, i) { return a + i.qty; }, 0); }
+  function renderCart() {
+    var body = $('nrCartBody'), n = count();
+    var badge = $('nrBadge'); badge.textContent = n; badge.hidden = !n;
+    $('nrCartFoot').style.display = n ? '' : 'none';
+    if (!n) {
+      body.innerHTML = '<div class="nr-empty-cart">' + L.c_empty + '<button type="button" class="nr-cta" id="nrBrowse">' + L.c_browse + '</button></div>';
+      $('nrBrowse').onclick = function () { closeAll(); show('services'); };
+      return;
+    }
+    var total = 0;
+    body.innerHTML = cart.map(function (it, i) {
+      total += priceOf(it.name) * it.qty;
+      return '<div class="nr-item"><div class="nr-item-name"></div><div class="nr-item-row"><span class="nr-qty">' +
+        '<button type="button" data-dec="' + i + '" aria-label="-">−</button><span>' + it.qty + '</span>' +
+        '<button type="button" data-inc="' + i + '" aria-label="+">+</button></span>' +
+        '<button type="button" class="nr-rm" data-rm="' + i + '">' + L.c_remove + '</button></div></div>';
+    }).join('');
+    body.querySelectorAll('.nr-item-name').forEach(function (el, i) { el.textContent = cart[i].name; });
+    $('nrCartTotal').textContent = fmt(total);
+    body.querySelectorAll('[data-inc]').forEach(function (b) { b.onclick = function () { cart[+b.dataset.inc].qty++; save(); renderCart(); }; });
+    body.querySelectorAll('[data-dec]').forEach(function (b) { b.onclick = function () { var it = cart[+b.dataset.dec]; it.qty--; if (it.qty < 1) cart.splice(+b.dataset.dec, 1); save(); renderCart(); }; });
+    body.querySelectorAll('[data-rm]').forEach(function (b) { b.onclick = function () { cart.splice(+b.dataset.rm, 1); save(); renderCart(); }; });
+  }
+  window.addToCart = function (name) {
+    var f = cart.filter(function (i) { return i.name === name; })[0];
+    if (f) f.qty++; else cart.push({ name: name, qty: 1 });
+    save(); renderCart(); open('nrCartDrawer');
+  };
+  $('nrCartBtn').addEventListener('click', function () { renderCart(); open('nrCartDrawer'); });
+  $('nrCheckout').addEventListener('click', function () {
+    if (!cart.length) return;
+    var total = 0, lines = cart.map(function (i) { total += priceOf(i.name) * i.qty; return '• ' + i.qty + ' × ' + i.name; });
+    var msg = L.order + '\n' + lines.join('\n') + '\n' + L.c_total + ': ' + fmt(total);
+    try { __pendingPackage = cart[0].name; } catch (e) {}
+    closeAll(); show('contact');
+    setTimeout(function () { var t = $('qbfMessage'); if (t) t.value = msg; }, 80);
+  });
+
+  // ── Login / Register ──
+  $('nrLoginBtn').addEventListener('click', function () { open('nrLoginModal'); });
+  $('nrLoginToRegister').addEventListener('click', function () { closeAll(); show('contact'); });
+  $('nrRegisterBtn').addEventListener('click', function () { closeAll(); show('contact'); });
+
+  // ── Useful links ──
+  $('nrLinksBtn').addEventListener('click', function () {
+    var menu = $('nrLinksMenu');
+    if (!menu.hidden) { closeAll(); return; }
+    document.querySelectorAll('.footer-social a[aria-label]').forEach(function (a) {
+      var t = menu.querySelector('[data-social="' + a.getAttribute('aria-label') + '"]'); if (t) t.href = a.href;
+    });
+    open('nrLinksMenu', false);
+    var r = this.getBoundingClientRect();
+    menu.style.top = (r.bottom + 8) + 'px';
+    menu.style.right = Math.max(8, window.innerWidth - r.right) + 'px';
+    menu.style.left = 'auto';
+    this.setAttribute('aria-expanded', 'true');
+    $('nrBackdrop').hidden = false; $('nrBackdrop').style.background = 'transparent';
+  });
+  $('nrBackdrop').addEventListener('click', function () { this.style.background = ''; });
+  document.querySelectorAll('#nrLinksMenu [data-go]').forEach(function (a) {
+    a.addEventListener('click', function (e) { e.preventDefault(); closeAll(); show(a.dataset.go); });
+  });
+
+  // ── Search ──
+  var index = null;
+  function buildIndex() {
+    var out = [], seen = {};
+    document.querySelectorAll('.page').forEach(function (pg) {
+      var label = L.pages[pg.id] || pg.id;
+      pg.querySelectorAll('h2,h3,h4,p,li,.faq-q,.price-tier,.price-days').forEach(function (el) {
+        if (el.closest('form,.nr-panel,nav,footer')) return;
+        var t = (el.textContent || '').replace(/\s+/g, ' ').replace(/\s*[▼▲+−]\s*$/, '').trim();
+        if (t.length < 4 || t.length > 420) return;
+        var k = pg.id + '|' + t; if (seen[k]) return; seen[k] = 1;
+        out.push({ page: pg.id, label: label, text: t, low: t.toLowerCase(), head: /^H[2-4]$/.test(el.tagName) || el.classList.contains('faq-q') || el.classList.contains('price-tier'), el: el });
+      });
+    });
+    return out;
+  }
+  function esc(s) { return s.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function snippet(text, q) {
+    var i = text.toLowerCase().indexOf(q), s = Math.max(0, i - 35), e = Math.min(text.length, i + q.length + 70);
+    var part = text.slice(s, e), j = i - s;
+    return (s ? '…' : '') + esc(part.slice(0, j)) + '<mark>' + esc(part.slice(j, j + q.length)) + '</mark>' + esc(part.slice(j + q.length)) + (e < text.length ? '…' : '');
+  }
+  function runSearch() {
+    var q = $('nrSearchInput').value.trim().toLowerCase(), box = $('nrResults');
+    if (q.length < 2) { box.innerHTML = ''; return; }
+    if (!index) index = buildIndex();
+    var hits = index.filter(function (x) { return x.low.indexOf(q) > -1; });
+    hits.sort(function (a, b) { return (b.head - a.head) || (a.text.length - b.text.length); });
+    hits = hits.slice(0, 8);
+    if (!hits.length) { box.innerHTML = '<div class="nr-empty">' + L.nores + '</div>'; return; }
+    box.innerHTML = hits.map(function (h, i) { return '<button type="button" class="nr-res" data-i="' + i + '"><small>' + esc(h.label) + '</small><span>' + snippet(h.text, q) + '</span></button>'; }).join('');
+    box.querySelectorAll('.nr-res').forEach(function (b) {
+      b.onclick = function () {
+        var h = hits[+b.dataset.i]; closeAll(); show(h.page);
+        setTimeout(function () {
+          h.el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          h.el.classList.add('nr-flash'); setTimeout(function () { h.el.classList.remove('nr-flash'); }, 2200);
+        }, 450);
+      };
+    });
+  }
+  $('nrSearchBtn').addEventListener('click', function () {
+    index = null; open('nrSearchPanel'); var i = $('nrSearchInput'); i.value = ''; $('nrResults').innerHTML = ''; setTimeout(function () { i.focus(); }, 30);
+  });
+  $('nrSearchInput').addEventListener('input', runSearch);
+
+  renderCart();
+})();
+</script>
+
 </body></html>
