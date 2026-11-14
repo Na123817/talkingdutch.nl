@@ -1051,7 +1051,6 @@
   html body .footer-col-heading { color: #f7ecd9 !important; }
   html body nav .nav-logo { position: absolute; left: 2rem; top: 50%; transform: translateY(-50%); display: flex; align-items: center; justify-content: center; height: 44px; padding: 0 0.4rem; cursor: pointer; z-index: 2; font-family: 'Orbitron', sans-serif; font-weight: 700; font-size: 1.7rem; letter-spacing: 0.08em; line-height: 1; color: var(--accent); text-shadow: 0 1px 6px rgba(0,0,0,0.85), 0 0 14px rgba(0,0,0,0.6); }
   html body nav .nav-logo:hover { color: #ffb877; }
-  @media (max-width: 1060px) { html body nav .nav-logo { display: none; } }
   html body .qbf-field input, html body .qbf-field select, html body .qbf-field textarea { background-color: rgba(0,0,0,0.45) !important; border-color: rgba(232,119,34,0.5) !important; }
   html body .qbf-field input:focus, html body .qbf-field select:focus, html body .qbf-field textarea:focus { background-color: rgba(0,0,0,0.6) !important; }
   html body .qbf-field select option { background: #1a0e06; color: #f7ecd9; }
@@ -1118,7 +1117,7 @@
   html body .nr-flash { outline: 2px solid var(--accent); outline-offset: 6px; border-radius: 6px; transition: outline-color 1.6s; }
   @media (min-width: 1301px) { html body nav { padding-left: 90px !important; padding-right: 350px !important; } }
   @media (max-width: 1300px) {
-    html body nav .nav-logo { display: none; }
+    html body nav .nav-logo { position: static; transform: none; order: -1; flex: 0 0 auto; margin: 0 0.4rem 0 0.2rem; font-size: 1.35rem; }
     html body nav .nav-right { position: static; transform: none; margin-left: 0.6rem; flex: 0 0 auto; order: 99; }
   }
   /* Main page titles: white. Section titles below them stay creamy white. */
