@@ -1138,6 +1138,17 @@
     html body .nr-text, html body .nr-pill { display: none; }
     html body .nr-menu a.nr-m { display: block !important; }
   }
+  /* Contact: bright sky photo, so give the header tabs, tools and title a darker backing for legibility */
+  html body #contact.page > .page-photo::after { background: linear-gradient(180deg, rgba(8,5,3,0.78) 0, rgba(8,5,3,0.55) 9%, rgba(8,5,3,0.18) 24%, rgba(8,5,3,0.06) 40%, rgba(8,5,3,0.06) 60%, rgba(8,5,3,0.55) 100%), radial-gradient(ellipse 45% 22% at 50% 21%, rgba(8,5,3,0.5), rgba(8,5,3,0) 100%) !important; }
+  html body:has(#contact.page.active) nav a { background: rgba(8,5,3,0.78) !important; border-color: rgba(232,119,34,0.75) !important; color: #ffa24d !important; }
+  html body:has(#contact.page.active) nav a.active { background: rgba(60,28,8,0.88) !important; color: #ffd9b0 !important; }
+  html body:has(#contact.page.active) nav .nr-icon, html body:has(#contact.page.active) nav .nr-pill { background-color: rgba(8,5,3,0.6); text-shadow: 0 1px 6px rgba(0,0,0,0.9); }
+  html body:has(#contact.page.active) nav .nav-logo { text-shadow: 0 2px 10px rgba(0,0,0,0.9); }
+  html body #contact.page .page-title, html body #contact.page .page-title * { text-shadow: 0 2px 14px rgba(0,0,0,0.85), 0 0 30px rgba(0,0,0,0.6) !important; }
+  html body #contact.page .qbf-field label { color: #ffb46e !important; font-size: 0.68rem !important; text-shadow: 0 1px 4px rgba(0,0,0,0.7); }
+  html body #contact.page .qbf-field input::placeholder, html body #contact.page .qbf-field textarea::placeholder { color: rgba(247,236,217,0.62) !important; }
+  html body #contact.page .qbf-field input, html body #contact.page .qbf-field select, html body #contact.page .qbf-field textarea { color: #fff4e3 !important; font-size: 1rem !important; }
+  html body #contact.page .contact-page p, html body #contact.page .contact-page li { color: rgba(247,236,217,0.92); }
   html body .footer-cta-text { margin: 0 0 0.6rem; font-size: 0.92rem; line-height: 1.55; color: rgba(247,236,217,0.75); }
   html body .footer-col-group a.footer-cta-btn { display: inline-flex; align-self: flex-start; padding: 0.7rem 1.3rem; border-radius: 999px; border: 1.5px solid rgba(240,120,30,0.9); background: rgba(240,120,30,0.16); color: #ffd9b0; font-weight: 600; transition: background .25s, transform .25s; }
   html body .footer-col-group a.footer-cta-btn:hover { background: rgba(240,120,30,0.32); color: #fff; transform: translateY(-2px); }
@@ -5409,16 +5420,8 @@ f();addEventListener('resize',f);addEventListener('load',f);if(document.fonts&&d
 <div class="nr-panel nr-menu" id="nrLinksMenu" hidden>
   <a href="#" class="nr-m" data-act="login">Inloggen</a>
   <div class="nr-sep nr-m"></div>
-  <a href="#" data-go="contact">Boek een proefles</a>
-  <a href="#" data-go="syllabus">Syllabus</a>
-  <a href="#" data-go="faq">Veelgestelde vragen</a>
-  <a href="#" data-go="terms">Algemene Voorwaarden</a>
+  <a href="#" data-go="contact">Boek proefles</a>
   <a href="#" data-go="privacy">Privacybeleid</a>
-  <div class="nr-sep"></div>
-  <a href="https://wa.me/31614479334" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-  <a href="#" data-social="Facebook" target="_blank" rel="noopener noreferrer">Facebook</a>
-  <a href="#" data-social="LinkedIn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-  <a href="#" data-social="YouTube" target="_blank" rel="noopener noreferrer">YouTube</a>
   <div class="nr-sep"></div>
   <a href="https://talkingdutch.com">English version (.com)</a>
 </div>
@@ -5427,7 +5430,7 @@ f();addEventListener('resize',f);addEventListener('load',f);if(document.fonts&&d
   <button type="button" class="nr-x" data-close aria-label="Sluiten">&times;</button>
   <h3>Inloggen voor studenten</h3>
   <p>Je persoonlijke voortgangstracker is een privélink die Jonathan met je heeft gedeeld toen je met lessen begon. Kun je hem niet vinden? Stuur me een bericht en ik stuur hem opnieuw.</p>
-  <a class="nr-cta" href="https://wa.me/31614479334" target="_blank" rel="noopener noreferrer">Stuur Jonathan een WhatsApp-bericht</a>
+  <a class="nr-cta" href="https://wa.me/31614479334" target="_blank" rel="noopener noreferrer">Bericht sturen</a>
   <button type="button" class="nr-link" id="nrLoginToRegister">Nog geen student? Registreren</button>
 </div>
 
