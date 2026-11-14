@@ -251,8 +251,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="image" href="netherlands-satellite.webp" fetchpriority="high">
-<link rel="preload" as="image" href="home-bg-amsterdam.webp" fetchpriority="high">
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="home-bg-amsterdam-opt.webp" fetchpriority="high">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Barlow:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
 <style>
   :root {
     color-scheme: dark;
@@ -3043,7 +3044,7 @@
 
 <!-- ══════════ HOME ══════════ -->
 <div class="page active" id="home">
-  <figure class="page-photo"><img src="home-bg-amsterdam.webp" alt="Amsterdam" fetchpriority="high" decoding="async"></figure>
+  <figure class="page-photo"><img src="home-bg-amsterdam-opt.webp" alt="Amsterdam" fetchpriority="high" decoding="async"></figure>
   <div class="hero">
     <div class="hero-inner">
 
@@ -3369,7 +3370,7 @@
 <!-- ══════════ COURSEWARE ══════════ -->
 <div class="page" id="courseware">
   <div class="content">
-    <figure class="page-photo"><img src="courseware-bg-hyacinth.webp" alt="Hyacintenvelden bij zonsondergang" loading="lazy" decoding="async"></figure>
+    <figure class="page-photo"><img src="courseware-bg-hyacinth-opt.webp" alt="Hyacintenvelden bij zonsondergang" loading="lazy" decoding="async"></figure>
     <div class="page-title" id="coursewareTitle"></div>
     
     <div class="home-section-label cw-kicker">Wat je krijgt</div>
@@ -3519,7 +3520,7 @@
 <div class="page" id="services">
   <!-- PACKAGES SECTION -->
   <div class="services-wrap">
-    <figure class="page-photo"><img src="packages-bg-cheese.webp" alt="Kaasboerderij" loading="lazy" decoding="async"></figure>
+    <figure class="page-photo"><img src="packages-bg-cheese-opt.webp" alt="Kaasboerderij" loading="lazy" decoding="async"></figure>
     <div class="page-title" id="servicesTitle"></div>
     
     <div class="services-layout">
@@ -3819,7 +3820,7 @@
 
 <!-- ══════════ SYLLABUS ══════════ -->
 <div class="page" id="syllabus">
-  <figure class="page-photo"><img src="syllabus-bg-festival.webp" alt="Koningsdag" loading="lazy" decoding="async"></figure>
+  <figure class="page-photo"><img src="syllabus-bg-festival-opt.webp" alt="Koningsdag" loading="lazy" decoding="async"></figure>
   <div class="page-hero">
     <div class="page-hero-inner">
       <div class="pt-label" style="display:none">Curriculum</div>
@@ -4266,7 +4267,7 @@
 <!-- ══════════ FAQ ══════════ -->
 <div class="page" id="faq">
   <div class="content">
-    <figure class="page-photo"><img src="contact-bg-giethoorn.webp" alt="Rieten daken en grachten in Giethoorn" loading="lazy" decoding="async"></figure>
+    <figure class="page-photo"><img src="contact-bg-giethoorn-opt.webp" alt="Rieten daken en grachten in Giethoorn" loading="lazy" decoding="async"></figure>
     <div class="page-title" id="faqTitle"></div>
     
     <div class="orange-panel">
@@ -4815,7 +4816,7 @@
 
 <!-- ══════════ ABOUT ══════════ -->
 <div class="page" id="about">
-  <figure class="page-photo"><img src="about-bg-canalhouse.webp" alt="Rietgedekt huis met bloementuin en bootjes aan een gracht in Giethoorn" loading="lazy" decoding="async"></figure>
+  <figure class="page-photo"><img src="about-bg-canalhouse-opt.webp" alt="Rietgedekt huis met bloementuin en bootjes aan een gracht in Giethoorn" loading="lazy" decoding="async"></figure>
   <div class="content" style="max-width:860px;">
     <div class="page-title" id="aboutTitle"></div>
     
@@ -4898,7 +4899,7 @@
 
 <!-- ══════════ BLOG ══════════ -->
 <div class="page" id="blog">
-  <figure class="page-photo"><img src="contact-bg-canal.webp" alt="Amsterdamse grachtenpanden" loading="lazy" decoding="async"></figure>
+  <figure class="page-photo"><img src="contact-bg-canal-opt.webp" alt="Amsterdamse grachtenpanden" loading="lazy" decoding="async"></figure>
   <div class="page-hero">
     <div class="page-hero-inner">
       <div class="pt-label" style="display:none">Inzichten</div>
@@ -5141,7 +5142,7 @@
 
 <!-- ══════════ CONTACT ══════════ -->
 <div class="page" id="contact">
-  <figure class="page-photo"><img src="contact-bg-summer-hd.webp" alt="Twee fietsers op een dijk door het Hollandse polderlandschap" loading="lazy" decoding="async"></figure>
+  <figure class="page-photo"><img src="contact-bg-summer-hd-opt.webp" alt="Twee fietsers op een dijk door het Hollandse polderlandschap" loading="lazy" decoding="async"></figure>
   <div class="contact-page">
     <div class="page-title" id="contactTitle"></div>
     <div class="contact-hero">
@@ -5586,4 +5587,20 @@ f();addEventListener('resize',f);addEventListener('load',f);if(document.fonts&&d
 })();
 </script>
 
+<script>
+// Warm the cache: once the page has loaded, quietly fetch every other page's photo so tab switches are instant
+window.addEventListener('load', function () {
+  var order = ['contact', 'services', 'syllabus', 'faq', 'blog', 'about', 'courseware'];
+  var i = 0;
+  function next() {
+    if (i >= order.length) return;
+    var pg = document.getElementById(order[i++]);
+    var img = pg && pg.querySelector('.page-photo img');
+    if (img) { img.loading = 'eager'; var pre = new Image(); pre.decoding = 'async'; pre.src = img.currentSrc || img.src; }
+    setTimeout(next, 350);
+  }
+  var start = function () { setTimeout(next, 600); };
+  if ('requestIdleCallback' in window) requestIdleCallback(start, { timeout: 2500 }); else start();
+});
+</script>
 </body></html>
