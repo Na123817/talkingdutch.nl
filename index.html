@@ -1135,6 +1135,7 @@
   .nr-m { display: none !important; }
   @media (max-width: 700px) {
     html body nav .nav-right { position: sticky; right: 0; margin-left: 0.3rem; padding-left: 2rem; background: linear-gradient(90deg, rgba(8,5,3,0) 0, rgba(8,5,3,0.88) 1.8rem); }
+    html body .nav-right.nr-float { position: absolute; top: 66px; right: 0.6rem; left: auto; transform: none; margin: 0; padding: 0.15rem 0.5rem; gap: 0.1rem; display: flex; align-items: center; border-radius: 999px; background: rgba(8,5,3,0.82); border: 1px solid rgba(232,119,34,0.45); z-index: 1001; backdrop-filter: blur(6px); }
     html body .nr-text, html body .nr-pill { display: none; }
     html body .nr-menu a.nr-m { display: block !important; }
   }
@@ -5603,5 +5604,24 @@ window.addEventListener('load', function () {
   var start = function () { setTimeout(next, 600); };
   if ('requestIdleCallback' in window) requestIdleCallback(start, { timeout: 2500 }); else start();
 });
+</script>
+<script>
+// Phones: float the search / links / cart cluster just below the tab row so it never covers the tabs
+(function () {
+  var nr = document.querySelector('nav .nav-right'), nav = document.querySelector('nav');
+  if (!nr || !nav || !window.matchMedia) return;
+  var mq = window.matchMedia('(max-width: 700px)');
+  function place() {
+    if (mq.matches) {
+      if (nr.parentNode === nav) { nr.classList.add('nr-float'); document.body.appendChild(nr); }
+      nr.style.top = (nav.getBoundingClientRect().height + window.scrollY + 6) + 'px';
+    } else if (nr.parentNode !== nav) {
+      nr.classList.remove('nr-float'); nr.style.top = ''; nav.insertBefore(nr, nav.children[1] || null);
+    }
+  }
+  place();
+  (mq.addEventListener ? mq.addEventListener('change', place) : mq.addListener(place));
+  window.addEventListener('load', place); window.addEventListener('resize', place);
+})();
 </script>
 </body></html>
