@@ -5524,7 +5524,8 @@ f();addEventListener('resize',f);addEventListener('load',f);if(document.fonts&&d
     open('nrLinksMenu', false);
     var r = this.getBoundingClientRect();
     menu.style.top = (r.bottom + 8) + 'px';
-    menu.style.right = Math.max(8, window.innerWidth - r.right) + 'px';
+    var rc = $('nrCartBtn').getBoundingClientRect();
+    menu.style.right = Math.max(8, window.innerWidth - rc.right) + 'px';
     menu.style.left = 'auto';
     this.setAttribute('aria-expanded', 'true');
     $('nrBackdrop').hidden = false; $('nrBackdrop').style.background = 'transparent';
