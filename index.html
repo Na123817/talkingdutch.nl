@@ -5620,4 +5620,31 @@ window.addEventListener('load', function () {
   window.addEventListener('load', place); window.addEventListener('resize', place);
 })();
 </script>
+<script>
+// Tablets: shrink the tab labels just enough that every tab is fully visible (no sideways scrolling)
+(function () {
+  var nav = document.querySelector('nav');
+  if (!nav) return;
+  function tabs() { return [].slice.call(nav.querySelectorAll(':scope > a')).filter(function (a) { return a.offsetWidth; }); }
+  function reset() { tabs().forEach(function (a) { a.style.removeProperty('font-size'); a.style.removeProperty('padding'); a.style.removeProperty('letter-spacing'); }); nav.style.removeProperty('gap'); }
+  function fit() {
+    reset();
+    var w = window.innerWidth;
+    if (w > 1100 || w < 560) { nav.scrollLeft = 0; return; }
+    var a0 = tabs()[0]; if (!a0) return;
+    var fs = parseFloat(getComputedStyle(a0).fontSize);
+    var guard = 0;
+    while (nav.scrollWidth > nav.clientWidth + 1 && fs > 6.5 && guard++ < 60) {
+      fs -= 0.3;
+      tabs().forEach(function (a) { a.style.setProperty('font-size', fs + 'px', 'important'); a.style.setProperty('padding', '0.62em 0.85em', 'important'); a.style.setProperty('letter-spacing', '0.09em', 'important'); });
+      nav.style.setProperty('gap', Math.max(4, fs * 0.45) + 'px');
+    }
+    nav.scrollLeft = 0;
+  }
+  var t; function later() { clearTimeout(t); t = setTimeout(fit, 80); }
+  window.addEventListener('resize', later); window.addEventListener('orientationchange', later); window.addEventListener('load', later);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(later);
+  later();
+})();
+</script>
 </body></html>
