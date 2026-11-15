@@ -251,7 +251,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="image" href="netherlands-satellite.webp" fetchpriority="high">
-<link rel="preload" as="image" href="home-bg-amsterdam-v2.webp" fetchpriority="high">
+<link rel="preload" as="image" href="home-bg-amsterdam-v2-m.webp" media="(max-width: 600px) and (orientation: portrait)" fetchpriority="high">
+<link rel="preload" as="image" href="home-bg-amsterdam-v2.webp" imagesrcset="home-bg-amsterdam-v2.webp 1600w, home-bg-amsterdam-v2-2400.webp 2400w" imagesizes="100vw" media="not all and (max-width: 600px) and (orientation: portrait)" fetchpriority="high">
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Barlow:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
 <style>
@@ -3048,7 +3049,7 @@
 
 <!-- ══════════ HOME ══════════ -->
 <div class="page active" id="home">
-  <figure class="page-photo"><img src="home-bg-amsterdam-v2.webp" alt="Amsterdam" fetchpriority="high" decoding="async"></figure>
+  <figure class="page-photo"><picture><source media="(max-width: 600px) and (orientation: portrait)" srcset="home-bg-amsterdam-v2-m.webp"><img src="home-bg-amsterdam-v2.webp" srcset="home-bg-amsterdam-v2.webp 1600w, home-bg-amsterdam-v2-2400.webp 2400w" sizes="100vw" alt="Amsterdam" fetchpriority="high" decoding="async"></picture></figure>
   <div class="hero">
     <div class="hero-inner">
 
@@ -3522,7 +3523,7 @@
 <div class="page" id="services">
   <!-- PACKAGES SECTION -->
   <div class="services-wrap">
-    <figure class="page-photo"><img src="packages-bg-cheese-opt.webp" alt="Kaasboerderij" loading="lazy" decoding="async"></figure>
+    <figure class="page-photo"><picture><source media="(max-width: 600px) and (orientation: portrait)" srcset="packages-bg-cheese-m.webp"><img src="packages-bg-cheese-opt.webp" srcset="packages-bg-cheese-opt.webp 1600w, packages-bg-cheese-2400.webp 2400w" sizes="100vw" alt="Kaasboerderij" loading="lazy" decoding="async"></picture></figure>
     <div class="page-title" id="servicesTitle"></div>
     
     <div class="services-layout">
@@ -3822,7 +3823,7 @@
 
 <!-- ══════════ SYLLABUS ══════════ -->
 <div class="page" id="syllabus">
-  <figure class="page-photo"><img src="syllabus-bg-festival-opt.webp" alt="Koningsdag" loading="lazy" decoding="async"></figure>
+  <figure class="page-photo"><picture><source media="(max-width: 600px) and (orientation: portrait)" srcset="syllabus-bg-festival-m.webp"><img src="syllabus-bg-festival-opt.webp" srcset="syllabus-bg-festival-opt.webp 1600w, syllabus-bg-festival-2400.webp 2400w" sizes="100vw" alt="Koningsdag" loading="lazy" decoding="async"></picture></figure>
   <div class="page-hero">
     <div class="page-hero-inner">
       <div class="pt-label" style="display:none">Curriculum</div>
@@ -4269,7 +4270,7 @@
 <!-- ══════════ FAQ ══════════ -->
 <div class="page" id="faq">
   <div class="content">
-    <figure class="page-photo"><img src="contact-bg-giethoorn-opt.webp" alt="Rieten daken en grachten in Giethoorn" loading="lazy" decoding="async"></figure>
+    <figure class="page-photo"><picture><source media="(max-width: 600px) and (orientation: portrait)" srcset="contact-bg-giethoorn-m.webp"><img src="contact-bg-giethoorn-opt.webp" srcset="contact-bg-giethoorn-opt.webp 1600w, contact-bg-giethoorn-2400.webp 2400w" sizes="100vw" alt="Rieten daken en grachten in Giethoorn" loading="lazy" decoding="async"></picture></figure>
     <div class="page-title" id="faqTitle"></div>
     
     <div class="orange-panel">
