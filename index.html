@@ -1153,6 +1153,19 @@
   html body #about.page .orange-panel p:last-child { margin-bottom: 0 !important; }
   html body #about.page .content > div[style*="margin-bottom:3.5rem"] { margin-bottom: 0 !important; }
   html body #about.page .content { padding-bottom: 4rem; }
+  /* Price table: stacked cards on phones */
+  @media (max-width: 600px) {
+    html body #services.page.page .price-table-wrap { overflow: visible !important; }
+    html body #services.page.page .price-table.price-table, html body #services.page.page .price-table.price-table tbody, html body #services.page.page .price-table.price-table tr { display: block !important; width: 100% !important; min-width: 0 !important; background: none !important; border: none !important; }
+    html body #services.page.page .price-table.price-table thead { display: none !important; }
+    html body #services.page.page .price-table.price-table tr { border: 1px solid rgba(232,119,34,0.35) !important; border-radius: 12px; padding: 0.9rem 1rem !important; margin-bottom: 0.8rem; background: rgba(36,16,4,0.55) !important; }
+    html body #services.page.page .price-table.price-table tr.pt-featured { border-color: var(--accent) !important; }
+    html body #services.page.page .price-table.price-table td, html body #services.page.page .price-table.price-table tr.pt-featured td { display: flex !important; justify-content: space-between; align-items: baseline; gap: 1rem; padding: 0.35rem 0 !important; border: none !important; background: none !important; box-shadow: none !important; text-align: right; white-space: normal !important; width: 100% !important; }
+    html body #services.page.page .price-table.price-table td::before { content: attr(data-label); font-family: 'Barlow', sans-serif; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(247,236,217,0.6); text-align: left; flex-shrink: 0; }
+    html body #services.page.page .price-table.price-table td.pt-pkg { font-size: 1.05rem; padding-bottom: 0.5rem !important; border-bottom: 1px solid rgba(232,119,34,0.25) !important; margin-bottom: 0.3rem; }
+    html body #services.page.page .price-table.price-table td.pt-pkg::before { content: none; }
+    html body #services.page.page .price-table.price-table td.pt-price { font-size: 1.2rem !important; }
+  }
   html body .footer-cta-text { margin: 0 0 0.6rem; font-size: 0.92rem; line-height: 1.55; color: rgba(247,236,217,0.75); }
   html body .footer-col-group a.footer-cta-btn { display: inline-flex; align-self: flex-start; padding: 0.7rem 1.3rem; border-radius: 999px; border: 1.5px solid rgba(240,120,30,0.9); background: rgba(240,120,30,0.16); color: #ffd9b0; font-weight: 600; transition: background .25s, transform .25s; }
   html body .footer-col-group a.footer-cta-btn:hover { background: rgba(240,120,30,0.32); color: #fff; transform: translateY(-2px); }
@@ -3657,46 +3670,46 @@
         </thead>
         <tbody>
           <tr>
-            <td class="pt-pkg">1 uur</td>
-            <td class="pt-price">€25</td>
-            <td>€25</td>
-            <td>1 les van 60 min</td>
-            <td>Binnen 30 dagen</td>
+            <td data-label="Pakket" class="pt-pkg">1 uur</td>
+            <td data-label="Totaalprijs" class="pt-price">€25</td>
+            <td data-label="Per uur">€25</td>
+            <td data-label="Lessen">1 les van 60 min</td>
+            <td data-label="Looptijd">Binnen 30 dagen</td>
           </tr>
           <tr>
-            <td class="pt-pkg">5 uur</td>
-            <td class="pt-price">€120</td>
-            <td>€24</td>
-            <td>5 lessen van 60 min</td>
-            <td>Binnen 60 dagen</td>
+            <td data-label="Pakket" class="pt-pkg">5 uur</td>
+            <td data-label="Totaalprijs" class="pt-price">€120</td>
+            <td data-label="Per uur">€24</td>
+            <td data-label="Lessen">5 lessen van 60 min</td>
+            <td data-label="Looptijd">Binnen 60 dagen</td>
           </tr>
           <tr>
-            <td class="pt-pkg">10 uur</td>
-            <td class="pt-price">€230</td>
-            <td>€23</td>
-            <td>10 lessen van 60 min</td>
-            <td>Binnen 90 dagen</td>
+            <td data-label="Pakket" class="pt-pkg">10 uur</td>
+            <td data-label="Totaalprijs" class="pt-price">€230</td>
+            <td data-label="Per uur">€23</td>
+            <td data-label="Lessen">10 lessen van 60 min</td>
+            <td data-label="Looptijd">Binnen 90 dagen</td>
           </tr>
           <tr>
-            <td class="pt-pkg">50 uur (Blok 1)</td>
-            <td class="pt-price">€1.050</td>
-            <td>€21</td>
-            <td>50 lessen van 60 min</td>
-            <td>2 per week, ongeveer 6 maanden</td>
+            <td data-label="Pakket" class="pt-pkg">50 uur (Blok 1)</td>
+            <td data-label="Totaalprijs" class="pt-price">€1.050</td>
+            <td data-label="Per uur">€21</td>
+            <td data-label="Lessen">50 lessen van 60 min</td>
+            <td data-label="Looptijd">2 per week, ongeveer 6 maanden</td>
           </tr>
           <tr>
-            <td class="pt-pkg">100 uur (Blokken 1+2)</td>
-            <td class="pt-price">€1.900</td>
-            <td>€19</td>
-            <td>100 lessen van 60 min</td>
-            <td>3 per week, ongeveer 8 maanden</td>
+            <td data-label="Pakket" class="pt-pkg">100 uur (Blokken 1+2)</td>
+            <td data-label="Totaalprijs" class="pt-price">€1.900</td>
+            <td data-label="Per uur">€19</td>
+            <td data-label="Lessen">100 lessen van 60 min</td>
+            <td data-label="Looptijd">3 per week, ongeveer 8 maanden</td>
           </tr>
           <tr class="pt-featured">
-            <td class="pt-pkg">150 uur (volledige cursus)</td>
-            <td class="pt-price">€2.550</td>
-            <td>€17</td>
-            <td>150 lessen van 60 min</td>
-            <td>3 per week, ongeveer 12 maanden</td>
+            <td data-label="Pakket" class="pt-pkg">150 uur (volledige cursus)</td>
+            <td data-label="Totaalprijs" class="pt-price">€2.550</td>
+            <td data-label="Per uur">€17</td>
+            <td data-label="Lessen">150 lessen van 60 min</td>
+            <td data-label="Looptijd">3 per week, ongeveer 12 maanden</td>
           </tr>
         </tbody>
       </table>
