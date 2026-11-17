@@ -3054,7 +3054,7 @@
     <div class="hero-inner">
 
       <div class="hero-text">
-        <h1 class="hero-title" id="heroTitle" style="margin:0;"><span style="display:block;">Talking Dutch?</span><span id="heroTyped" style="display:block;min-height:1.2em;">Verbeter je Nederlands, vandaag nog!</span></h1>
+        <h1 class="hero-title" id="heroTitle" style="margin:0;"><span id="heroLine1" style="display:block;min-height:1.2em;">Talking Dutch?</span><span id="heroTyped" style="display:block;min-height:1.2em;">Verbeter je Nederlands, vandaag nog!</span></h1>
     
       </div>
     </div>
@@ -4458,31 +4458,25 @@
     requestAnimationFrame(() => requestAnimationFrame(initScrollReveal));
   }
 
+  const __titleGen = {};
   function typeTitle(cfg, delay) {
     const el = document.getElementById(cfg.id);
     if (!el) return;
-    el.innerHTML = '';
-    const orange = cfg.orange;
-    // separator: if white part ends with space, use that; otherwise nothing (e.g. "Course"+"ware")
+    const gen = (__titleGen[cfg.id] = (__titleGen[cfg.id] || 0) + 1);
+    el.innerHTML = '<span class="pt-cursor"></span>';
+    const white = cfg.white, orange = cfg.orange, total = white.length + orange.length;
     let k = 0;
-
-    function tick() {
-      const cursor = '<span class="pt-cursor"></span>';
+    function render(withCursor) {
       el.innerHTML =
-        '<span class="white-part">' + cfg.white + '</span>' +
-        '<span class="orange-part">' + orange.slice(0, k) + '</span>' +
-        cursor;
-      if (k < orange.length) {
-        k++;
-        setTimeout(tick, 55);
-      } else {
-        // after a pause, erase the cursor
-        setTimeout(() => {
-          el.innerHTML =
-            '<span class="white-part">' + cfg.white + '</span>' +
-            '<span class="orange-part">' + orange + '</span>';
-        }, 900);
-      }
+        '<span class="white-part">' + white.slice(0, Math.min(k, white.length)) + '</span>' +
+        '<span class="orange-part">' + orange.slice(0, Math.max(0, k - white.length)) + '</span>' +
+        (withCursor ? '<span class="pt-cursor"></span>' : '');
+    }
+    function tick() {
+      if (gen !== __titleGen[cfg.id]) return;
+      render(true);
+      if (k < total) { k++; setTimeout(tick, 55); }
+      else setTimeout(() => { if (gen === __titleGen[cfg.id]) render(false); }, 900);
     }
     setTimeout(tick, delay || 0);
   }
@@ -4629,18 +4623,26 @@
   const titleEl   = document.getElementById('heroTyped');
   let heroGen = 0;
 
+  const HERO_L1 = 'Talking Dutch?';
+  const line1El = document.getElementById('heroLine1');
   function startHeroTyping() {
-    if (!titleEl) return;
+    if (!titleEl || !line1El) return;
     const gen = ++heroGen;
-    let i = 0;
-    titleEl.textContent = '';
-
+    const cur = document.createElement('span'); cur.className = 'pt-cursor';
+    const parts = [[line1El, HERO_L1], [titleEl, LINE1]];
+    line1El.textContent = ''; titleEl.textContent = '';
+    let p = 0, i = 0;
     function step() {
       if (gen !== heroGen) return; // superseded by a newer run — stop
-      titleEl.textContent = LINE1.slice(0, i);
+      const [el, txt] = parts[p];
+      el.textContent = txt.slice(0, i); el.appendChild(cur);
       i++;
-      if (i > LINE1.length) return;
-      setTimeout(step, i === 1 ? 120 : 30);
+      if (i > txt.length) {
+        if (++p < parts.length) { i = 0; setTimeout(step, 250); return; }
+        setTimeout(() => { if (gen === heroGen) cur.remove(); }, 900);
+        return;
+      }
+      setTimeout(step, 45);
     }
     setTimeout(step, 150);
   }
