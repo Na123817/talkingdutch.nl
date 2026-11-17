@@ -1190,6 +1190,14 @@
   html body #home.page.page .pricing-grid.home-pricing { grid-template-columns: repeat(4, 1fr); max-width: 1180px; }
   @media (max-width: 1100px) { html body #home.page.page .pricing-grid.home-pricing { grid-template-columns: repeat(2, 1fr); max-width: 760px; } }
   @media (max-width: 600px) { html body #home.page.page .pricing-grid.home-pricing { grid-template-columns: 1fr; } }
+  /* Syllabus: step intro, module ranges, 5 tabs */
+  html body #syllabus .toc-tabs { flex-wrap: wrap; justify-content: center; gap: 0.5rem; }
+  html body #syllabus .toc-step-intro { text-align: center; margin: 0.4rem auto 1.6rem; max-width: 640px; }
+  html body #syllabus .toc-step-goal { font-size: 1rem; line-height: 1.7; color: #f7ecd9; }
+  html body #syllabus .toc-step-meta { margin-top: 0.5rem; font-family: 'Orbitron', sans-serif; font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+  html body #syllabus .toc-module-range { font-size: 0.72rem; color: rgba(247,236,217,0.6); white-space: nowrap; }
+  html body #syllabus .toc-study-every { margin-top: 1.2rem; font-size: 0.85rem; color: rgba(247,236,217,0.75); text-align: center; }
+  @media (max-width: 600px) { html body #syllabus .toc-module-range { display: none; } }
   html body .footer-cta-text { margin: 0 0 0.6rem; font-size: 0.92rem; line-height: 1.55; color: rgba(247,236,217,0.75); }
   html body .footer-col-group a.footer-cta-btn { display: inline-flex; align-self: flex-start; padding: 0.7rem 1.3rem; border-radius: 999px; border: 1.5px solid rgba(240,120,30,0.9); background: rgba(240,120,30,0.16); color: #ffd9b0; font-weight: 600; transition: background .25s, transform .25s; }
   html body .footer-col-group a.footer-cta-btn:hover { background: rgba(240,120,30,0.32); color: #fff; transform: translateY(-2px); }
@@ -3998,369 +4006,723 @@
 
     <div class="syl-head"><div class="home-section-label">Curriculum</div><h2 class="home-section-title sec-title">Kies je niveau</h2></div>
     <div class="toc-tabs">
-      <button class="toc-tab active" onclick="switchToc('a1a2',this)">A1 – A2</button>
-      <button class="toc-tab" onclick="switchToc('b1b2',this)">B1 – B2</button>
-      <button class="toc-tab" onclick="switchToc('c1c2',this)">C1 – C2</button>
+      <button class="toc-tab active" onclick="switchToc('a1a2',this)">A1 → A2</button>
+      <button class="toc-tab" onclick="switchToc('a2b1',this)">A2 → B1</button>
+      <button class="toc-tab" onclick="switchToc('b1b2',this)">B1 → B2</button>
+      <button class="toc-tab" onclick="switchToc('b2c1',this)">B2 → C1</button>
+      <button class="toc-tab" onclick="switchToc('c1c2',this)">C1 → C2</button>
     </div>
 
-    <!-- ── A1-A2 ── -->
+    <!-- ── A1 → A2 ── -->
     <div class="toc-panel active" id="toc-a1a2">
+      <div class="toc-step-intro">
+        <div class="toc-step-goal">Je redt je in het dagelijks leven: jezelf voorstellen, boodschappen doen, reizen en afspraken maken.</div>
+        <div class="toc-step-meta">Ongeveer 100 uur · 25 modules van 4 lessen · 1 × pakket van 100 uur</div>
+      </div>
 
       <div class="toc-module">
         <div class="toc-module-header" onclick="toggleModule(this)">
           <div class="toc-module-left">
-            <span class="toc-module-num">A1.01</span>
-            <span class="toc-module-title">Eerste woorden &amp; begroetingen</span>
+            <span class="toc-module-num">Deel 1</span>
+            <span class="toc-module-title">Eerste stappen</span>
           </div>
           <div style="display:flex;align-items:center;gap:.8rem">
+            <span class="toc-module-range">Modules 1–5</span>
             <span class="toc-module-arrow">▼</span>
           </div>
         </div>
         <div class="toc-lessons">
-          <div class="toc-lesson"><span class="toc-lesson-num">1.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">Hallo &amp; Dag — Kennismaking</div><div class="toc-lesson-desc">Begroetingen, afscheid nemen en jezelf voorstellen</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">1.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Getallen 1–20</div><div class="toc-lesson-desc">Tellen, telefoonnummers, adressen</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">1.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">Dagen, maanden &amp; seizoenen</div><div class="toc-lesson-desc">Kalenderwoordenschat en praten over data</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">1.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">Het alfabet &amp; uitspraak</div><div class="toc-lesson-desc">Nederlandse klanken, hardop spellen, de ij-klank</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">1.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">Begroeten &amp; voorstellen</div><div class="toc-lesson-desc">Hallo zeggen, jezelf voorstellen, small talk</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">1.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Getallen, data &amp; tijd</div><div class="toc-lesson-desc">Tellen, prijzen, dagen en de klok</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">1.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">Klanken van het Nederlands</div><div class="toc-lesson-desc">Uitspraak, spellen, ui, ij en g</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">1.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">Eenvoudige zinnen</div><div class="toc-lesson-desc">Zijn en hebben, eenvoudige woordvolgorde</div></div></div>
         </div>
       </div>
 
       <div class="toc-module">
         <div class="toc-module-header" onclick="toggleModule(this)">
           <div class="toc-module-left">
-            <span class="toc-module-num">A1.02</span>
-            <span class="toc-module-title">Over mij &amp; mijn wereld</span>
+            <span class="toc-module-num">Deel 2</span>
+            <span class="toc-module-title">Ik &amp; mijn wereld</span>
           </div>
           <div style="display:flex;align-items:center;gap:.8rem">
+            <span class="toc-module-range">Modules 6–10</span>
             <span class="toc-module-arrow">▼</span>
           </div>
         </div>
         <div class="toc-lessons">
-          <div class="toc-lesson"><span class="toc-lesson-num">2.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">Familieleden</div><div class="toc-lesson-desc">Je familie beschrijven, bezittelijke voornaamwoorden</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">2.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Waar woon je?</div><div class="toc-lesson-desc">Landen, nationaliteiten, steden en adressen</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">2.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">Beroepen &amp; werk</div><div class="toc-lesson-desc">Werk beschrijven, ik ben / ik werk als…</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">2.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">Hobby's &amp; vrije tijd</div><div class="toc-lesson-desc">Wat je wel en niet leuk vindt, ik vind… leuk</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">2.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">Familie &amp; vrienden</div><div class="toc-lesson-desc">Praten over de mensen om je heen</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">2.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Huis &amp; buurt</div><div class="toc-lesson-desc">Waar je woont, kamers, de weg</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">2.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">Werk &amp; studie</div><div class="toc-lesson-desc">Beroepen, school en je dagritme</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">2.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">Vrije tijd</div><div class="toc-lesson-desc">Hobby's, wat je leuk vindt en niet</div></div></div>
         </div>
       </div>
 
       <div class="toc-module">
         <div class="toc-module-header" onclick="toggleModule(this)">
           <div class="toc-module-left">
-            <span class="toc-module-num">A1.03</span>
-            <span class="toc-module-title">Grammaticale basis</span>
+            <span class="toc-module-num">Deel 3</span>
+            <span class="toc-module-title">Dagelijks leven</span>
           </div>
           <div style="display:flex;align-items:center;gap:.8rem">
+            <span class="toc-module-range">Modules 11–15</span>
             <span class="toc-module-arrow">▼</span>
           </div>
         </div>
         <div class="toc-lessons">
-          <div class="toc-lesson"><span class="toc-lesson-num">3.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">De / Het — Lidwoorden</div><div class="toc-lesson-desc">Het geslacht van Nederlandse zelfstandige naamwoorden begrijpen en gebruiken</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">3.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Basisvervoeging van werkwoorden</div><div class="toc-lesson-desc">Tegenwoordige tijd: zijn, hebben, werken, wonen</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">3.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">Woordvolgorde (SVO)</div><div class="toc-lesson-desc">Zinsstructuur onderwerp–werkwoord–object</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">3.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">Ontkenning — Niet &amp; Geen</div><div class="toc-lesson-desc">Hoe je nee en niet zegt in het Nederlands</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">3.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">Boodschappen &amp; eten</div><div class="toc-lesson-desc">Supermarkt, markt, bestellen in een café</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">3.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Onderweg</div><div class="toc-lesson-desc">Openbaar vervoer, kaartjes, de weg vragen</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">3.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">Gezondheid</div><div class="toc-lesson-desc">Het lichaam, de huisarts en de apotheek</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">3.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">Afspraken</div><div class="toc-lesson-desc">Plannen, bellen en verzetten</div></div></div>
         </div>
       </div>
 
       <div class="toc-module">
         <div class="toc-module-header" onclick="toggleModule(this)">
           <div class="toc-module-left">
-            <span class="toc-module-num">A2.01</span>
-            <span class="toc-module-title">Dagelijks leven &amp; routines</span>
+            <span class="toc-module-num">Deel 4</span>
+            <span class="toc-module-title">Grammatica: een niveau hoger</span>
           </div>
           <div style="display:flex;align-items:center;gap:.8rem">
+            <span class="toc-module-range">Modules 16–20</span>
             <span class="toc-module-arrow">▼</span>
           </div>
         </div>
         <div class="toc-lessons">
-          <div class="toc-lesson"><span class="toc-lesson-num">4.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">Eten &amp; boodschappen</div><div class="toc-lesson-desc">Op de markt, in de supermarkt, eten bestellen</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">4.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Je verplaatsen</div><div class="toc-lesson-desc">De weg vragen, openbaar vervoer, om hulp vragen</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">4.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">Gezondheid &amp; het lichaam</div><div class="toc-lesson-desc">Lichaamsdelen, naar de dokter gaan, klachten</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">4.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">Tijd &amp; plannen</div><div class="toc-lesson-desc">De klok lezen, afspraken maken</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">4.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">Verleden tijd</div><div class="toc-lesson-desc">De voltooide tijd met hebben en zijn</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">4.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Modale werkwoorden</div><div class="toc-lesson-desc">Kunnen, mogen, moeten, willen, zullen</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">4.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">De en het</div><div class="toc-lesson-desc">Lidwoorden, bijvoeglijke naamwoorden en hun uitgang</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">4.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">Scheidbare werkwoorden</div><div class="toc-lesson-desc">Opstaan, meenemen en meer</div></div></div>
         </div>
       </div>
 
       <div class="toc-module">
         <div class="toc-module-header" onclick="toggleModule(this)">
           <div class="toc-module-left">
-            <span class="toc-module-num">A2.02</span>
-            <span class="toc-module-title">Grammatica — Een niveau hoger</span>
+            <span class="toc-module-num">Deel 5</span>
+            <span class="toc-module-title">Wonen in Nederland</span>
           </div>
           <div style="display:flex;align-items:center;gap:.8rem">
+            <span class="toc-module-range">Modules 21–25</span>
             <span class="toc-module-arrow">▼</span>
           </div>
         </div>
         <div class="toc-lessons">
-          <div class="toc-lesson"><span class="toc-lesson-num">5.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">Verleden tijd — Perfectum</div><div class="toc-lesson-desc">Hebben/zijn + voltooid deelwoord</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">5.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Modale werkwoorden</div><div class="toc-lesson-desc">Kunnen, mogen, moeten, willen, zullen</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">5.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">Verbuiging van bijvoeglijke naamwoorden</div><div class="toc-lesson-desc">Hoe bijvoeglijke naamwoorden veranderen bij de/het-woorden</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">5.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">Scheidbare werkwoorden</div><div class="toc-lesson-desc">Opstaan, aankomen, uitleggen en meer</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">5.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">De Nederlandse samenleving</div><div class="toc-lesson-desc">Gewoonten, regels en hoe het werkt</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">5.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Brieven &amp; formulieren</div><div class="toc-lesson-desc">De gemeente, DigiD en eenvoudige formulieren</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">5.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">Korte teksten</div><div class="toc-lesson-desc">Berichtjes, e-mails en briefjes</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">5.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">Oefenen voor A2</div><div class="toc-lesson-desc">Lezen, luisteren, schrijven, spreken en KNM</div></div></div>
         </div>
       </div>
-
 
       <div class="toc-study">
-        <div class="toc-study-title">Studiemateriaal — A1–A2</div>
+        <div class="toc-study-title">Lesmateriaal — A1 → A2</div>
         <div class="toc-study-grid">
           <div>
             <div class="toc-study-cat">
               <div class="toc-study-cat-title"><span class="toc-study-cat-name">Werkboeken</span></div>
               <ul class="toc-study-list">
-                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Werkboeken voor dit niveau</li>
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Twee beginnersmethodes (A1 en A2) met audio</li>
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Een tweede methode om extra te oefenen</li>
               </ul>
             </div>
             <div class="toc-study-cat">
               <div class="toc-study-cat-title"><span class="toc-study-cat-name">Grammatica</span></div>
               <ul class="toc-study-list">
-                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Grammaticagidsen en spellingregels</li>
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Een oefenboek grammatica met korte uitleg</li>
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Korte grammaticavideo's en dictees</li>
               </ul>
             </div>
           </div>
           <div>
             <div class="toc-study-cat">
-              <div class="toc-study-cat-title"><span class="toc-study-cat-name">Examenvoorbereiding</span></div>
+              <div class="toc-study-cat-title"><span class="toc-study-cat-name">Luisteren &amp; lezen</span></div>
               <ul class="toc-study-list">
-                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Oefenmateriaal voor NT2 en inburgering</li>
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Podcasts en video's in langzaam, eenvoudig Nederlands</li>
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Het dagelijkse nieuws in makkelijke taal</li>
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Korte verhalen voor beginners</li>
               </ul>
             </div>
             <div class="toc-study-cat">
-              <div class="toc-study-cat-title"><span class="toc-study-cat-name">Oefeningen</span></div>
+              <div class="toc-study-cat-title"><span class="toc-study-cat-name">Examens</span></div>
               <ul class="toc-study-list">
-                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Dictee-, lees-, luister-, schrijf- en spreekoefeningen</li>
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Officiële oefenexamens voor alle vier A2-vaardigheden</li>
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Oefenen voor Kennis van de Nederlandse Maatschappij (KNM)</li>
               </ul>
             </div>
           </div>
         </div>
+        <p class="toc-study-every">Op elk niveau: een persoonlijke voortgangstracker, huiswerk tussen de lessen en hulp via WhatsApp en e-mail.</p>
       </div>
     </div>
 
-    <!-- ── B1-B2 ── -->
+    <!-- ── A2 → B1 ── -->
+    <div class="toc-panel" id="toc-a2b1">
+      <div class="toc-step-intro">
+        <div class="toc-step-goal">Je redt je op je werk en in de samenleving, volgt het nieuws en haalt het inburgeringsexamen op B1.</div>
+        <div class="toc-step-meta">Ongeveer 200 uur · 50 modules van 4 lessen · 2 × 100 uur of 1 × 200 uur</div>
+      </div>
+
+      <div class="toc-module">
+        <div class="toc-module-header" onclick="toggleModule(this)">
+          <div class="toc-module-left">
+            <span class="toc-module-num">Deel 1</span>
+            <span class="toc-module-title">Over jezelf vertellen</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:.8rem">
+            <span class="toc-module-range">Modules 1–10</span>
+            <span class="toc-module-arrow">▼</span>
+          </div>
+        </div>
+        <div class="toc-lessons">
+          <div class="toc-lesson"><span class="toc-lesson-num">1.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">Jouw verhaal</div><div class="toc-lesson-desc">Ervaringen in de verleden tijd</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">1.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Plannen &amp; wensen</div><div class="toc-lesson-desc">De toekomst met zullen en gaan</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">1.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">Meningen</div><div class="toc-lesson-desc">Ik vind, ik denk dat, volgens mij</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">1.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">Gevoelens</div><div class="toc-lesson-desc">Emoties en reacties beschrijven</div></div></div>
+        </div>
+      </div>
+
+      <div class="toc-module">
+        <div class="toc-module-header" onclick="toggleModule(this)">
+          <div class="toc-module-left">
+            <span class="toc-module-num">Deel 2</span>
+            <span class="toc-module-title">Werk</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:.8rem">
+            <span class="toc-module-range">Modules 11–20</span>
+            <span class="toc-module-arrow">▼</span>
+          </div>
+        </div>
+        <div class="toc-lessons">
+          <div class="toc-lesson"><span class="toc-lesson-num">2.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">Solliciteren</div><div class="toc-lesson-desc">Vacatures, je cv en sollicitatiegesprekken</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">2.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Op het werk</div><div class="toc-lesson-desc">Vergaderingen, collega's en de telefoon</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">2.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">Werkcultuur</div><div class="toc-lesson-desc">Directheid, afspraken, het poldermodel</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">2.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">Rechten &amp; regels</div><div class="toc-lesson-desc">Contracten, verlof en ziekmelden</div></div></div>
+        </div>
+      </div>
+
+      <div class="toc-module">
+        <div class="toc-module-header" onclick="toggleModule(this)">
+          <div class="toc-module-left">
+            <span class="toc-module-num">Deel 3</span>
+            <span class="toc-module-title">Samenleving &amp; instanties</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:.8rem">
+            <span class="toc-module-range">Modules 21–30</span>
+            <span class="toc-module-arrow">▼</span>
+          </div>
+        </div>
+        <div class="toc-lessons">
+          <div class="toc-lesson"><span class="toc-lesson-num">3.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">Zorg</div><div class="toc-lesson-desc">De huisarts, verzekering en afspraken</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">3.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Wonen</div><div class="toc-lesson-desc">Huren, reparaties en buren</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">3.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">Overheid</div><div class="toc-lesson-desc">Belasting, toeslagen en de gemeente</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">3.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">Onderwijs</div><div class="toc-lesson-desc">Het schoolsysteem en cursussen</div></div></div>
+        </div>
+      </div>
+
+      <div class="toc-module">
+        <div class="toc-module-header" onclick="toggleModule(this)">
+          <div class="toc-module-left">
+            <span class="toc-module-num">Deel 4</span>
+            <span class="toc-module-title">Grammatica</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:.8rem">
+            <span class="toc-module-range">Modules 31–40</span>
+            <span class="toc-module-arrow">▼</span>
+          </div>
+        </div>
+        <div class="toc-lessons">
+          <div class="toc-lesson"><span class="toc-lesson-num">4.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">Bijzinnen</div><div class="toc-lesson-desc">Omdat, als, toen, dat en de woordvolgorde</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">4.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Betrekkelijke bijzinnen</div><div class="toc-lesson-desc">Die, dat, wie en waar</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">4.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">Lijdende vorm</div><div class="toc-lesson-desc">Worden en zijn in context</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">4.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">Er</div><div class="toc-lesson-desc">Alle manieren om er te gebruiken</div></div></div>
+        </div>
+      </div>
+
+      <div class="toc-module">
+        <div class="toc-module-header" onclick="toggleModule(this)">
+          <div class="toc-module-left">
+            <span class="toc-module-num">Deel 5</span>
+            <span class="toc-module-title">Klaar voor het examen</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:.8rem">
+            <span class="toc-module-range">Modules 41–50</span>
+            <span class="toc-module-arrow">▼</span>
+          </div>
+        </div>
+        <div class="toc-lessons">
+          <div class="toc-lesson"><span class="toc-lesson-num">5.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">Lezen &amp; luisteren</div><div class="toc-lesson-desc">Strategieën en echte B1-examenopdrachten</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">5.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Schrijven</div><div class="toc-lesson-desc">E-mails, formulieren en korte verslagen</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">5.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">Spreken</div><div class="toc-lesson-desc">Antwoorden, uitleggen en advies geven</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">5.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">KNM</div><div class="toc-lesson-desc">Kennis van de Nederlandse Maatschappij</div></div></div>
+        </div>
+      </div>
+
+      <div class="toc-study">
+        <div class="toc-study-title">Lesmateriaal — A2 → B1</div>
+        <div class="toc-study-grid">
+          <div>
+            <div class="toc-study-cat">
+              <div class="toc-study-cat-title"><span class="toc-study-cat-name">Werkboeken</span></div>
+              <ul class="toc-study-list">
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Een methode voor gevorderden van A2 naar B1</li>
+              </ul>
+            </div>
+            <div class="toc-study-cat">
+              <div class="toc-study-cat-title"><span class="toc-study-cat-name">Grammatica</span></div>
+              <ul class="toc-study-list">
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Een naslagwerk grammatica</li>
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Een ondersteunende grammaticareeks</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="toc-study-cat">
+              <div class="toc-study-cat-title"><span class="toc-study-cat-name">Luisteren &amp; lezen</span></div>
+              <ul class="toc-study-list">
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Dagelijks nieuws en nieuwsradio</li>
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Een podcast over alledaagse vragen</li>
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Officiële overheidspagina's in begrijpelijke taal</li>
+              </ul>
+            </div>
+            <div class="toc-study-cat">
+              <div class="toc-study-cat-title"><span class="toc-study-cat-name">Examens</span></div>
+              <ul class="toc-study-list">
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Examentrainers voor elke B1-vaardigheid</li>
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">De officiële oefenomgeving met echte examenopdrachten</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <p class="toc-study-every">Op elk niveau: een persoonlijke voortgangstracker, huiswerk tussen de lessen en hulp via WhatsApp en e-mail.</p>
+      </div>
+    </div>
+
+    <!-- ── B1 → B2 ── -->
     <div class="toc-panel" id="toc-b1b2">
+      <div class="toc-step-intro">
+        <div class="toc-step-goal">Je spreekt vloeiend over de meeste onderwerpen, leest de krant en werkt in het Nederlands.</div>
+        <div class="toc-step-meta">Ongeveer 200 uur · 50 modules van 4 lessen · 2 × 100 uur of 1 × 200 uur</div>
+      </div>
 
       <div class="toc-module">
         <div class="toc-module-header" onclick="toggleModule(this)">
           <div class="toc-module-left">
-            <span class="toc-module-num">B1.01</span>
-            <span class="toc-module-title">Gesprek &amp; mening</span>
+            <span class="toc-module-num">Deel 1</span>
+            <span class="toc-module-title">Vloeiend in gesprek</span>
           </div>
           <div style="display:flex;align-items:center;gap:.8rem">
-            <span class="toc-module-badge">Spreken</span>
+            <span class="toc-module-range">Modules 1–10</span>
             <span class="toc-module-arrow">▼</span>
           </div>
         </div>
         <div class="toc-lessons">
-          <div class="toc-lesson"><span class="toc-lesson-num">1.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">Je mening uiten</div><div class="toc-lesson-desc">Ik denk dat, ik vind dat, volgens mij…</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">1.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Eens &amp; oneens zijn</div><div class="toc-lesson-desc">Gestructureerd debat en beleefd tegenspreken</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">1.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">Verhalen vertellen</div><div class="toc-lesson-desc">Verhalen in de verleden tijd, signaalwoorden voor volgorde</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">1.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">Nederlands aan de telefoon &amp; per e-mail</div><div class="toc-lesson-desc">Formele en informele communicatie</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">1.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">Discussiëren</div><div class="toc-lesson-desc">Het eens en oneens zijn, overtuigen</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">1.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Vertellen</div><div class="toc-lesson-desc">Langere verhalen met een duidelijke opbouw</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">1.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">Nuance</div><div class="toc-lesson-desc">Beleefdheid, afzwakken en toon</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">1.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">Uitdrukkingen</div><div class="toc-lesson-desc">Alledaagse gezegden en uitdrukkingen</div></div></div>
         </div>
       </div>
 
       <div class="toc-module">
         <div class="toc-module-header" onclick="toggleModule(this)">
           <div class="toc-module-left">
-            <span class="toc-module-num">B1.02</span>
-            <span class="toc-module-title">Werk &amp; maatschappij</span>
+            <span class="toc-module-num">Deel 2</span>
+            <span class="toc-module-title">Media &amp; actualiteit</span>
           </div>
           <div style="display:flex;align-items:center;gap:.8rem">
-            <span class="toc-module-badge">Professioneel</span>
+            <span class="toc-module-range">Modules 11–20</span>
             <span class="toc-module-arrow">▼</span>
           </div>
         </div>
         <div class="toc-lessons">
-          <div class="toc-lesson"><span class="toc-lesson-num">2.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">De Nederlandse werkvloer</div><div class="toc-lesson-desc">Werkcultuur, vergaderingen, sollicitatiegesprekken</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">2.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Overheid &amp; voorzieningen</div><div class="toc-lesson-desc">Gemeente, DigiD, zorgtoeslag, belasting</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">2.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">Nederlandse samenleving &amp; waarden</div><div class="toc-lesson-desc">Directheid, tolerantie, poldermodel</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">2.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">Nieuws &amp; actualiteiten</div><div class="toc-lesson-desc">NOS-koppen lezen, actuele onderwerpen bespreken</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">2.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">Nieuws</div><div class="toc-lesson-desc">Het nieuws volgen en samenvatten</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">2.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Opiniestukken</div><div class="toc-lesson-desc">Columns en commentaren lezen</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">2.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">Podcasts &amp; tv</div><div class="toc-lesson-desc">Natuurlijk, snel Nederlands verstaan</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">2.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">Wetenschap &amp; samenleving</div><div class="toc-lesson-desc">Praten over trends en onderzoek</div></div></div>
         </div>
       </div>
 
       <div class="toc-module">
         <div class="toc-module-header" onclick="toggleModule(this)">
           <div class="toc-module-left">
-            <span class="toc-module-num">B1.03</span>
-            <span class="toc-module-title">NT2-examenvoorbereiding</span>
+            <span class="toc-module-num">Deel 3</span>
+            <span class="toc-module-title">Zakelijk Nederlands</span>
           </div>
           <div style="display:flex;align-items:center;gap:.8rem">
-            <span class="toc-module-badge">Examen</span>
+            <span class="toc-module-range">Modules 21–30</span>
             <span class="toc-module-arrow">▼</span>
           </div>
         </div>
         <div class="toc-lessons">
-          <div class="toc-lesson"><span class="toc-lesson-num">3.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">Lezen — Leesvaardigheid</div><div class="toc-lesson-desc">Strategieën voor examenteksten, scannend en zoekend lezen</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">3.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Luisteren — Luistervaardigheid</div><div class="toc-lesson-desc">Format van het luisterexamen, kernwoorden en aantekeningen maken</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">3.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">Schrijven — Schrijfopdrachten</div><div class="toc-lesson-desc">Formele brief, klacht, uitnodiging schrijven</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">3.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">Spreken — Mondeling examen</div><div class="toc-lesson-desc">Proefexamen spreken, vloeiend spreken onder druk</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">3.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">E-mails &amp; verslagen</div><div class="toc-lesson-desc">Formeel schrijven voor je werk</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">3.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Presentaties</div><div class="toc-lesson-desc">Een presentatie opbouwen en geven</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">3.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">Vergaderen &amp; onderhandelen</div><div class="toc-lesson-desc">Meedoen en een deal sluiten</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">3.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">Jouw vakgebied</div><div class="toc-lesson-desc">Woordenschat voor je eigen beroep</div></div></div>
         </div>
       </div>
 
       <div class="toc-module">
         <div class="toc-module-header" onclick="toggleModule(this)">
           <div class="toc-module-left">
-            <span class="toc-module-num">B2.01</span>
+            <span class="toc-module-num">Deel 4</span>
             <span class="toc-module-title">Gevorderde grammatica</span>
           </div>
           <div style="display:flex;align-items:center;gap:.8rem">
-            <span class="toc-module-badge">Grammatica</span>
+            <span class="toc-module-range">Modules 31–40</span>
             <span class="toc-module-arrow">▼</span>
           </div>
         </div>
         <div class="toc-lessons">
-          <div class="toc-lesson"><span class="toc-lesson-num">4.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">Bijzinnen</div><div class="toc-lesson-desc">Omdat, hoewel, terwijl, als, wanneer</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">4.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Lijdende vorm</div><div class="toc-lesson-desc">Worden + voltooid deelwoord in context</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">4.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">Voorwaardelijke zinnen</div><div class="toc-lesson-desc">Als…dan, zou + infinitief, hypothetische situaties</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">4.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">Indirecte rede</div><div class="toc-lesson-desc">Hij zei dat… constructie van de indirecte rede</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">4.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">Complexe zinnen</div><div class="toc-lesson-desc">Lange zinnen die helder blijven</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">4.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Voorwaardelijke zinnen</div><div class="toc-lesson-desc">Als… dan, zou en hypotheses</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">4.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">Indirecte rede</div><div class="toc-lesson-desc">Vertellen wat anderen zeiden</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">4.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">Register</div><div class="toc-lesson-desc">Formele en informele stijl</div></div></div>
         </div>
       </div>
 
+      <div class="toc-module">
+        <div class="toc-module-header" onclick="toggleModule(this)">
+          <div class="toc-module-left">
+            <span class="toc-module-num">Deel 5</span>
+            <span class="toc-module-title">Klaar voor het examen</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:.8rem">
+            <span class="toc-module-range">Modules 41–50</span>
+            <span class="toc-module-arrow">▼</span>
+          </div>
+        </div>
+        <div class="toc-lessons">
+          <div class="toc-lesson"><span class="toc-lesson-num">5.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">Staatsexamen NT2 II</div><div class="toc-lesson-desc">Overzicht en strategie</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">5.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Lezen &amp; luisteren</div><div class="toc-lesson-desc">Lange teksten en colleges op B2</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">5.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">Schrijven</div><div class="toc-lesson-desc">Betogen, brieven en samenvattingen</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">5.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">Spreken</div><div class="toc-lesson-desc">Presenteren, argumenteren en reageren</div></div></div>
+        </div>
+      </div>
 
       <div class="toc-study">
-        <div class="toc-study-title">Studiemateriaal — B1–B2</div>
+        <div class="toc-study-title">Lesmateriaal — B1 → B2</div>
         <div class="toc-study-grid">
           <div>
             <div class="toc-study-cat">
               <div class="toc-study-cat-title"><span class="toc-study-cat-name">Werkboeken</span></div>
               <ul class="toc-study-list">
-                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Werkboeken voor dit niveau</li>
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Een methode van B1 naar B2</li>
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Een methode zakelijk Nederlands (zakelijke route)</li>
               </ul>
             </div>
             <div class="toc-study-cat">
               <div class="toc-study-cat-title"><span class="toc-study-cat-name">Grammatica</span></div>
               <ul class="toc-study-list">
-                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Grammaticagidsen en spellingregels</li>
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">De officiële spellingregels</li>
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Een oefenboek grammatica, video's en dictees</li>
               </ul>
             </div>
           </div>
           <div>
             <div class="toc-study-cat">
-              <div class="toc-study-cat-title"><span class="toc-study-cat-name">Examenvoorbereiding</span></div>
+              <div class="toc-study-cat-title"><span class="toc-study-cat-name">Luisteren &amp; lezen</span></div>
               <ul class="toc-study-list">
-                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Oefenmateriaal voor NT2 en inburgering</li>
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Een dagelijkse nieuwspodcast en korte wetenschapscolleges</li>
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Actualiteitenprogramma's en documentaires</li>
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Echte verhalen en nieuwsartikelen</li>
               </ul>
             </div>
             <div class="toc-study-cat">
-              <div class="toc-study-cat-title"><span class="toc-study-cat-name">Oefeningen</span></div>
+              <div class="toc-study-cat-title"><span class="toc-study-cat-name">Examens</span></div>
               <ul class="toc-study-list">
-                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Dictee-, lees-, luister-, schrijf- en spreekoefeningen</li>
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Oefenexamens voor alle vier vaardigheden</li>
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Oefenen voor KNM</li>
               </ul>
             </div>
           </div>
         </div>
+        <p class="toc-study-every">Op elk niveau: een persoonlijke voortgangstracker, huiswerk tussen de lessen en hulp via WhatsApp en e-mail.</p>
       </div>
     </div>
 
-    <!-- ── C1-C2 ── -->
+    <!-- ── B2 → C1 ── -->
+    <div class="toc-panel" id="toc-b2c1">
+      <div class="toc-step-intro">
+        <div class="toc-step-goal">Je gebruikt Nederlands met vertrouwen op academisch en professioneel niveau.</div>
+        <div class="toc-step-meta">Ongeveer 200 uur · 50 modules van 4 lessen · 2 × 100 uur of 1 × 200 uur</div>
+      </div>
+
+      <div class="toc-module">
+        <div class="toc-module-header" onclick="toggleModule(this)">
+          <div class="toc-module-left">
+            <span class="toc-module-num">Deel 1</span>
+            <span class="toc-module-title">Precisie</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:.8rem">
+            <span class="toc-module-range">Modules 1–10</span>
+            <span class="toc-module-arrow">▼</span>
+          </div>
+        </div>
+        <div class="toc-lessons">
+          <div class="toc-lesson"><span class="toc-lesson-num">1.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">Rijke woordenschat</div><div class="toc-lesson-desc">Synoniemen, vaste combinaties en het juiste woord</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">1.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Register</div><div class="toc-lesson-desc">Je toon aanpassen aan elk publiek</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">1.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">Beeldspraak</div><div class="toc-lesson-desc">Spreekwoorden en beeldende taal</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">1.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">Uitspraak verfijnen</div><div class="toc-lesson-desc">Intonatie, klemtoon en accent</div></div></div>
+        </div>
+      </div>
+
+      <div class="toc-module">
+        <div class="toc-module-header" onclick="toggleModule(this)">
+          <div class="toc-module-left">
+            <span class="toc-module-num">Deel 2</span>
+            <span class="toc-module-title">Academisch Nederlands</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:.8rem">
+            <span class="toc-module-range">Modules 11–20</span>
+            <span class="toc-module-arrow">▼</span>
+          </div>
+        </div>
+        <div class="toc-lessons">
+          <div class="toc-lesson"><span class="toc-lesson-num">2.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">Academisch lezen</div><div class="toc-lesson-desc">Opbouw, argumentatie en samenvatten</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">2.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Essays schrijven</div><div class="toc-lesson-desc">Stelling, opbouw en bronnen</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">2.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">Colleges</div><div class="toc-lesson-desc">Volgen en aantekeningen maken</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">2.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">Discussie</div><div class="toc-lesson-desc">Werkgroepen en kritische vragen</div></div></div>
+        </div>
+      </div>
+
+      <div class="toc-module">
+        <div class="toc-module-header" onclick="toggleModule(this)">
+          <div class="toc-module-left">
+            <span class="toc-module-num">Deel 3</span>
+            <span class="toc-module-title">Professioneel</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:.8rem">
+            <span class="toc-module-range">Modules 21–30</span>
+            <span class="toc-module-arrow">▼</span>
+          </div>
+        </div>
+        <div class="toc-lessons">
+          <div class="toc-lesson"><span class="toc-lesson-num">3.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">Jouw beroep</div><div class="toc-lesson-desc">De taal en documenten van je vakgebied</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">3.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Verslaglegging</div><div class="toc-lesson-desc">Notities, dossiers en officiële rapporten</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">3.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">Moeilijke gesprekken</div><div class="toc-lesson-desc">Slecht nieuws, feedback en conflict</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">3.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">Onderhandelen</div><div class="toc-lesson-desc">Strategie en overtuigen</div></div></div>
+        </div>
+      </div>
+
+      <div class="toc-module">
+        <div class="toc-module-header" onclick="toggleModule(this)">
+          <div class="toc-module-left">
+            <span class="toc-module-num">Deel 4</span>
+            <span class="toc-module-title">Cultuur &amp; samenleving</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:.8rem">
+            <span class="toc-module-range">Modules 31–40</span>
+            <span class="toc-module-arrow">▼</span>
+          </div>
+        </div>
+        <div class="toc-lessons">
+          <div class="toc-lesson"><span class="toc-lesson-num">4.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">Politiek</div><div class="toc-lesson-desc">Partijen, debatten en het nieuws</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">4.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Geschiedenis</div><div class="toc-lesson-desc">Van de Gouden Eeuw tot nu</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">4.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">Literatuur</div><div class="toc-lesson-desc">Korte verhalen en moderne romans</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">4.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">Humor</div><div class="toc-lesson-desc">Ironie, woordspelingen en Nederlandse comedy</div></div></div>
+        </div>
+      </div>
+
+      <div class="toc-module">
+        <div class="toc-module-header" onclick="toggleModule(this)">
+          <div class="toc-module-left">
+            <span class="toc-module-num">Deel 5</span>
+            <span class="toc-module-title">Klaar voor het examen</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:.8rem">
+            <span class="toc-module-range">Modules 41–50</span>
+            <span class="toc-module-arrow">▼</span>
+          </div>
+        </div>
+        <div class="toc-lessons">
+          <div class="toc-lesson"><span class="toc-lesson-num">5.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">Staatsexamen C1</div><div class="toc-lesson-desc">Overzicht en strategie</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">5.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Lezen &amp; luisteren</div><div class="toc-lesson-desc">Snelheid en detail</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">5.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">Schrijven</div><div class="toc-lesson-desc">Betogende en formele teksten</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">5.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">Spreken</div><div class="toc-lesson-desc">Presentaties en debatten</div></div></div>
+        </div>
+      </div>
+
+      <div class="toc-study">
+        <div class="toc-study-title">Lesmateriaal — B2 → C1</div>
+        <div class="toc-study-grid">
+          <div>
+            <div class="toc-study-cat">
+              <div class="toc-study-cat-title"><span class="toc-study-cat-name">Werkboeken</span></div>
+              <ul class="toc-study-list">
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Een vakgerichte methode voor jouw beroep</li>
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Een boek over professionele gespreksvaardigheden</li>
+              </ul>
+            </div>
+            <div class="toc-study-cat">
+              <div class="toc-study-cat-title"><span class="toc-study-cat-name">Grammatica</span></div>
+              <ul class="toc-study-list">
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Een naslagwerk voor gevorderde grammatica en stijl</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="toc-study-cat">
+              <div class="toc-study-cat-title"><span class="toc-study-cat-name">Luisteren &amp; lezen</span></div>
+              <ul class="toc-study-list">
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Boeken ingedeeld op leesniveau</li>
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Heldere informatie over gezondheid en overheid</li>
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Officiële richtlijnen uit jouw sector</li>
+              </ul>
+            </div>
+            <div class="toc-study-cat">
+              <div class="toc-study-cat-title"><span class="toc-study-cat-name">Examens</span></div>
+              <ul class="toc-study-list">
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">De officiële oefenomgeving voor het staatsexamen C1</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <p class="toc-study-every">Op elk niveau: een persoonlijke voortgangstracker, huiswerk tussen de lessen en hulp via WhatsApp en e-mail.</p>
+      </div>
+    </div>
+
+    <!-- ── C1 → C2 ── -->
     <div class="toc-panel" id="toc-c1c2">
+      <div class="toc-step-intro">
+        <div class="toc-step-goal">Bijna moedertaalniveau: subtiel, spontaan en met je eigen stijl.</div>
+        <div class="toc-step-meta">Ongeveer 300 uur · 75 modules van 4 lessen · 3 × 100 uur of 1 × 300 uur</div>
+      </div>
 
       <div class="toc-module">
         <div class="toc-module-header" onclick="toggleModule(this)">
           <div class="toc-module-left">
-            <span class="toc-module-num">C1.01</span>
-            <span class="toc-module-title">Vloeiende expressie</span>
+            <span class="toc-module-num">Deel 1</span>
+            <span class="toc-module-title">Meesterschap</span>
           </div>
           <div style="display:flex;align-items:center;gap:.8rem">
-            <span class="toc-module-badge">Gevorderd</span>
+            <span class="toc-module-range">Modules 1–15</span>
             <span class="toc-module-arrow">▼</span>
           </div>
         </div>
         <div class="toc-lessons">
-          <div class="toc-lesson"><span class="toc-lesson-num">1.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">Idiomatisch Nederlands</div><div class="toc-lesson-desc">Veelvoorkomende uitdrukkingen, vaste zegswijzen en gezegdes</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">1.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Register &amp; toon</div><div class="toc-lesson-desc">Formeel versus informeel, professionele schrijfstijlen</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">1.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">Humor &amp; ironie</div><div class="toc-lesson-desc">Nederlandse directheid, sarcasme en komische cultuur</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">1.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">Retoriek &amp; overtuigingskracht</div><div class="toc-lesson-desc">Debat, argumentatie, een standpunt presenteren</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">1.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">Complexe zinsbouw</div><div class="toc-lesson-desc">Ingebedde bijzinnen en lange zinnen</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">1.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Fijne verschillen</div><div class="toc-lesson-desc">Woorden die bijna hetzelfde betekenen</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">1.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">Stijl &amp; stem</div><div class="toc-lesson-desc">Je eigen schrijfstijl ontwikkelen</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">1.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">Naslaggrammatica</div><div class="toc-lesson-desc">Zelf elk antwoord vinden</div></div></div>
         </div>
       </div>
 
       <div class="toc-module">
         <div class="toc-module-header" onclick="toggleModule(this)">
           <div class="toc-module-left">
-            <span class="toc-module-num">C1.02</span>
-            <span class="toc-module-title">Academisch &amp; professioneel Nederlands</span>
+            <span class="toc-module-num">Deel 2</span>
+            <span class="toc-module-title">Spontaan spreken</span>
           </div>
           <div style="display:flex;align-items:center;gap:.8rem">
-            <span class="toc-module-badge">Professioneel</span>
+            <span class="toc-module-range">Modules 16–30</span>
             <span class="toc-module-arrow">▼</span>
           </div>
         </div>
         <div class="toc-lessons">
-          <div class="toc-lesson"><span class="toc-lesson-num">2.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">Academisch schrijven</div><div class="toc-lesson-desc">Essays, rapporten, argumenten formeel structureren</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">2.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Zakelijke communicatie</div><div class="toc-lesson-desc">Presentaties, onderhandelingen, zakelijke e-mails</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">2.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">Juridische &amp; ambtelijke taal</div><div class="toc-lesson-desc">Contracten, officiële documenten, formele correspondentie</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">2.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">Media &amp; journalistiek</div><div class="toc-lesson-desc">NRC en de Volkskrant lezen, naar het radionieuws luisteren</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">2.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">Zonder voorbereiding</div><div class="toc-lesson-desc">Over elk onderwerp, op elk moment</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">2.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Debat</div><div class="toc-lesson-desc">Een standpunt verdedigen onder druk</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">2.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">Humor &amp; ironie</div><div class="toc-lesson-desc">Begrijpen en zelf gebruiken</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">2.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">Regionale verschillen</div><div class="toc-lesson-desc">Vlaams, Amsterdams en Haags, plus een blik op het Fries</div></div></div>
         </div>
       </div>
 
       <div class="toc-module">
         <div class="toc-module-header" onclick="toggleModule(this)">
           <div class="toc-module-left">
-            <span class="toc-module-num">C1.03</span>
-            <span class="toc-module-title">Nederlandse literatuur &amp; cultuur</span>
+            <span class="toc-module-num">Deel 3</span>
+            <span class="toc-module-title">Literatuur &amp; ideeën</span>
           </div>
           <div style="display:flex;align-items:center;gap:.8rem">
-            <span class="toc-module-badge">Cultuur</span>
+            <span class="toc-module-range">Modules 31–45</span>
             <span class="toc-module-arrow">▼</span>
           </div>
         </div>
         <div class="toc-lessons">
-          <div class="toc-lesson"><span class="toc-lesson-num">3.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">Klassieke Nederlandse literatuur</div><div class="toc-lesson-desc">Anne Frank, Multatuli, Herman Heijermans</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">3.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Moderne Nederlandse fictie</div><div class="toc-lesson-desc">Hedendaagse auteurs en analyse van korte verhalen</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">3.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">Nederlandse geschiedenis &amp; identiteit</div><div class="toc-lesson-desc">Gouden Eeuw, kolonialisme, moderne Nederlandse identiteit</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">3.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">Regionale verschillen</div><div class="toc-lesson-desc">Vlaams, Amsterdams en Haags, plus een blik op het Fries</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">3.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">Klassieke literatuur</div><div class="toc-lesson-desc">Belangrijke werken en hun achtergrond</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">3.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Moderne fictie</div><div class="toc-lesson-desc">Hedendaagse schrijvers</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">3.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">Essays</div><div class="toc-lesson-desc">Essays lezen en schrijven</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">3.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">Wetenschap &amp; filosofie</div><div class="toc-lesson-desc">Populaire wetenschap en grote ideeën</div></div></div>
         </div>
       </div>
 
       <div class="toc-module">
         <div class="toc-module-header" onclick="toggleModule(this)">
           <div class="toc-module-left">
-            <span class="toc-module-num">C2.01</span>
-            <span class="toc-module-title">Beheersing &amp; bijna-moedertaalniveau</span>
+            <span class="toc-module-num">Deel 4</span>
+            <span class="toc-module-title">Professionele topklasse</span>
           </div>
           <div style="display:flex;align-items:center;gap:.8rem">
-            <span class="toc-module-badge">Beheersing</span>
+            <span class="toc-module-range">Modules 46–60</span>
             <span class="toc-module-arrow">▼</span>
           </div>
         </div>
         <div class="toc-lessons">
-          <div class="toc-lesson"><span class="toc-lesson-num">4.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">Complexe zinsbouw</div><div class="toc-lesson-desc">Lange zinsconstructies, ingebedde bijzinnen</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">4.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Spontaan spreken</div><div class="toc-lesson-desc">Vloeiend, onvoorbereid spreken over elk onderwerp</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">4.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">Stijl &amp; schrijfstem</div><div class="toc-lesson-desc">Je eigen persoonlijke Nederlandse schrijfstijl ontwikkelen</div></div></div>
-          <div class="toc-lesson"><span class="toc-lesson-num">4.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">Eindexamen &amp; beoordeling</div><div class="toc-lesson-desc">Mondelinge en schriftelijke eindbeoordeling van de cursus</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">4.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">Taal van leiderschap</div><div class="toc-lesson-desc">Leidinggeven, motiveren en beslissen</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">4.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Juridisch &amp; officieel Nederlands</div><div class="toc-lesson-desc">Contracten en officiële documenten</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">4.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">Media</div><div class="toc-lesson-desc">Interviews, pers en spreken in het openbaar</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">4.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">Vertalen</div><div class="toc-lesson-desc">Tussen het Nederlands en je eigen taal</div></div></div>
         </div>
       </div>
 
+      <div class="toc-module">
+        <div class="toc-module-header" onclick="toggleModule(this)">
+          <div class="toc-module-left">
+            <span class="toc-module-num">Deel 5</span>
+            <span class="toc-module-title">Eindniveau</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:.8rem">
+            <span class="toc-module-range">Modules 61–75</span>
+            <span class="toc-module-arrow">▼</span>
+          </div>
+        </div>
+        <div class="toc-lessons">
+          <div class="toc-lesson"><span class="toc-lesson-num">5.1</span><div class="toc-lesson-info"><div class="toc-lesson-title">Internationaal certificaat</div><div class="toc-lesson-desc">Examentraining op het hoogste niveau</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">5.2</span><div class="toc-lesson-info"><div class="toc-lesson-title">Redigeren</div><div class="toc-lesson-desc">Je eigen teksten verfijnen</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">5.3</span><div class="toc-lesson-info"><div class="toc-lesson-title">Eindproject</div><div class="toc-lesson-desc">Een lange tekst of presentatie over jouw onderwerp</div></div></div>
+          <div class="toc-lesson"><span class="toc-lesson-num">5.4</span><div class="toc-lesson-info"><div class="toc-lesson-title">Eindbeoordeling</div><div class="toc-lesson-desc">Mondeling en schriftelijk</div></div></div>
+        </div>
+      </div>
 
       <div class="toc-study">
-        <div class="toc-study-title">Studiemateriaal — C1–C2</div>
+        <div class="toc-study-title">Lesmateriaal — C1 → C2</div>
         <div class="toc-study-grid">
           <div>
             <div class="toc-study-cat">
               <div class="toc-study-cat-title"><span class="toc-study-cat-name">Werkboeken</span></div>
               <ul class="toc-study-list">
-                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Werkboeken voor dit niveau</li>
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Een methode voor bijna-moedertaalniveau</li>
               </ul>
             </div>
             <div class="toc-study-cat">
               <div class="toc-study-cat-title"><span class="toc-study-cat-name">Grammatica</span></div>
               <ul class="toc-study-list">
-                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Grammaticagidsen en spellingregels</li>
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">De complete naslaggrammatica van het Nederlands</li>
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Een boek over stijl en taalgebruik voor gevorderden</li>
               </ul>
             </div>
           </div>
           <div>
             <div class="toc-study-cat">
-              <div class="toc-study-cat-title"><span class="toc-study-cat-name">Examenvoorbereiding</span></div>
+              <div class="toc-study-cat-title"><span class="toc-study-cat-name">Luisteren &amp; lezen</span></div>
               <ul class="toc-study-list">
-                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Oefenmateriaal voor NT2 en inburgering</li>
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Bijlagen van kwaliteitskranten</li>
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Populairwetenschappelijke tijdschriften</li>
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Podcasts van de publieke omroep en politieke talkshows</li>
               </ul>
             </div>
             <div class="toc-study-cat">
-              <div class="toc-study-cat-title"><span class="toc-study-cat-name">Oefeningen</span></div>
+              <div class="toc-study-cat-title"><span class="toc-study-cat-name">Examens</span></div>
               <ul class="toc-study-list">
-                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Dictee-, lees-, luister-, schrijf- en spreekoefeningen</li>
+                <li class="toc-study-item" style="padding-left:0;color:var(--muted);">Oefenen voor een internationaal certificaatexamen Nederlands</li>
               </ul>
             </div>
           </div>
         </div>
+        <p class="toc-study-every">Op elk niveau: een persoonlijke voortgangstracker, huiswerk tussen de lessen en hulp via WhatsApp en e-mail.</p>
       </div>
     </div>
+
 
 
   </div>
