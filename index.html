@@ -1228,6 +1228,12 @@
   html body .page .page-sub.reveal-scroll { opacity: 1 !important; transform: none !important; filter: none !important; }
   html body .payment-methods .payment-intl-note { text-align: center; max-width: 620px; margin: 2rem auto 0; font-size: 0.92rem; line-height: 1.7; color: rgba(247,236,217,0.85); }
   html body .payment-methods .payment-intl-note strong { color: #f7ecd9; }
+  /* Bigger subtitles */
+  html body .page .page-sub, html body #home .hero-sub { font-size: 1.3rem !important; line-height: 1.55 !important; max-width: 720px !important; }
+  @media (max-width: 600px) { html body .page .page-sub, html body #home .hero-sub { font-size: 1.1rem !important; } }
+  html body .ts-cur { display: inline; border-left: 2px solid var(--accent); margin-left: 1px; margin-right: -3px; animation: blink 0.75s step-end infinite; }
+  html body #home .hero-sub, html body .page .page-sub { display: block !important; }
+  html body #home .hero-sub > span, html body .page .page-sub > span { display: inline !important; }
   html body .footer-cta-text { margin: 0 0 0.6rem; font-size: 0.92rem; line-height: 1.55; color: rgba(247,236,217,0.75); }
   html body .footer-col-group a.footer-cta-btn { display: inline-flex; align-self: flex-start; padding: 0.7rem 1.3rem; border-radius: 999px; border: 1.5px solid rgba(240,120,30,0.9); background: rgba(240,120,30,0.16); color: #ffd9b0; font-weight: 600; transition: background .25s, transform .25s; }
   html body .footer-col-group a.footer-cta-btn:hover { background: rgba(240,120,30,0.32); color: #fff; transform: translateY(-2px); }
@@ -5091,6 +5097,24 @@
   // Title tag per tab: '<page> | Talking Dutch'
   const __HOME_TITLE = document.title;
   const __TAB_TITLES = {"about": "Over mij", "courseware": "Lesmateriaal", "services": "Pakketten & prijzen", "syllabus": "Lesprogramma A1 tot C2", "faq": "Veelgestelde vragen", "blog": "Blog", "contact": "Contact & boeken", "terms": "Algemene voorwaarden", "privacy": "Privacybeleid"};
+  // Subtitle typewriter: types after the title; the untyped part keeps its space (no layout jump)
+  const __subGen = new WeakMap();
+  function typeSub(el, delay) {
+    const full = el.dataset.full || (el.dataset.full = el.textContent.trim());
+    const gen = (__subGen.get(el) || 0) + 1; __subGen.set(el, gen);
+    const esc = t => t.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+    if (typeof prefersReducedMotion !== 'undefined' && prefersReducedMotion) { el.textContent = full; return; }
+    let i = 0;
+    const draw = (cur) => { el.innerHTML = esc(full.slice(0, i)) + (cur ? '<span class="ts-cur"></span>' : '') + '<span style="visibility:hidden">' + esc(full.slice(i)) + '</span>'; };
+    draw(false);
+    function step() {
+      if (__subGen.get(el) !== gen) return;
+      if (i >= full.length) { el.textContent = full; return; }
+      i++; draw(true); setTimeout(step, 22);
+    }
+    setTimeout(step, delay);
+  }
+
   // ── TAB SWITCHING ──
   function show(id) {
     document.title = __TAB_TITLES[id] ? __TAB_TITLES[id] + ' | Talking Dutch' : __HOME_TITLE;
@@ -5114,6 +5138,11 @@
       if (cfg) typeTitle(cfg, i * 300);
     });
     if (id === 'home') startHeroTyping();
+    { const pg = document.getElementById(id); const sub = pg && pg.querySelector('.page-sub, .hero-sub');
+      if (sub) { let d = 300;
+        if (id === 'home') d = 150 + HERO_L1.length * 45 + 250 + LINE1.length * 45 + 250;
+        else { const c = PAGE_TITLES[(TAB_TITLES[id] || [])[0]]; if (c) d = (c.white.length + c.orange.length) * 55 + 250; }
+        typeSub(sub, d); } }
 
     if (id === 'faq') resetFaqState();
     if (id === 'syllabus') resetSyllabusState();
