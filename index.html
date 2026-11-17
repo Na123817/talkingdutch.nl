@@ -1909,14 +1909,6 @@
   #contactTitle    .orange-part,
   #blogTitle       .orange-part { color: #f7ecd9; }
 
-  #coursewareTitle .pt-cursor,
-  #loginTitle      .pt-cursor,
-  #registerTitle   .pt-cursor,
-  #servicesTitle   .pt-cursor,
-  #syllabusTitle   .pt-cursor,
-  #faqTitle        .pt-cursor,
-  #pricingTitle    .pt-cursor,
-  #aboutTitle      .pt-cursor { background: var(--text); }
 
   /* ── INFO STRIP (bottom of packages grid) ── */
   .info-strip {
@@ -3054,7 +3046,7 @@
     <div class="hero-inner">
 
       <div class="hero-text">
-        <h1 class="hero-title" id="heroTitle" style="margin:0;"><span id="heroLine1" style="display:block;min-height:1.2em;">Talking Dutch?</span><span id="heroTyped" style="display:block;min-height:1.2em;">Verbeter je Nederlands, vandaag nog!</span></h1>
+        <h1 class="hero-title" id="heroTitle" style="margin:0;"><span id="heroLine1" style="display:block;min-height:1.2em;">Talking Dutch?</span><span id="heroTyped" style="display:block;min-height:1.2em;">Verbeter je uitspraak, vandaag nog!</span></h1>
     
       </div>
     </div>
@@ -4476,7 +4468,7 @@
       if (gen !== __titleGen[cfg.id]) return;
       render(true);
       if (k < total) { k++; setTimeout(tick, 55); }
-      else setTimeout(() => { if (gen === __titleGen[cfg.id]) render(false); }, 900);
+      else render(false);
     }
     setTimeout(tick, delay || 0);
   }
@@ -4619,7 +4611,7 @@
   }
 
   // ── HERO TYPEWRITER ──
-  const LINE1 = 'Verbeter je Nederlands, vandaag nog!';
+  const LINE1 = 'Verbeter je uitspraak, vandaag nog!';
   const titleEl   = document.getElementById('heroTyped');
   let heroGen = 0;
 
@@ -4639,7 +4631,7 @@
       i++;
       if (i > txt.length) {
         if (++p < parts.length) { i = 0; setTimeout(step, 250); return; }
-        setTimeout(() => { if (gen === heroGen) cur.remove(); }, 900);
+        cur.remove();
         return;
       }
       setTimeout(step, 45);
