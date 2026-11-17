@@ -1214,6 +1214,12 @@
   html body #syllabus .toc-module-range { font-size: 0.72rem; color: rgba(247,236,217,0.6); white-space: nowrap; }
   html body #syllabus .toc-study-every { margin-top: 1.2rem; font-size: 0.85rem; color: rgba(247,236,217,0.75); text-align: center; }
   @media (max-width: 600px) { html body #syllabus .toc-module-range { display: none; } }
+  /* Contact: wider form on phones */
+  @media (max-width: 600px) {
+    html body #contact .contact-page { padding-left: 1rem !important; padding-right: 1rem !important; }
+    html body #contact .contact-hero { padding-left: 1.1rem !important; padding-right: 1.1rem !important; }
+    html body #contact .booking-form-fallback { padding-left: 0 !important; padding-right: 0 !important; }
+  }
   html body .footer-cta-text { margin: 0 0 0.6rem; font-size: 0.92rem; line-height: 1.55; color: rgba(247,236,217,0.75); }
   html body .footer-col-group a.footer-cta-btn { display: inline-flex; align-self: flex-start; padding: 0.7rem 1.3rem; border-radius: 999px; border: 1.5px solid rgba(240,120,30,0.9); background: rgba(240,120,30,0.16); color: #ffd9b0; font-weight: 600; transition: background .25s, transform .25s; }
   html body .footer-col-group a.footer-cta-btn:hover { background: rgba(240,120,30,0.32); color: #fff; transform: translateY(-2px); }
@@ -5645,7 +5651,7 @@
     <div class="contact-hero">
       <div class="contact-kicker">Boek een les / Neem contact op</div>
       <h2 class="contact-title">Boek een les bij Talking Dutch</h2>
-      <p class="contact-subtitle">Gebruik onderstaand formulier om je pakket en gewenste planning aan te vragen. Ik bevestig de beschikbaarheid en stuur de betaalgegevens per e-mail.</p>
+      <p class="contact-subtitle">Kies een pakket en laat weten wanneer je kunt. Ik bevestig een tijd en mail je de betaalgegevens. Nieuw? Begin met de proefles van €12.</p>
 
     <div class="booking-form-wrap">
         <iframe id="bookingFormFrame" class="booking-form-frame" style="display:none;" title="Boekingsformulier" loading="lazy"></iframe>
@@ -5682,15 +5688,15 @@
               </div>
               <div class="qbf-field">
                 <label for="qbfSchedule">Gewenste Dagen / Tijden</label>
-                <input type="text" id="qbfSchedule" placeholder="bijv. doordeweeks 's avonds, CET">
+                <input type="text" id="qbfSchedule" placeholder="bijv. di/do-ochtend, NL-tijd">
               </div>
             </div>
             <div class="qbf-field">
               <label for="qbfMessage">Bericht <span class="qbf-optional">(optioneel)</span></label>
-              <textarea id="qbfMessage" rows="3" placeholder="Je huidige niveau, doelen, of iets anders wat ik moet weten"></textarea>
+              <textarea id="qbfMessage" rows="3" placeholder="Je niveau, je doelen, of iets anders wat ik moet weten"></textarea>
             </div>
             <button type="submit" class="qbf-submit">Verstuur Aanvraag →</button>
-            <p class="qbf-note">Je aanvraag wordt veilig naar mij verstuurd en ik reageer per e-mail.</p>
+            <p class="qbf-note">Je aanvraag komt rechtstreeks in mijn inbox. Ik reageer per e-mail.</p>
             <p id="qbfStatus" class="qbf-note" role="status" aria-live="polite" style="margin-top:0.6rem;"></p>
           </form>
         </div>
@@ -5716,14 +5722,14 @@
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="5" width="20" height="14" rx="2"></rect><path d="M2 10h20"></path></svg>
             </div>
             <div class="payment-method-name">Credit- / Betaalkaart</div>
-            <div class="payment-method-detail">Betaal met kaart via de PayPal-link hierboven — geen PayPal-account nodig.</div>
+            <div class="payment-method-detail">Betaal met je kaart via de PayPal-link hierboven. Je hebt geen PayPal-account nodig.</div>
           </div>
 
           <div class="payment-method-card">
             <div class="payment-method-icon">
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18M9 21V9"></path></svg>
             </div>
-            <div class="payment-method-name">Bankoverschrijving (Revolut-link)</div>
+            <div class="payment-method-name">Revolut</div>
             <div class="payment-method-detail"><a href="https://revolut.me/jonath4uch" target="_blank" rel="noopener">revolut.me/jonath4uch</a></div>
           </div>
 
@@ -5731,8 +5737,8 @@
             <div class="payment-method-icon">
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M5 21V10l7-6 7 6v11M9 21v-6h6v6"></path></svg>
             </div>
-            <div class="payment-method-name">Reguliere Bankoverschrijving (IBAN)</div>
-            <div class="payment-method-detail">Liever een directe bankoverschrijving? Stuur me een bericht via het contactformulier en ik stuur je mijn IBAN rechtstreeks toe — dit wordt hier niet gepubliceerd.</div>
+            <div class="payment-method-name">Bankoverschrijving (IBAN)</div>
+            <div class="payment-method-detail">Liever een bankoverschrijving? Stuur me een bericht, dan mail ik je mijn IBAN. Die staat niet op deze site.</div>
           </div>
 
           <div class="payment-method-card">
@@ -5740,7 +5746,7 @@
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 15h4"></path></svg>
             </div>
             <div class="payment-method-name">iDEAL</div>
-            <div class="payment-method-detail">Beschikbaar voor Nederlandse bankrekeningen — betaallink wordt per e-mail verstuurd zodra je boeking is bevestigd.</div>
+            <div class="payment-method-detail">Voor Nederlandse bankrekeningen. Ik mail je een betaallink zodra je boeking is bevestigd.</div>
           </div>
 
           <div class="payment-method-card">
@@ -5748,7 +5754,7 @@
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>
             </div>
             <div class="payment-method-name">Wero</div>
-            <div class="payment-method-detail">Op aanvraag beschikbaar — details worden per e-mail verstuurd.</div>
+            <div class="payment-method-detail">Op aanvraag. Ik mail je de details.</div>
           </div>
 
         </div>
