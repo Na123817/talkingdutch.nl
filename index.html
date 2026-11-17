@@ -3472,7 +3472,7 @@
   <div class="hero hero-end"><div class="hero-inner"><div class="hero-text">
 <div class="hero-body">
           <div class="accent-bar"></div>
-          <p class="hero-tagline" style="text-align:center;">Klaar om te beginnen? Boek een proefles van 30 minuten voor €12. We bepalen je niveau, je doelen en je lesplan.</p>
+          <p class="hero-tagline" style="text-align:center;">Klaar om te beginnen? Boek een proefles van 30 minuten bij Talking Dutch voor €12. We bepalen je niveau, je doelen en je lesplan.</p>
           <div class="home-hero-ctas" style="display:flex;gap:0.8rem;justify-content:center;flex-wrap:wrap;margin-top:1.4rem;"><button class="booking-gcal-btn" type="button" onclick="__pendingPackage='30-Minuten Proefles - €12';show('contact')">Boek een proefles van €12</button><button class="booking-gcal-btn" type="button" onclick="show('services')">Bekijk pakketten</button></div>
         </div>
   </div></div></div>
@@ -3503,7 +3503,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
           <span>Plannen via Google Calendar</span>
         </div>
-        <p class="booking-freeline">Voordat je je eerste pakket boekt, beginnen we met een proefles van 30 minuten voor €12. Samen brengen we je doelen, je huidige niveau en je gewenste tempo in kaart — en op basis van dat gesprek stel ik een persoonlijk plan op. Een proefles of een volledige cursus boeken werkt op dezelfde manier:</p>
+        <p class="booking-freeline">Voordat je je eerste pakket bij Talking Dutch boekt, beginnen we met een proefles van 30 minuten voor €12. Samen brengen we je doelen, je huidige niveau en je gewenste tempo in kaart — en op basis van dat gesprek stel ik een persoonlijk plan op. Een proefles of een volledige cursus boeken werkt op dezelfde manier:</p>
         <div class="booking-steps">
           <div class="booking-step">
             <div class="booking-step-num">01</div>
@@ -5043,8 +5043,12 @@
     return false;
   }
 
+  // Title tag per tab: '<page> | Talking Dutch'
+  const __HOME_TITLE = document.title;
+  const __TAB_TITLES = {"about": "Over mij", "courseware": "Lesmateriaal", "services": "Pakketten & prijzen", "syllabus": "Lesprogramma A1 tot C2", "faq": "Veelgestelde vragen", "blog": "Blog", "contact": "Contact & boeken", "terms": "Algemene voorwaarden", "privacy": "Privacybeleid"};
   // ── TAB SWITCHING ──
   function show(id) {
+    document.title = __TAB_TITLES[id] ? __TAB_TITLES[id] + ' | Talking Dutch' : __HOME_TITLE;
     // Reset the scroll-reveal while the target page is still hidden, so there is no flash
     { const tgt = document.getElementById(id);
       if (tgt && !tgt.classList.contains('active')) tgt.querySelectorAll('.reveal-scroll.is-visible').forEach(el => el.classList.remove('is-visible')); }
@@ -5613,7 +5617,7 @@
     <div class="page-title" id="contactTitle"></div>
     <div class="contact-hero">
       <div class="contact-kicker">Boek een les / Neem contact op</div>
-      <h2 class="contact-title">Laten we je eerste les plannen</h2>
+      <h2 class="contact-title">Boek een les bij Talking Dutch</h2>
       <p class="contact-subtitle">Gebruik onderstaand formulier om je pakket en gewenste planning aan te vragen. Ik bevestig de beschikbaarheid en stuur de betaalgegevens per e-mail.</p>
 
     <div class="booking-form-wrap">
