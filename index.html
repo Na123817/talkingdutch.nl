@@ -5047,6 +5047,20 @@
   const CONTACT_FORM_KEY = 'fe75e56d-24f8-4c74-bb3d-401c9b1de4a8';
   const WHATSAPP_FALLBACK = 'https://wa.me/31614479334';
 
+
+  // ── Spam / sales filter: only lesson requests get through ──
+  const BLOCKED_EMAILS = ['h.melotto@melottogroup.com'];
+  const BLOCKED_DOMAINS = ['melottogroup.com'];
+  const SALES_PHRASES = ['web design','webdesign','website design','redesign','refresh their website','new look','seo','search engine','google ranking','first page of google','backlink','guest post','marketing','lead generation','leads for','social media management','app development','we help businesses','we help b','our agency','our services','our team of','book a call','book a time','schedule a call','samples of our','pricing if you','partnership','collaboration','sponsor','crypto','investment opportunity','calendly.com'];
+  function isNotALessonRequest(email, text) {
+    const e = (email || '').toLowerCase(), t = (text || '').toLowerCase();
+    if (BLOCKED_EMAILS.indexOf(e) !== -1) return true;
+    const dom = e.split('@')[1] || '';
+    if (BLOCKED_DOMAINS.some(function (d) { return dom === d || dom.endsWith('.' + d); })) return true;
+    if (/https?:\/\/|www\.|calendly|bit\.ly/.test(t)) return true;              // links in a lesson request are almost always sales
+    const hits = SALES_PHRASES.filter(function (k) { return t.indexOf(k) !== -1; }).length;
+    return hits >= 2;
+  }
   async function submitQuickBookingForm(e) {
     e.preventDefault();
     const form = document.getElementById('quickBookingForm');
@@ -5060,6 +5074,11 @@
       setStatus('Het formulier is nog niet gekoppeld. Stuur me in plaats daarvan een bericht via ' + waLink + '.', false);
       return false;
     }
+    if (document.getElementById('qbfBot') && document.getElementById('qbfBot').checked) return false; // hidden honeypot: bots tick it
+    if (isNotALessonRequest(val('qbfEmail'), val('qbfName') + ' ' + val('qbfSchedule') + ' ' + val('qbfMessage'))) {
+      setStatus('Dit formulier is alleen voor aanvragen van lessen Nederlands. Aanbiedingen voor diensten (websites, marketing, SEO en dergelijke) worden niet geaccepteerd.', false);
+      return false;
+    }
     const pkg = val('qbfPackage');
     const payload = {
       access_key: CONTACT_FORM_KEY,
@@ -5069,7 +5088,8 @@
       email: val('qbfEmail'),
       package: pkg,
       preferred_days_times: val('qbfSchedule') || '-',
-      message: val('qbfMessage') || '-'
+      message: val('qbfMessage') || '-',
+      botcheck: false
     };
     btn.disabled = true;
     setStatus('Verzenden…', true);
@@ -5704,6 +5724,7 @@
         </p>
         <div id="bookingFormFallback" class="booking-form-fallback" style="display:none;">
           <form id="quickBookingForm" onsubmit="return submitQuickBookingForm(event)">
+                <input type="checkbox" id="qbfBot" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;">
             <div class="qbf-row">
               <div class="qbf-field">
                 <label for="qbfName">Naam</label>
