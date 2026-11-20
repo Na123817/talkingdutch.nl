@@ -1297,6 +1297,8 @@
   /* Home background a little brighter */
   html body #home.page .page-photo img { filter: sepia(0.15) saturate(1.1) brightness(0.95) !important; }
   html body #home.page .page-photo::after { background: radial-gradient(ellipse 60% 85% at 50% 45%, rgba(10,6,3,0.58), rgba(10,6,3,0.26) 70%, rgba(10,6,3,0.06) 100%), linear-gradient(180deg, rgba(10,6,3,0.4), rgba(10,6,3,0.04) 22%, rgba(10,6,3,0.04) 60%, rgba(10,6,3,0.45)), linear-gradient(160deg, rgba(222,125,52,0.12), rgba(138,71,21,0.05)) !important; }
+  /* No blurred strip behind the top tabs */
+  html body nav, html body nav * { -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
   html body .footer-cta-text { margin: 0 0 0.6rem; font-size: 0.92rem; line-height: 1.55; color: rgba(247,236,217,0.75); }
   html body .footer-col-group a.footer-cta-btn { display: inline-flex; align-self: flex-start; padding: 0.7rem 1.3rem; border-radius: 999px; border: 1.5px solid rgba(240,120,30,0.9); background: rgba(240,120,30,0.16); color: #ffd9b0; font-weight: 600; transition: background .25s, transform .25s; }
   html body .footer-col-group a.footer-cta-btn:hover { background: rgba(240,120,30,0.32); color: #fff; transform: translateY(-2px); }
@@ -3740,7 +3742,7 @@
 <div class="page" id="services">
   <!-- PACKAGES SECTION -->
   <div class="services-wrap">
-    <figure class="page-photo"><picture><source media="(max-width: 600px) and (orientation: portrait)" srcset="packages-bg-cheesemarket-v2-m.webp"><img src="packages-bg-cheesemarket-v2.webp" alt="Kaasmarkt voor het stadhuis van Gouda" loading="lazy" decoding="async"></picture></figure>
+    <figure class="page-photo"><picture><source media="(max-width: 600px) and (orientation: portrait)" srcset="packages-bg-cheeseboard-m.webp"><img src="packages-bg-cheeseboard.webp" alt="Hollandse kazen op een houten plank bij het raam van een boerderij" loading="lazy" decoding="async"></picture></figure>
     <div class="page-head"><div class="page-title" id="servicesTitle"></div>
     <p class="page-sub">Online privélessen vanaf €16 per uur. Begin met één les of boek een volledige stap naar het volgende niveau.</p></div>
     
