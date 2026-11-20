@@ -1297,6 +1297,8 @@
   /* Home background a little brighter */
   html body #home.page .page-photo img { filter: sepia(0.15) saturate(1.1) brightness(0.95) !important; }
   html body #home.page .page-photo::after { background: radial-gradient(ellipse 60% 85% at 50% 45%, rgba(10,6,3,0.58), rgba(10,6,3,0.26) 70%, rgba(10,6,3,0.06) 100%), linear-gradient(180deg, rgba(10,6,3,0.4), rgba(10,6,3,0.04) 22%, rgba(10,6,3,0.04) 60%, rgba(10,6,3,0.45)), linear-gradient(160deg, rgba(222,125,52,0.12), rgba(138,71,21,0.05)) !important; }
+  /* Contact photo: no sepia so the blue sky stays blue */
+  html body #contact.page > .page-photo img { filter: saturate(1.05) brightness(0.85) !important; }
   html body .footer-cta-text { margin: 0 0 0.6rem; font-size: 0.92rem; line-height: 1.55; color: rgba(247,236,217,0.75); }
   html body .footer-col-group a.footer-cta-btn { display: inline-flex; align-self: flex-start; padding: 0.7rem 1.3rem; border-radius: 999px; border: 1.5px solid rgba(240,120,30,0.9); background: rgba(240,120,30,0.16); color: #ffd9b0; font-weight: 600; transition: background .25s, transform .25s; }
   html body .footer-col-group a.footer-cta-btn:hover { background: rgba(240,120,30,0.32); color: #fff; transform: translateY(-2px); }
@@ -5778,7 +5780,7 @@
 
 <!-- ══════════ CONTACT ══════════ -->
 <div class="page" id="contact">
-  <figure class="page-photo"><picture><source media="(max-width: 600px) and (orientation: portrait)" srcset="contact-bg-heath-m.webp"><img src="contact-bg-heath.webp" alt="Fietser op de heide met een grazende Schotse hooglander" loading="lazy" decoding="async"></picture></figure>
+  <figure class="page-photo"><picture><source media="(max-width: 600px) and (orientation: portrait)" srcset="contact-bg-heath-v2-m.webp"><img src="contact-bg-heath-v2.webp" alt="Fietser op de heide met een grazende Schotse hooglander" loading="lazy" decoding="async"></picture></figure>
   <div class="contact-page">
     <div class="page-head"><div class="page-title" id="contactTitle"></div>
     <p class="page-sub">Boek een proefles, vraag een pakket aan of stel gewoon een vraag.</p></div>
