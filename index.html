@@ -1265,8 +1265,8 @@
     background: rgba(232,119,34,0.28) !important; color: #fff3e6 !important; border-color: var(--accent) !important;
     box-shadow: 0 0 16px rgba(232,119,34,0.35) !important; transform: translateY(-1px); }
   /* Photo band: title + subtitle on the photo; content starts below it */
-  :root { --band: max(460px, 70vh); }
-  @media (max-width: 600px) { :root { --band: max(400px, 62vh); } }
+  :root { --band: max(520px, 100vh); }
+  @supports (height: 100svh) { :root { --band: max(520px, 100svh); } }
   html body .page .page-photo { height: var(--band) !important; -webkit-mask-image: linear-gradient(to bottom, #000 70%, transparent 100%); mask-image: linear-gradient(to bottom, #000 70%, transparent 100%); }
   html body .page .page-head { min-height: calc(var(--band) - 140px); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; box-sizing: border-box; padding-bottom: 1.5rem; order: 0 !important; }
   html body .page .page-head.reveal-scroll { opacity: 1 !important; transform: none !important; filter: none !important; }
@@ -3200,9 +3200,92 @@
     </div>
   </div>
 
+  <!-- ── BUTTONS BELOW THE PHOTO ── -->
+  <div class="home-section home-ctas-section" style="padding-top:1.5rem;padding-bottom:0;">
+    <div class="home-hero-ctas home-ctas-below" style="display:flex;gap:0.8rem;justify-content:center;flex-wrap:wrap;margin:0 auto 3rem;"><button class="booking-gcal-btn" type="button" onclick="__pendingPackage='30-Minuten Proefles - €12';show('contact')">Boek een proefles van €12</button><button class="booking-gcal-btn" type="button" onclick="show('services')">Bekijk pakketten</button></div>
+  </div>
+
+  <!-- ── HOW IT WORKS ── -->
+  <div class="home-section" style="padding-top:7.5rem;padding-bottom:4rem;">
+    <div class="home-section-label">Hoe het werkt</div>
+    <h2 class="home-section-title">Hoe ik online Nederlands lesgeef</h2>
+    <div class="home-services-grid">
+      <div class="hs-card">
+<div class="gflip-inner">
+<div class="gflip-front">
+        <div class="hs-title">Live via Google Meet</div>
+        <div class="hs-desc">Echte gesprekken met mij, elke les een volle 60 minuten. Geen opgenomen video's.</div>
+      </div>
+<div class="gflip-back">
+        <div class="hs-title">Live via Google Meet</div>
+        <div class="hs-desc">Echte gesprekken met mij, elke les een volle 60 minuten. Geen opgenomen video's.</div>
+      </div>
+</div>
+</div>
+      <div class="hs-card">
+<div class="gflip-inner">
+<div class="gflip-front">
+        <div class="hs-title">Privé of in een groep</div>
+        <div class="hs-desc">Privélessen, of een groep van maximaal 6. Ideaal voor bedrijven die hun team willen trainen.</div>
+      </div>
+<div class="gflip-back">
+        <div class="hs-title">Privé of in een groep</div>
+        <div class="hs-desc">Privélessen, of een groep van maximaal 6. Ideaal voor bedrijven die hun team willen trainen.</div>
+      </div>
+</div>
+</div>
+      <div class="hs-card">
+<div class="gflip-inner">
+<div class="gflip-front">
+        <div class="hs-title">Alle niveaus en examens</div>
+        <div class="hs-desc">Van beginner tot C2, inclusief voorbereiding op het NT2- en inburgeringsexamen.</div>
+      </div>
+<div class="gflip-back">
+        <div class="hs-title">Alle niveaus en examens</div>
+        <div class="hs-desc">Van beginner tot C2, inclusief voorbereiding op het NT2- en inburgeringsexamen.</div>
+      </div>
+</div>
+</div>
+      <div class="hs-card">
+<div class="gflip-inner">
+<div class="gflip-front">
+        <div class="hs-title">Spreken vanaf dag één</div>
+        <div class="hs-desc">Elke les draait om praten, zodat je snel zelfvertrouwen opbouwt.</div>
+      </div>
+<div class="gflip-back">
+        <div class="hs-title">Spreken vanaf dag één</div>
+        <div class="hs-desc">Elke les draait om praten, zodat je snel zelfvertrouwen opbouwt.</div>
+      </div>
+</div>
+</div>
+      <div class="hs-card">
+<div class="gflip-inner">
+<div class="gflip-front">
+        <div class="hs-title">Op maat gemaakt</div>
+        <div class="hs-desc">Een proefles van 30 minuten (€12) bepaalt je doelen, tempo en materiaal.</div>
+      </div>
+<div class="gflip-back">
+        <div class="hs-title">Op maat gemaakt</div>
+        <div class="hs-desc">Een proefles van 30 minuten (€12) bepaalt je doelen, tempo en materiaal.</div>
+      </div>
+</div>
+</div>
+      <div class="hs-card">
+<div class="gflip-inner">
+<div class="gflip-front">
+        <div class="hs-title">Een docent die je begrijpt</div>
+        <div class="hs-desc">Ik spreek Nederlands, Engels, Spaans en Portugees, dus ik kan uitleggen in een taal die je kent.</div>
+      </div>
+<div class="gflip-back">
+        <div class="hs-title">Een docent die je begrijpt</div>
+        <div class="hs-desc">Ik spreek Nederlands, Engels, Spaans en Portugees, dus ik kan uitleggen in een taal die je kent.</div>
+      </div>
+</div>
+</div>
+    </div>
+  </div>
   <!-- ── PACKAGE DEALS ── -->
   <div class="home-section" style="padding-top:1.5rem;">
-    <div class="home-hero-ctas home-ctas-below" style="display:flex;gap:0.8rem;justify-content:center;flex-wrap:wrap;margin:0 auto 3rem;"><button class="booking-gcal-btn" type="button" onclick="__pendingPackage='30-Minuten Proefles - €12';show('contact')">Boek een proefles van €12</button><button class="booking-gcal-btn" type="button" onclick="show('services')">Bekijk pakketten</button></div>
     <div class="home-section-label">Tarieven</div>
     <h2 class="home-section-title">Lespakketten &amp; Tarieven Nederlands</h2>
 
@@ -3484,85 +3567,6 @@
     </div>
   </div>
 
-  <!-- ── HOW IT WORKS ── -->
-  <div class="home-section" style="padding-top:7.5rem;padding-bottom:4rem;">
-    <div class="home-section-label">Hoe het werkt</div>
-    <h2 class="home-section-title">Hoe ik online Nederlands lesgeef</h2>
-    <div class="home-services-grid">
-      <div class="hs-card">
-<div class="gflip-inner">
-<div class="gflip-front">
-        <div class="hs-title">Live via Google Meet</div>
-        <div class="hs-desc">Echte gesprekken met mij, elke les een volle 60 minuten. Geen opgenomen video's.</div>
-      </div>
-<div class="gflip-back">
-        <div class="hs-title">Live via Google Meet</div>
-        <div class="hs-desc">Echte gesprekken met mij, elke les een volle 60 minuten. Geen opgenomen video's.</div>
-      </div>
-</div>
-</div>
-      <div class="hs-card">
-<div class="gflip-inner">
-<div class="gflip-front">
-        <div class="hs-title">Privé of in een groep</div>
-        <div class="hs-desc">Privélessen, of een groep van maximaal 6. Ideaal voor bedrijven die hun team willen trainen.</div>
-      </div>
-<div class="gflip-back">
-        <div class="hs-title">Privé of in een groep</div>
-        <div class="hs-desc">Privélessen, of een groep van maximaal 6. Ideaal voor bedrijven die hun team willen trainen.</div>
-      </div>
-</div>
-</div>
-      <div class="hs-card">
-<div class="gflip-inner">
-<div class="gflip-front">
-        <div class="hs-title">Alle niveaus en examens</div>
-        <div class="hs-desc">Van beginner tot C2, inclusief voorbereiding op het NT2- en inburgeringsexamen.</div>
-      </div>
-<div class="gflip-back">
-        <div class="hs-title">Alle niveaus en examens</div>
-        <div class="hs-desc">Van beginner tot C2, inclusief voorbereiding op het NT2- en inburgeringsexamen.</div>
-      </div>
-</div>
-</div>
-      <div class="hs-card">
-<div class="gflip-inner">
-<div class="gflip-front">
-        <div class="hs-title">Spreken vanaf dag één</div>
-        <div class="hs-desc">Elke les draait om praten, zodat je snel zelfvertrouwen opbouwt.</div>
-      </div>
-<div class="gflip-back">
-        <div class="hs-title">Spreken vanaf dag één</div>
-        <div class="hs-desc">Elke les draait om praten, zodat je snel zelfvertrouwen opbouwt.</div>
-      </div>
-</div>
-</div>
-      <div class="hs-card">
-<div class="gflip-inner">
-<div class="gflip-front">
-        <div class="hs-title">Op maat gemaakt</div>
-        <div class="hs-desc">Een proefles van 30 minuten (€12) bepaalt je doelen, tempo en materiaal.</div>
-      </div>
-<div class="gflip-back">
-        <div class="hs-title">Op maat gemaakt</div>
-        <div class="hs-desc">Een proefles van 30 minuten (€12) bepaalt je doelen, tempo en materiaal.</div>
-      </div>
-</div>
-</div>
-      <div class="hs-card">
-<div class="gflip-inner">
-<div class="gflip-front">
-        <div class="hs-title">Een docent die je begrijpt</div>
-        <div class="hs-desc">Ik spreek Nederlands, Engels, Spaans en Portugees, dus ik kan uitleggen in een taal die je kent.</div>
-      </div>
-<div class="gflip-back">
-        <div class="hs-title">Een docent die je begrijpt</div>
-        <div class="hs-desc">Ik spreek Nederlands, Engels, Spaans en Portugees, dus ik kan uitleggen in een taal die je kent.</div>
-      </div>
-</div>
-</div>
-    </div>
-  </div>
   <div class="hero hero-end"><div class="hero-inner"><div class="hero-text">
 <div class="hero-body">
           <div class="accent-bar"></div>
@@ -4828,7 +4832,7 @@
 <!-- ══════════ FAQ ══════════ -->
 <div class="page" id="faq">
   <div class="content">
-    <figure class="page-photo"><picture><source media="(max-width: 600px) and (orientation: portrait)" srcset="contact-bg-giethoorn-m.webp"><img src="contact-bg-giethoorn-opt.webp" srcset="contact-bg-giethoorn-opt.webp 1600w, contact-bg-giethoorn-2400.webp 2400w" sizes="100vw" alt="Rieten daken en grachten in Giethoorn" loading="lazy" decoding="async"></picture></figure>
+    <figure class="page-photo"><picture><source media="(max-width: 600px) and (orientation: portrait)" srcset="faq-bg-keukenhof-m.webp"><img src="faq-bg-keukenhof.webp" alt="Molen en tulpenvelden in de lente" loading="lazy" decoding="async"></picture></figure>
     <div class="page-head"><div class="page-title" id="faqTitle"></div>
     <p class="page-sub">Snel antwoord op vragen over lessen, niveaus, examens en betalen.</p></div>
     
