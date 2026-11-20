@@ -1287,10 +1287,13 @@
   html body #contact.page.page .contact-hero { margin-top: 2.5rem !important; }
   html body #contact.page.page .payment-methods { margin-top: 3.5rem !important; }
   html body #about.page.page .content > div:has(> #aboutPortraitImg) { margin-top: 2.5rem !important; }
-  /* Title block exactly in the middle of the first screen on every page */
-  html body .page .page-head { min-height: calc(var(--band) - 80px) !important; padding-bottom: 80px !important; margin: 0 !important; }
-  html body :is(#syllabus, #blog) .page-hero { min-height: var(--band) !important; padding-bottom: 80px !important; }
-  html body #home.page.page > .hero:not(.hero-end), html body #home .hero:not(.hero-end):first-of-type { min-height: var(--band) !important; padding-top: 80px !important; padding-bottom: 80px !important; margin: 0 !important; }
+  /* Title block exactly in the middle of the first screen on every page:
+     each header starts at the very top of the window (behind the tab bar) and is one screen tall */
+  html body .page .page-head { margin: calc(-80px - var(--nav-h, 62px)) 0 0 !important; min-height: var(--band) !important; padding: 0 !important; }
+  html body :is(#syllabus, #blog) .page-hero { margin-top: calc(-1 * var(--nav-h, 62px)) !important; min-height: var(--band) !important; padding-top: 0 !important; padding-bottom: 0 !important; }
+  html body #home.page.page > .hero:not(.hero-end), html body #home .hero:not(.hero-end):first-of-type { margin: calc(-1 * var(--nav-h, 62px)) 0 0 !important; min-height: var(--band) !important; padding-top: 0 !important; padding-bottom: 0 !important; }
+  html body #home .hero:not(.hero-end) .hero-inner, html body #home .hero:not(.hero-end) .hero-text { min-height: 0 !important; height: auto !important; display: flex !important; flex-direction: column !important; justify-content: center !important; } html body #home .hero:not(.hero-end) .hero-text { flex: 0 0 auto !important; }
+  html body #about.page.page .content > .page-head.page-head { margin-top: calc(-80px - var(--nav-h, 62px)) !important; }
   /* Home background a little brighter */
   html body #home.page .page-photo img { filter: sepia(0.15) saturate(1.1) brightness(0.95) !important; }
   html body #home.page .page-photo::after { background: radial-gradient(ellipse 60% 85% at 50% 45%, rgba(10,6,3,0.58), rgba(10,6,3,0.26) 70%, rgba(10,6,3,0.06) 100%), linear-gradient(180deg, rgba(10,6,3,0.4), rgba(10,6,3,0.04) 22%, rgba(10,6,3,0.04) 60%, rgba(10,6,3,0.45)), linear-gradient(160deg, rgba(222,125,52,0.12), rgba(138,71,21,0.05)) !important; }
