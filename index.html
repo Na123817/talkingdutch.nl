@@ -287,8 +287,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="image" href="netherlands-satellite.webp" fetchpriority="high">
-<link rel="preload" as="image" href="home-bg-amsterdam-v2-m.webp" media="(max-width: 600px) and (orientation: portrait)" fetchpriority="high">
-<link rel="preload" as="image" href="home-bg-amsterdam-v2.webp" imagesrcset="home-bg-amsterdam-v2.webp 1600w, home-bg-amsterdam-v2-2400.webp 2400w" imagesizes="100vw" media="not all and (max-width: 600px) and (orientation: portrait)" fetchpriority="high">
+<link rel="preload" as="image" href="home-bg-amsterdam-v3-m.webp" media="(max-width: 600px) and (orientation: portrait)" fetchpriority="high">
+<link rel="preload" as="image" href="home-bg-amsterdam-v3.webp" media="not all and (max-width: 600px) and (orientation: portrait)" fetchpriority="high">
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Barlow:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
 <style>
@@ -1261,8 +1261,31 @@
   html body .price-card .btn-purchase { transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease !important; }
   html body .price-card .btn-purchase:hover, html body .price-card .btn-purchase:focus-visible,
   html body .price-card .gflip-back .btn-purchase:hover, html body .price-card .gflip-back .btn-purchase:focus-visible {
-    background: var(--accent) !important; color: #1a0e05 !important; border-color: var(--accent) !important;
-    box-shadow: 0 0 18px rgba(232,119,34,0.55) !important; transform: translateY(-1px); }
+    background: rgba(232,119,34,0.28) !important; color: #fff3e6 !important; border-color: var(--accent) !important;
+    box-shadow: 0 0 16px rgba(232,119,34,0.35) !important; transform: translateY(-1px); }
+  /* Photo band: title + subtitle on the photo; content starts below it */
+  :root { --band: max(460px, 70vh); }
+  @media (max-width: 600px) { :root { --band: max(400px, 62vh); } }
+  html body .page .page-photo { height: var(--band) !important; -webkit-mask-image: linear-gradient(to bottom, #000 70%, transparent 100%); mask-image: linear-gradient(to bottom, #000 70%, transparent 100%); }
+  html body .page .page-head { min-height: calc(var(--band) - 140px); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; box-sizing: border-box; padding-bottom: 1.5rem; order: 0 !important; }
+  html body .page .page-head.reveal-scroll { opacity: 1 !important; transform: none !important; filter: none !important; }
+  html body .page .page-head .page-title { margin-top: 0 !important; }
+  html body :is(#syllabus, #blog) .page-hero { min-height: calc(var(--band) - 60px); box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; }
+  html body #home.page.page > .hero:not(.hero-end), html body #home .hero:not(.hero-end):first-of-type { min-height: calc(var(--band) - 60px) !important; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; }
+  /* Photo band: content directly below the band (replaces the old 34vh/62vh gaps) */
+  html body #home.page.page .hero + .home-section { margin-top: 2.5rem !important; }
+  html body #courseware.page.page .cw-kicker { margin-top: 2.5rem !important; }
+  html body #services.page.page .services-layout { margin-top: 2.5rem !important; }
+  html body #services.page.page .services-left { margin-top: 0 !important; }
+  html body #syllabus.page.page .syl-head { margin-top: 2.5rem !important; }
+  html body #syllabus.page.page .toc-tabs { margin-top: 1.2rem !important; }
+  html body #blog.page.page #blog-list .blog-outro { margin-top: 2.5rem !important; }
+  html body #faq.page.page .content > .faq-aside { margin: 2.5rem auto 0 !important; }
+  html body #faq.page.page .content > .orange-panel { margin-top: 2.5rem !important; }
+  @media (min-width: 900px) { html body #contact.page.page .contact-page { padding-top: 5rem !important; } }
+  html body #contact.page.page .contact-hero { margin-top: 2.5rem !important; }
+  html body #contact.page.page .payment-methods { margin-top: 3.5rem !important; }
+  html body #about.page.page .content > div:has(> #aboutPortraitImg) { margin-top: 2.5rem !important; }
   html body .footer-cta-text { margin: 0 0 0.6rem; font-size: 0.92rem; line-height: 1.55; color: rgba(247,236,217,0.75); }
   html body .footer-col-group a.footer-cta-btn { display: inline-flex; align-self: flex-start; padding: 0.7rem 1.3rem; border-radius: 999px; border: 1.5px solid rgba(240,120,30,0.9); background: rgba(240,120,30,0.16); color: #ffd9b0; font-weight: 600; transition: background .25s, transform .25s; }
   html body .footer-col-group a.footer-cta-btn:hover { background: rgba(240,120,30,0.32); color: #fff; transform: translateY(-2px); }
@@ -3163,7 +3186,7 @@
 
 <!-- ══════════ HOME ══════════ -->
 <div class="page active" id="home">
-  <figure class="page-photo"><picture><source media="(max-width: 600px) and (orientation: portrait)" srcset="home-bg-amsterdam-v2-m.webp"><img src="home-bg-amsterdam-v2.webp" srcset="home-bg-amsterdam-v2.webp 1600w, home-bg-amsterdam-v2-2400.webp 2400w" sizes="100vw" alt="Amsterdam" fetchpriority="high" decoding="async"></picture></figure>
+  <figure class="page-photo"><picture><source media="(max-width: 600px) and (orientation: portrait)" srcset="home-bg-amsterdam-v3-m.webp"><img src="home-bg-amsterdam-v3.webp" alt="Amsterdam" fetchpriority="high" decoding="async"></picture></figure>
   <div class="hero">
     <div class="hero-inner">
 
@@ -3550,8 +3573,8 @@
 <div class="page" id="courseware">
   <div class="content">
     <figure class="page-photo"><img src="courseware-bg-hyacinth-opt.webp" alt="Hyacintenvelden bij zonsondergang" loading="lazy" decoding="async"></figure>
-    <div class="page-title" id="coursewareTitle"></div>
-    <p class="page-sub">Werkboeken, video's en oefeningen voor elk niveau, allemaal digitaal en inbegrepen bij je lessen.</p>
+    <div class="page-head"><div class="page-title" id="coursewareTitle"></div>
+    <p class="page-sub">Werkboeken, video's en oefeningen voor elk niveau, allemaal digitaal en inbegrepen bij je lessen.</p></div>
     
     <div class="home-section-label cw-kicker">Wat je krijgt</div>
     <h2 class="home-section-title sec-title">Alles wat je nodig hebt</h2>
@@ -3701,8 +3724,8 @@
   <!-- PACKAGES SECTION -->
   <div class="services-wrap">
     <figure class="page-photo"><picture><source media="(max-width: 600px) and (orientation: portrait)" srcset="packages-bg-cheese-m.webp"><img src="packages-bg-cheese-opt.webp" srcset="packages-bg-cheese-opt.webp 1600w, packages-bg-cheese-2400.webp 2400w" sizes="100vw" alt="Kaasboerderij" loading="lazy" decoding="async"></picture></figure>
-    <div class="page-title" id="servicesTitle"></div>
-    <p class="page-sub">Online privélessen vanaf €16 per uur. Begin met één les of boek een volledige stap naar het volgende niveau.</p>
+    <div class="page-head"><div class="page-title" id="servicesTitle"></div>
+    <p class="page-sub">Online privélessen vanaf €16 per uur. Begin met één les of boek een volledige stap naar het volgende niveau.</p></div>
     
     <div class="services-layout">
       <div class="services-left">
@@ -4803,8 +4826,8 @@
 <div class="page" id="faq">
   <div class="content">
     <figure class="page-photo"><picture><source media="(max-width: 600px) and (orientation: portrait)" srcset="contact-bg-giethoorn-m.webp"><img src="contact-bg-giethoorn-opt.webp" srcset="contact-bg-giethoorn-opt.webp 1600w, contact-bg-giethoorn-2400.webp 2400w" sizes="100vw" alt="Rieten daken en grachten in Giethoorn" loading="lazy" decoding="async"></picture></figure>
-    <div class="page-title" id="faqTitle"></div>
-    <p class="page-sub">Snel antwoord op vragen over lessen, niveaus, examens en betalen.</p>
+    <div class="page-head"><div class="page-title" id="faqTitle"></div>
+    <p class="page-sub">Snel antwoord op vragen over lessen, niveaus, examens en betalen.</p></div>
     
     <div class="orange-panel">
     <div class="faq-item">
@@ -4928,6 +4951,7 @@
   let __gateArmed = true, __gateSeenTop = true;
   function armRevealGate() { __gateArmed = true; __gateSeenTop = window.scrollY < 30; }
   function revealGateActive() {
+    return false; // photo band layout: content below the band reveals as soon as it is on screen
     if (!__gateArmed) return false;
     const pg = document.querySelector('.page.active');
     if (!pg || pg.id === 'home') return false;
@@ -4965,8 +4989,8 @@
         revealObserver.unobserve(entry.target);
       });
     }, {
-      threshold: 0.14,
-      rootMargin: '0px 0px -10% 0px'
+      threshold: 0.01,
+      rootMargin: '0px 0px -40px 0px'
     });
 
     targets.forEach((el, idx) => {
@@ -5411,8 +5435,8 @@
 <div class="page" id="about">
   <figure class="page-photo"><img src="about-bg-canalhouse-opt.webp" alt="Rietgedekt huis met bloementuin en bootjes aan een gracht in Giethoorn" loading="lazy" decoding="async"></figure>
   <div class="content" style="max-width:860px;">
-    <div class="page-title" id="aboutTitle"></div>
-    <p class="page-sub">Maak kennis met je docent en ontdek waarom Nederlands de moeite waard is.</p>
+    <div class="page-head"><div class="page-title" id="aboutTitle"></div>
+    <p class="page-sub">Maak kennis met je docent en ontdek waarom Nederlands de moeite waard is.</p></div>
     
 
     <!-- Intro block -->
@@ -5739,8 +5763,8 @@
 <div class="page" id="contact">
   <figure class="page-photo"><img src="contact-bg-summer-hd-opt.webp" alt="Twee fietsers op een dijk door het Hollandse polderlandschap" loading="lazy" decoding="async"></figure>
   <div class="contact-page">
-    <div class="page-title" id="contactTitle"></div>
-    <p class="page-sub">Boek een proefles, vraag een pakket aan of stel gewoon een vraag.</p>
+    <div class="page-head"><div class="page-title" id="contactTitle"></div>
+    <p class="page-sub">Boek een proefles, vraag een pakket aan of stel gewoon een vraag.</p></div>
     <div class="contact-hero">
       <div class="contact-kicker">Boek een les / Neem contact op</div>
       <h2 class="contact-title">Boek een les bij Talking Dutch</h2>
