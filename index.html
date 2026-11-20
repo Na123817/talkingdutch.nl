@@ -286,8 +286,6 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="image" href="netherlands-satellite.webp" media="(max-width: 699px)" fetchpriority="high">
-<link rel="preload" as="image" href="netherlands-satellite-hd.webp" media="(min-width: 700px)" fetchpriority="high">
 <link rel="preload" as="image" href="home-bg-amsterdam-v6-m.webp" media="(max-width: 600px) and (orientation: portrait)" fetchpriority="high">
 <link rel="preload" as="image" href="home-bg-amsterdam-v6.webp" media="not all and (max-width: 600px) and (orientation: portrait)" fetchpriority="high">
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Barlow:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
@@ -3127,46 +3125,10 @@
       transition: none !important;
     }
   }
-  .page-loader {
-    position: fixed; inset: 0; z-index: 9999;
-    display: flex; align-items: center; justify-content: center;
-    overflow: hidden;
-    clip-path: inset(0 0 0 0);
-  }
-  .page-loader.is-hidden { display: none; pointer-events: none; }
-  .page-loader-bg {
-    position: absolute; inset: 0;
-    background-image: url('netherlands-satellite.webp');
-    background-size: cover;
-    background-position: center top;
-    filter: brightness(0.8);
-    animation: pageLoaderPan 1.1s cubic-bezier(.45,.05,.35,1) forwards;
-  }
-  /* Same dark vignette as the page backgrounds (without the orange tint) */
-  .page-loader-bg::after { content: ""; position: absolute; inset: 0;
-    background:
-      radial-gradient(ellipse 60% 85% at 50% 45%, rgba(10,6,3,0.72), rgba(10,6,3,0.38) 70%, rgba(10,6,3,0.12) 100%),
-      linear-gradient(180deg, rgba(10,6,3,0.5), rgba(10,6,3,0.1) 22%, rgba(10,6,3,0.1) 60%, rgba(10,6,3,0.5)); }
-  @keyframes pageLoaderPan {
-    0%   { background-position: center top; }
-    100% { background-position: center bottom; }
-  }
-  .page-loader-tint {
-    position: absolute; inset: 0;
-    background: #e87722;
-    mix-blend-mode: color;
-    opacity: 0.55;
-  }
-  .page-loader-scrim {
-    position: absolute; inset: 0;
-    background: linear-gradient(rgba(8,5,2,0.35), rgba(8,5,2,0.7));
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .page-loader { transition: none; }
-    .page-loader-bg { animation: none; background-position: center; }
-  }
-  /* Sharper map on larger screens */
-  @media (min-width: 700px) { .page-loader-bg { background-image: url('netherlands-satellite-hd.webp'); } }
+  /* Quick soft fade-in instead of a loader */
+  @keyframes tdFadeIn { from { opacity: 0; } to { opacity: 1; } }
+  body { animation: tdFadeIn .3s ease-out both; }
+  @media (prefers-reduced-motion: reduce) { body { animation: none; } }
 </style>
 </head>
 <body>
@@ -3176,9 +3138,6 @@
   <div class="syllabus-call-label">Live les</div>
   <div class="syllabus-call-self-badge">Jij &mdash; camera uit</div>
   <div class="syllabus-call-pip"></div>
-</div>
-<div class="page-loader" id="pageLoader" aria-hidden="true">
-  <div class="page-loader-bg"></div>
 </div>
 
 <nav>
@@ -5341,18 +5300,6 @@
     });
   }
 
-  (function () {
-    var done = false;
-    function hideLoader() {
-      if (done) return; done = true;
-      var loader = document.getElementById('pageLoader');
-      if (!loader) return;
-      loader.classList.add('is-hidden');
-      setTimeout(function () { loader.remove(); }, 50);
-    }
-    document.addEventListener('DOMContentLoaded', function () { setTimeout(hideLoader, Math.max(250, 1150 - performance.now())); }); /* let the map pan finish (north to south) */
-    setTimeout(hideLoader, 1800); /* never block longer than 1.8s */
-  })();
   document.addEventListener('DOMContentLoaded', initScrollReveal);
   document.addEventListener('DOMContentLoaded', restoreStudyState);
   document.addEventListener('DOMContentLoaded', function () {
@@ -5452,7 +5399,7 @@
 
 <!-- ══════════ ABOUT ══════════ -->
 <div class="page" id="about">
-  <figure class="page-photo"><img src="about-bg-canalhouse-opt.webp" alt="Rietgedekt huis met bloementuin en bootjes aan een gracht in Giethoorn" loading="lazy" decoding="async"></figure>
+  <figure class="page-photo"><img src="about-bg-canalhouse-v2.webp" alt="Rietgedekt huis met bloementuin en bootjes aan een gracht in Giethoorn" loading="lazy" decoding="async"></figure>
   <div class="content" style="max-width:860px;">
     <div class="page-head"><div class="page-title" id="aboutTitle"></div>
     <p class="page-sub">Maak kennis met je docent en ontdek waarom Nederlands de moeite waard is.</p></div>
