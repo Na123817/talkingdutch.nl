@@ -286,7 +286,8 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="image" href="netherlands-satellite.webp" fetchpriority="high">
+<link rel="preload" as="image" href="netherlands-satellite.webp" media="(max-width: 699px)" fetchpriority="high">
+<link rel="preload" as="image" href="netherlands-satellite-hd.webp" media="(min-width: 700px)" fetchpriority="high">
 <link rel="preload" as="image" href="home-bg-amsterdam-v3-m.webp" media="(max-width: 600px) and (orientation: portrait)" fetchpriority="high">
 <link rel="preload" as="image" href="home-bg-amsterdam-v3.webp" media="not all and (max-width: 600px) and (orientation: portrait)" fetchpriority="high">
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Barlow:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
@@ -3152,6 +3153,8 @@
     .page-loader { transition: none; }
     .page-loader-bg { animation: none; background-position: center; }
   }
+  /* Sharper map on larger screens */
+  @media (min-width: 700px) { .page-loader-bg { background-image: url('netherlands-satellite-hd.webp'); } }
 </style>
 </head>
 <body>
