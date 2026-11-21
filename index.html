@@ -68,7 +68,7 @@
    "name": "Hoe lang duurt het om een niveau omhoog te gaan?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Ongeveer 100 uur van A1 naar A2, ongeveer 200 uur voor elke stap van A2 tot C1, en ongeveer 300 uur van C1 naar C2. Het lesprogramma laat elke stap zien. Huiswerk maken tussen de lessen maakt een groot verschil."
+    "text": "Ongeveer 100 uur van A1 naar A2, ongeveer 200 uur voor elke stap van A2 tot C1, en ongeveer 300 uur van C1 naar C2. De syllabus laat elke stap zien. Huiswerk maken tussen de lessen maakt een groot verschil."
    }
   },
   {
@@ -3152,7 +3152,7 @@
   <a href="about.html" onclick="show('about'); return false;" id="tab-about">Over ons</a>
   <a href="courseware.html" onclick="show('courseware'); return false;" id="tab-courseware">Lesmateriaal</a>
   <a href="packages.html" onclick="show('services'); return false;" id="tab-services">Pakketten</a>
-  <a href="syllabus.html" onclick="show('syllabus'); return false;" id="tab-syllabus">Lesprogramma</a>
+  <a href="syllabus.html" onclick="show('syllabus'); return false;" id="tab-syllabus">Syllabus</a>
   <a href="faq.html" onclick="show('faq'); return false;" id="tab-faq">FAQ</a>
   <a href="blog.html" onclick="show('blog'); return false;" id="tab-blog">Blog</a>
   <a href="contact.html" onclick="show('contact'); return false;" id="tab-contact" class="nav-contact">Contact</a>
@@ -3343,7 +3343,7 @@
             <button class="btn-purchase" onclick="addToCart('10 Uur - €230')">Bestellen</button>
             <p class="price-note">Twee lessen per week, ongeveer vijf weken lang.</p>
             <ul class="price-features">
-              <li>Toegang tot het volledige lesprogramma</li>
+              <li>Toegang tot de volledige syllabus</li>
               <li>Ondersteuning via WhatsApp &amp; e-mail</li>
               <li>Lesmateriaal inbegrepen</li>
             </ul>
@@ -3829,7 +3829,7 @@
   <div class="pricing-wrap">
     <h2 class="pt-heading">Kies je <span class="accent">Pakket</span></h2>
     <p style="font-family:'Barlow',sans-serif;font-size:0.95rem;color:var(--muted);line-height:1.8;max-width:820px;margin:1.4rem auto 0;text-align:center;">
-      Elke les duurt 60 minuten. Hoe meer uren je boekt, hoe lager de prijs per uur. Een niveau omhoog kost 100 tot 300 uur, afhankelijk van waar je begint. Het lesprogramma laat elke stap zien.
+      Elke les duurt 60 minuten. Hoe meer uren je boekt, hoe lager de prijs per uur. Een niveau omhoog kost 100 tot 300 uur, afhankelijk van waar je begint. De syllabus laat elke stap zien.
     </p>
 
     <div class="price-table-wrap">
@@ -4001,7 +4001,7 @@
 
 <!-- ══════════ SYLLABUS ══════════ -->
 <div class="page" id="syllabus">
-  <figure class="page-photo"><picture><source media="(max-width: 600px) and (orientation: portrait)" srcset="syllabus-bg-amsterdam-m.webp"><img src="syllabus-bg-amsterdam.webp" alt="Skyline van Amsterdam met de Sint-Nicolaaskerk en trams" loading="lazy" decoding="async"></picture></figure>
+  <figure class="page-photo"><picture><source media="(max-width: 600px) and (orientation: portrait)" srcset="syllabus-bg-sunset-m.webp"><img src="syllabus-bg-sunset.webp" alt="Skyline van Amsterdam bij zonsondergang met de Sint-Nicolaaskerk" loading="lazy" decoding="async"></picture></figure>
   <div class="page-hero">
     <div class="page-hero-inner">
       <div class="pt-label" style="display:none">Curriculum</div>
@@ -4818,7 +4818,7 @@
     </div>
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">Hoe lang duurt het om een niveau omhoog te gaan? <span class="arrow">▼</span></div>
-      <div class="faq-a">Ongeveer 100 uur van A1 naar A2, ongeveer 200 uur voor elke stap van A2 tot C1, en ongeveer 300 uur van C1 naar C2. Het lesprogramma laat elke stap zien. Huiswerk maken tussen de lessen maakt een groot verschil.</div>
+      <div class="faq-a">Ongeveer 100 uur van A1 naar A2, ongeveer 200 uur voor elke stap van A2 tot C1, en ongeveer 300 uur van C1 naar C2. De syllabus laat elke stap zien. Huiswerk maken tussen de lessen maakt een groot verschil.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">Hoe lang duurt het voordat ik het inburgeringsexamen kan halen? <span class="arrow">▼</span></div>
@@ -4869,7 +4869,7 @@
     courseware: { id: 'coursewareTitle', white: 'Les',             orange: 'materiaal'  },
     services:   { id: 'servicesTitle',   white: 'Onze ',           orange: 'Pakketten'  },
     pricing:    { id: 'pricingTitle',    white: 'Kies je ',        orange: 'Pakket'     },
-    syllabus:   { id: 'syllabusTitle',   white: 'Les',             orange: 'programma'  },
+    syllabus:   { id: 'syllabusTitle',   white: '',             orange: 'Syllabus'  },
     faq:        { id: 'faqTitle',        white: 'Veelgestelde ',   orange: 'Vragen'     },
     blog:       { id: 'blogTitle',       white: 'Nederlands Leren ',    orange: 'Blog'  },
     about:      { id: 'aboutTitle',      white: 'Over ',           orange: 'ons'   },
@@ -5147,7 +5147,7 @@
 
   // Title tag per tab: '<page> | Talking Dutch'
   const __HOME_TITLE = document.title;
-  const __TAB_TITLES = {"about": "Over ons", "courseware": "Lesmateriaal", "services": "Pakketten & prijzen", "syllabus": "Lesprogramma A1 tot C2", "faq": "Veelgestelde vragen", "blog": "Blog", "contact": "Contact & boeken", "terms": "Algemene voorwaarden", "privacy": "Privacybeleid"};
+  const __TAB_TITLES = {"about": "Over ons", "courseware": "Lesmateriaal", "services": "Pakketten & prijzen", "syllabus": "Syllabus A1 tot C2", "faq": "Veelgestelde vragen", "blog": "Blog", "contact": "Contact & boeken", "terms": "Algemene voorwaarden", "privacy": "Privacybeleid"};
   // Subtitle typewriter: types after the title; the untyped part keeps its space (no layout jump)
   const __subGen = new WeakMap();
   function typeSub(el, delay) {
@@ -5399,7 +5399,7 @@
 
 <!-- ══════════ ABOUT ══════════ -->
 <div class="page" id="about">
-  <figure class="page-photo"><img src="about-bg-canalhouse-v2.webp" alt="Rietgedekt huis met bloementuin en bootjes aan een gracht in Giethoorn" loading="lazy" decoding="async"></figure>
+  <figure class="page-photo"><img src="about-bg-canalhouse-v3.webp" alt="Rietgedekt huis met bloementuin en bootjes aan een gracht in Giethoorn" loading="lazy" decoding="async"></figure>
   <div class="content" style="max-width:860px;">
     <div class="page-head"><div class="page-title" id="aboutTitle"></div>
     <p class="page-sub">Maak kennis met je docent en ontdek waarom Nederlands de moeite waard is.</p></div>
@@ -6027,7 +6027,7 @@ f();addEventListener('resize',f);addEventListener('load',f);if(document.fonts&&d
 
 <script>
 (function () {
-  var L = {"search": "Zoeken", "searchph": "Zoek pakketten, veelgestelde vragen, syllabus, blog…", "nores": "Geen resultaten. Probeer een ander trefwoord.", "links": "Handige links", "login": "Inloggen", "register": "Registreren", "cart": "Winkelwagen", "close": "Sluiten", "l_book": "Boek een proefles", "l_syl": "Syllabus", "l_faq": "Veelgestelde vragen", "l_terms": "Algemene Voorwaarden", "l_priv": "Privacybeleid", "l_other": "English version (.com)", "other_url": "https://talkingdutch.com", "lg_title": "Talking Dutch-account", "lg_text": "Je persoonlijke voortgangstracker is een privélink die Jonathan met je heeft gedeeld toen je met lessen begon. Kun je hem niet vinden? Stuur me een bericht en ik stuur hem opnieuw.", "lg_wa": "Stuur Jonathan een WhatsApp-bericht", "lg_new": "Nog geen student? Registreren", "c_title": "Je winkelwagen", "c_empty": "Je winkelwagen is leeg. Kies een pakket op de pagina Pakketten.", "c_browse": "Bekijk pakketten", "c_total": "Totaal", "c_go": "Bestelling aanvragen", "c_note": "Nu nog niets betalen. Ik bevestig je bestelling en stuur de betaalgegevens per e-mail.", "c_remove": "Verwijderen", "order": "Bestelaanvraag:", "pages": {"home": "Home", "about": "Over ons", "courseware": "Lesmateriaal", "services": "Pakketten", "syllabus": "Lesprogramma", "faq": "FAQ", "blog": "Blog", "contact": "Contact", "terms": "Voorwaarden", "privacy": "Privacy"}};
+  var L = {"search": "Zoeken", "searchph": "Zoek pakketten, veelgestelde vragen, syllabus, blog…", "nores": "Geen resultaten. Probeer een ander trefwoord.", "links": "Handige links", "login": "Inloggen", "register": "Registreren", "cart": "Winkelwagen", "close": "Sluiten", "l_book": "Boek een proefles", "l_syl": "Syllabus", "l_faq": "Veelgestelde vragen", "l_terms": "Algemene Voorwaarden", "l_priv": "Privacybeleid", "l_other": "English version (.com)", "other_url": "https://talkingdutch.com", "lg_title": "Talking Dutch-account", "lg_text": "Je persoonlijke voortgangstracker is een privélink die Jonathan met je heeft gedeeld toen je met lessen begon. Kun je hem niet vinden? Stuur me een bericht en ik stuur hem opnieuw.", "lg_wa": "Stuur Jonathan een WhatsApp-bericht", "lg_new": "Nog geen student? Registreren", "c_title": "Je winkelwagen", "c_empty": "Je winkelwagen is leeg. Kies een pakket op de pagina Pakketten.", "c_browse": "Bekijk pakketten", "c_total": "Totaal", "c_go": "Bestelling aanvragen", "c_note": "Nu nog niets betalen. Ik bevestig je bestelling en stuur de betaalgegevens per e-mail.", "c_remove": "Verwijderen", "order": "Bestelaanvraag:", "pages": {"home": "Home", "about": "Over ons", "courseware": "Lesmateriaal", "services": "Pakketten", "syllabus": "Syllabus", "faq": "FAQ", "blog": "Blog", "contact": "Contact", "terms": "Voorwaarden", "privacy": "Privacy"}};
   var $ = function (id) { return document.getElementById(id); };
   var KEY = 'td_cart_v1';
   var cart = [];
