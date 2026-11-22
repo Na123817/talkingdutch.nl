@@ -5773,7 +5773,7 @@
 
 <!-- ══════════ CONTACT ══════════ -->
 <div class="page" id="contact">
-  <figure class="page-photo"><picture><source media="(max-width: 600px) and (orientation: portrait)" srcset="contact-bg-hyacinth-v2-m.webp"><img src="contact-bg-hyacinth-v2.webp" alt="Tractor in een Hollands hyacintenveld in de lente" loading="lazy" decoding="async"></picture></figure>
+  <figure class="page-photo"><picture><source media="(max-width: 600px) and (orientation: portrait)" srcset="contact-bg-family-m.webp"><img src="contact-bg-family.webp" alt="Gezin wandelt door een kleurrijk tulpenveld" loading="lazy" decoding="async"></picture></figure>
   <div class="contact-page">
     <div class="page-head"><div class="page-title" id="contactTitle"></div>
     <p class="page-sub">Boek een proefles, vraag een pakket aan of stel gewoon een vraag.</p></div>
@@ -6261,9 +6261,10 @@ window.addEventListener('load', function () {
   function tabs() { return [].slice.call(nav.querySelectorAll(':scope > a')).filter(function (a) { return a.offsetWidth; }); }
   function reset() { tabs().forEach(function (a) { a.style.removeProperty('font-size'); a.style.removeProperty('padding'); a.style.removeProperty('letter-spacing'); }); nav.style.removeProperty('gap'); }
   function fit() {
-    reset();
     var w = window.innerWidth;
-    if (w > 1100 || w < 560) { nav.scrollLeft = 0; return; }
+    if (w > 1100) return; /* desktop sizes are handled by the equal-width script */
+    reset();
+    if (w < 560) { nav.scrollLeft = 0; return; }
     var a0 = tabs()[0]; if (!a0) return;
     var fs = parseFloat(getComputedStyle(a0).fontSize);
     var guard = 0;
@@ -6326,6 +6327,57 @@ window.addEventListener('load', function () {
   back.addEventListener('click', close);
   document.getElementById('mnavClose').addEventListener('click', close);
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+})();
+</script>
+<script>
+// Desktop: every page tab gets the same width (as wide as the longest label when there is room)
+(function () {
+  var nav = document.querySelector('nav');
+  if (!nav) return;
+  function tabs() { return [].slice.call(nav.querySelectorAll(':scope > a[id^="tab-"]')); }
+  function reset() {
+    tabs().forEach(function (a) { ['width','min-width','max-width','padding-left','padding-right','justify-content','letter-spacing','font-size','white-space'].forEach(function (k) { a.style.removeProperty(k); }); });
+    nav.style.removeProperty('padding-left'); nav.style.removeProperty('padding-right');
+  }
+  function fit() {
+    reset();
+    if (window.innerWidth <= 1100) return;
+    var t = tabs(); if (!t.length) return;
+    var gap = parseFloat(getComputedStyle(nav).columnGap || getComputedStyle(nav).gap) || 8;
+    var maxW = Math.ceil(Math.max.apply(null, t.map(function (a) { return a.getBoundingClientRect().width; })));
+    var W = document.documentElement.clientWidth, c = W / 2;
+    var logo = nav.querySelector('.nav-logo'), nr = nav.querySelector('.nav-right');
+    var L = logo ? logo.getBoundingClientRect().right + 14 : 14;
+    var R = nr ? nr.getBoundingClientRect().left - 14 : W - 14;
+    var need = t.length * maxW + (t.length - 1) * gap;
+    var absolute = logo && getComputedStyle(logo).position === 'absolute';
+    var avail, padL, padR;
+    if (absolute) {
+      var half = Math.min(c - L, R - c);
+      if (2 * half >= need) { avail = 2 * half; padL = padR = (W - avail) / 2; }
+      else { avail = R - L; padL = L; padR = W - R; }
+    } else {
+      avail = R - t[0].getBoundingClientRect().left;
+    }
+    var w = Math.floor(Math.min(maxW, (avail - (t.length - 1) * gap) / t.length));
+    if (absolute) { nav.style.setProperty('padding-left', padL + 'px', 'important'); nav.style.setProperty('padding-right', padR + 'px', 'important'); }
+    t.forEach(function (a) {
+      a.style.setProperty('width', w + 'px', 'important'); a.style.setProperty('min-width', w + 'px', 'important'); a.style.setProperty('max-width', w + 'px', 'important');
+      a.style.setProperty('justify-content', 'center', 'important');
+      a.style.setProperty('white-space', 'nowrap', 'important');
+      if (w < maxW) { a.style.setProperty('padding-left', '4px', 'important'); a.style.setProperty('padding-right', '4px', 'important'); }
+    });
+    // squeeze the letters only if a label still doesn't fit
+    var ls = [1.0, 0.6, 0.3, 0], i = 0;
+    function overflow() { return t.some(function (a) { var r = document.createRange(); r.selectNodeContents(a); return r.getBoundingClientRect().width > a.getBoundingClientRect().width - 14; }); }
+    while (overflow() && i < ls.length) { t.forEach(function (a) { a.style.setProperty('letter-spacing', ls[i] + 'px', 'important'); }); i++; }
+    var fs = parseFloat(getComputedStyle(t[0]).fontSize);
+    while (overflow() && fs > 8) { fs -= 0.3; t.forEach(function (a) { a.style.setProperty('font-size', fs + 'px', 'important'); }); }
+  }
+  fit();
+  window.addEventListener('load', fit);
+  window.addEventListener('resize', function () { clearTimeout(fit._t); fit._t = setTimeout(fit, 80); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
 })();
 </script>
 </body></html>
