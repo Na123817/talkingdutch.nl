@@ -1297,6 +1297,11 @@
   html body #home.page .page-photo::after { background: radial-gradient(ellipse 60% 85% at 50% 45%, rgba(10,6,3,0.58), rgba(10,6,3,0.26) 70%, rgba(10,6,3,0.06) 100%), linear-gradient(180deg, rgba(10,6,3,0.4), rgba(10,6,3,0.04) 22%, rgba(10,6,3,0.04) 60%, rgba(10,6,3,0.45)), linear-gradient(160deg, rgba(222,125,52,0.12), rgba(138,71,21,0.05)) !important; }
   /* No blurred strip behind the top tabs */
   html body nav, html body nav * { -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
+  /* FAQ: title block centred on the page, in line with the text below */
+  html body #faq.page .page-head { align-self: center !important; width: 100% !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; }
+  /* About: smaller profile picture */
+  html body #about .about-portrait-circle { width: 170px !important; height: 170px !important; min-width: 0 !important; max-width: 170px !important; }
+  @media (max-width: 600px) { html body #about .about-portrait-circle { width: 140px !important; height: 140px !important; max-width: 140px !important; } }
   html body .footer-cta-text { margin: 0 0 0.6rem; font-size: 0.92rem; line-height: 1.55; color: rgba(247,236,217,0.75); }
   html body .footer-col-group a.footer-cta-btn { display: inline-flex; align-self: flex-start; padding: 0.7rem 1.3rem; border-radius: 999px; border: 1.5px solid rgba(240,120,30,0.9); background: rgba(240,120,30,0.16); color: #ffd9b0; font-weight: 600; transition: background .25s, transform .25s; }
   html body .footer-col-group a.footer-cta-btn:hover { background: rgba(240,120,30,0.32); color: #fff; transform: translateY(-2px); }
