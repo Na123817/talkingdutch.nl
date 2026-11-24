@@ -1351,6 +1351,15 @@
   html body nav > a#tab-home { display: none !important; }
   /* Syllabus & About: photo aligned to its top so the church tip / roof sit just under the tabs */
   html body #syllabus.page .page-photo img, html body #about.page .page-photo img { object-position: center 0% !important; }
+  /* FAQ: same student photo and look as Courseware */
+  html body #faq.page .page-photo img { object-position: center 0% !important; filter: none !important; }
+  html body #faq.page .page-photo::after { background: linear-gradient(180deg, rgba(10,6,3,0.45) 0, rgba(10,6,3,0) 140px), radial-gradient(ellipse 42% 22% at 50% 50%, rgba(10,6,3,0.42), rgba(10,6,3,0) 100%) !important; }
+  /* Desktop tabs: just orange text, no boxes or outlines */
+  @media (min-width: 1101px) {
+    html body nav > a[id^="tab-"], html body nav > a[id^="tab-"]:hover, html body nav > a[id^="tab-"].active { background: none !important; border: 0 !important; outline: 0 !important; box-shadow: none !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important; text-shadow: 0 1px 6px rgba(0,0,0,0.7); }
+    html body nav > a[id^="tab-"]:hover { color: #FFB366 !important; }
+    html body nav > a[id^="tab-"].active { color: #FFB366 !important; }
+  }
   html body .footer-cta-text { margin: 0 0 0.6rem; font-size: 0.92rem; line-height: 1.55; color: rgba(247,236,217,0.75); }
   html body .footer-col-group a.footer-cta-btn { display: inline-flex; align-self: flex-start; padding: 0.7rem 1.3rem; border-radius: 999px; border: 1.5px solid rgba(240,120,30,0.9); background: rgba(240,120,30,0.16); color: #ffd9b0; font-weight: 600; transition: background .25s, transform .25s; }
   html body .footer-col-group a.footer-cta-btn:hover { background: rgba(240,120,30,0.32); color: #fff; transform: translateY(-2px); }
@@ -4865,7 +4874,7 @@
 <!-- ══════════ FAQ ══════════ -->
 <div class="page" id="faq">
   <div class="content">
-    <figure class="page-photo"><picture><source media="(max-width: 600px) and (orientation: portrait)" srcset="faq-bg-flag-m.webp"><img src="faq-bg-flag.webp" alt="Lachende vrouw zwaait met een Nederlandse vlag op Koningsdag langs een Amsterdamse gracht" loading="lazy" decoding="async"></picture></figure>
+    <figure class="page-photo"><picture><source media="(max-width: 600px) and (orientation: portrait)" srcset="faq-bg-study-m.webp"><img src="faq-bg-study.webp" alt="Lachende student leert Nederlands op een laptop in een kantoor bij avond" loading="lazy" decoding="async"></picture></figure>
     <div class="page-head"><div class="page-title" id="faqTitle"></div>
     <p class="page-sub">Snel antwoord op vragen over lessen, niveaus, examens en betalen.</p></div>
     
@@ -5545,7 +5554,7 @@
 
 <!-- ══════════ BLOG ══════════ -->
 <div class="page" id="blog">
-  <figure class="page-photo"><picture><source media="(max-width: 700px)" srcset="blog-bg-canal-evening-m.webp"><img src="blog-bg-canal-evening-v2.webp" alt="Amsterdamse grachtenpanden met een woonboot in de avond" loading="lazy" decoding="async"></picture></figure>
+  <figure class="page-photo"><picture><source media="(max-width: 700px)" srcset="blog-bg-canal-evening-m.webp"><img src="blog-bg-canal-evening-v3.webp" alt="Amsterdamse grachtenpanden met een woonboot in de avond" loading="lazy" decoding="async"></picture></figure>
   <div class="page-hero">
     <div class="page-hero-inner">
       <div class="pt-label" style="display:none">Inzichten</div>
@@ -5789,7 +5798,7 @@
 
 <!-- ══════════ CONTACT ══════════ -->
 <div class="page" id="contact">
-  <figure class="page-photo"><picture><source media="(max-width: 600px) and (orientation: portrait)" srcset="contact-bg-tulips-v3-m.webp"><img src="contact-bg-tulips-v3.webp" alt="Gezin wandelt door een kleurrijk tulpenveld" loading="lazy" decoding="async"></picture></figure>
+  <figure class="page-photo"><picture><source media="(max-width: 600px) and (orientation: portrait)" srcset="contact-bg-tulips-v3-m.webp"><img src="contact-bg-tulips-v4.webp" alt="Gezin wandelt door een kleurrijk tulpenveld" loading="lazy" decoding="async"></picture></figure>
   <div class="contact-page">
     <div class="page-head"><div class="page-title" id="contactTitle"></div>
     <p class="page-sub">Boek een proefles, vraag een pakket aan of stel gewoon een vraag.</p></div>
