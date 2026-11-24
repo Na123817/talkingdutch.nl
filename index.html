@@ -1347,6 +1347,8 @@
   html body #contact.page figure.page-photo img { filter: sepia(0.15) saturate(0.9) brightness(0.6) !important; }
   /* About: slightly darker photo */
   html body #about.page figure.page-photo img { filter: sepia(0.2) saturate(1.1) brightness(0.72) !important; }
+  /* No Home tab: the TD logo goes to the homepage */
+  html body nav > a#tab-home { display: none !important; }
   html body .footer-cta-text { margin: 0 0 0.6rem; font-size: 0.92rem; line-height: 1.55; color: rgba(247,236,217,0.75); }
   html body .footer-col-group a.footer-cta-btn { display: inline-flex; align-self: flex-start; padding: 0.7rem 1.3rem; border-radius: 999px; border: 1.5px solid rgba(240,120,30,0.9); background: rgba(240,120,30,0.16); color: #ffd9b0; font-weight: 600; transition: background .25s, transform .25s; }
   html body .footer-col-group a.footer-cta-btn:hover { background: rgba(240,120,30,0.32); color: #fff; transform: translateY(-2px); }
@@ -6308,7 +6310,7 @@ window.addEventListener('load', function () {
   function close() { panel.classList.remove('open'); back.classList.remove('open'); panel.setAttribute('aria-hidden', 'true'); btn.setAttribute('aria-expanded', 'false'); document.body.classList.remove('mnav-lock'); }
   function build() {
     pages.innerHTML = '';
-    document.querySelectorAll('nav > a[id^="tab-"]').forEach(function (t) {
+    document.querySelectorAll('nav > a[id^="tab-"]:not(#tab-home)').forEach(function (t) {
       var a = document.createElement('a'); a.href = t.getAttribute('href'); a.textContent = t.textContent;
       if (t.classList.contains('active')) a.className = 'active';
       a.addEventListener('click', function (e) { e.preventDefault(); close(); t.click(); });
@@ -6346,7 +6348,7 @@ window.addEventListener('load', function () {
 (function () {
   var nav = document.querySelector('nav');
   if (!nav) return;
-  function tabs() { return [].slice.call(nav.querySelectorAll(':scope > a[id^="tab-"]')); }
+  function tabs() { return [].slice.call(nav.querySelectorAll(':scope > a[id^="tab-"]:not(#tab-home)')); }
   function reset() {
     tabs().forEach(function (a) { ['width','min-width','max-width','padding-left','padding-right','justify-content','letter-spacing','font-size','white-space'].forEach(function (k) { a.style.removeProperty(k); }); });
     nav.style.removeProperty('padding-left'); nav.style.removeProperty('padding-right');
