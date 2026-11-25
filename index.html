@@ -3217,7 +3217,7 @@
   </div>
   <a href="index.html" onclick="show('home'); return false;" class="active" id="tab-home">Home</a>
   <a href="about.html" onclick="show('about'); return false;" id="tab-about">Over ons</a>
-  <a href="courseware.html" onclick="show('courseware'); return false;" id="tab-courseware">Cursusmateriaal</a>
+  <a href="courseware.html" onclick="show('courseware'); return false;" id="tab-courseware">Courseware</a>
   <a href="packages.html" onclick="show('services'); return false;" id="tab-services">Pakketten</a>
   <a href="syllabus.html" onclick="show('syllabus'); return false;" id="tab-syllabus">Syllabus</a>
   <a href="faq.html" onclick="show('faq'); return false;" id="tab-faq">FAQ</a>
@@ -3625,7 +3625,7 @@
 <!-- ══════════ COURSEWARE ══════════ -->
 <div class="page" id="courseware">
   <div class="content">
-    <figure class="page-photo"><picture><source media="(max-width: 600px) and (orientation: portrait)" srcset="courseware-bg-concert-m.webp"><img src="courseware-bg-concert.webp" alt="Koningsdagconcert met een publiek in het oranje" loading="lazy" decoding="async"></picture></figure>
+    <figure class="page-photo"><picture><source media="(max-width: 600px) and (orientation: portrait)" srcset="courseware-bg-concert-v2-m.webp"><img src="courseware-bg-concert-v2.webp" alt="Koningsdagconcert met een publiek in het oranje" loading="lazy" decoding="async"></picture></figure>
     <div class="page-head"><div class="page-title" id="coursewareTitle"></div>
     <p class="page-sub">Werkboeken, video's en oefeningen voor elk niveau, allemaal digitaal en inbegrepen bij je lessen.</p></div>
     
@@ -4943,7 +4943,7 @@
   // ── PAGE TITLE TYPEWRITER CONFIG ──
   // Each entry: { id, white: "always-visible part", orange: "typed part" }
   const PAGE_TITLES = {
-    courseware: { id: 'coursewareTitle', white: 'Cursus',          orange: 'materiaal'  },
+    courseware: { id: 'coursewareTitle', white: 'Course',          orange: 'ware'       },
     services:   { id: 'servicesTitle',   white: 'Onze ',           orange: 'Pakketten'  },
     pricing:    { id: 'pricingTitle',    white: 'Kies je ',        orange: 'Pakket'     },
     syllabus:   { id: 'syllabusTitle',   white: '',             orange: 'Syllabus'  },
@@ -5224,7 +5224,7 @@
 
   // Title tag per tab: '<page> | Talking Dutch'
   const __HOME_TITLE = document.title;
-  const __TAB_TITLES = {"about": "Over ons", "courseware": "Cursusmateriaal", "services": "Pakketten & prijzen", "syllabus": "Syllabus A1 tot C2", "faq": "Veelgestelde vragen", "blog": "Blog", "contact": "Contact & boeken", "terms": "Algemene voorwaarden", "privacy": "Privacybeleid"};
+  const __TAB_TITLES = {"about": "Over ons", "courseware": "Courseware", "services": "Pakketten & prijzen", "syllabus": "Syllabus A1 tot C2", "faq": "Veelgestelde vragen", "blog": "Blog", "contact": "Contact & boeken", "terms": "Algemene voorwaarden", "privacy": "Privacybeleid"};
   // Subtitle typewriter: types after the title; the untyped part keeps its space (no layout jump)
   const __subGen = new WeakMap();
   function typeSub(el, delay) {
@@ -5984,7 +5984,7 @@
       <div class="footer-col-heading">Pagina's</div>
       <a href="index.html" onclick="show('home'); return false;">Home</a>
       <a href="about.html" onclick="show('about'); return false;">Over ons</a>
-      <a href="courseware.html" onclick="show('courseware'); return false;">Cursusmateriaal</a>
+      <a href="courseware.html" onclick="show('courseware'); return false;">Courseware</a>
       <a href="packages.html" onclick="show('services'); return false;">Pakketten</a>
     </div>
 
@@ -6104,7 +6104,7 @@ f();addEventListener('resize',f);addEventListener('load',f);if(document.fonts&&d
 
 <script>
 (function () {
-  var L = {"search": "Zoeken", "searchph": "Zoek pakketten, veelgestelde vragen, syllabus, blog…", "nores": "Geen resultaten. Probeer een ander trefwoord.", "links": "Handige links", "login": "Inloggen", "register": "Registreren", "cart": "Winkelwagen", "close": "Sluiten", "l_book": "Boek een proefles", "l_syl": "Syllabus", "l_faq": "Veelgestelde vragen", "l_terms": "Algemene Voorwaarden", "l_priv": "Privacybeleid", "l_other": "English version (.com)", "other_url": "https://talkingdutch.com", "lg_title": "Talking Dutch-account", "lg_text": "Je persoonlijke voortgangstracker is een privélink die Jonathan met je heeft gedeeld toen je met lessen begon. Kun je hem niet vinden? Stuur me een bericht en ik stuur hem opnieuw.", "lg_wa": "Stuur Jonathan een WhatsApp-bericht", "lg_new": "Nog geen student? Registreren", "c_title": "Je winkelwagen", "c_empty": "Je winkelwagen is leeg. Kies een pakket op de pagina Pakketten.", "c_browse": "Bekijk pakketten", "c_total": "Totaal", "c_go": "Bestelling aanvragen", "c_note": "Nu nog niets betalen. Ik bevestig je bestelling en stuur de betaalgegevens per e-mail.", "c_remove": "Verwijderen", "order": "Bestelaanvraag:", "pages": {"home": "Home", "about": "Over ons", "courseware": "Cursusmateriaal", "services": "Pakketten", "syllabus": "Syllabus", "faq": "FAQ", "blog": "Blog", "contact": "Contact", "terms": "Voorwaarden", "privacy": "Privacy"}};
+  var L = {"search": "Zoeken", "searchph": "Zoek pakketten, veelgestelde vragen, syllabus, blog…", "nores": "Geen resultaten. Probeer een ander trefwoord.", "links": "Handige links", "login": "Inloggen", "register": "Registreren", "cart": "Winkelwagen", "close": "Sluiten", "l_book": "Boek een proefles", "l_syl": "Syllabus", "l_faq": "Veelgestelde vragen", "l_terms": "Algemene Voorwaarden", "l_priv": "Privacybeleid", "l_other": "English version (.com)", "other_url": "https://talkingdutch.com", "lg_title": "Talking Dutch-account", "lg_text": "Je persoonlijke voortgangstracker is een privélink die Jonathan met je heeft gedeeld toen je met lessen begon. Kun je hem niet vinden? Stuur me een bericht en ik stuur hem opnieuw.", "lg_wa": "Stuur Jonathan een WhatsApp-bericht", "lg_new": "Nog geen student? Registreren", "c_title": "Je winkelwagen", "c_empty": "Je winkelwagen is leeg. Kies een pakket op de pagina Pakketten.", "c_browse": "Bekijk pakketten", "c_total": "Totaal", "c_go": "Bestelling aanvragen", "c_note": "Nu nog niets betalen. Ik bevestig je bestelling en stuur de betaalgegevens per e-mail.", "c_remove": "Verwijderen", "order": "Bestelaanvraag:", "pages": {"home": "Home", "about": "Over ons", "courseware": "Courseware", "services": "Pakketten", "syllabus": "Syllabus", "faq": "FAQ", "blog": "Blog", "contact": "Contact", "terms": "Voorwaarden", "privacy": "Privacy"}};
   var $ = function (id) { return document.getElementById(id); };
   var KEY = 'td_cart_v1';
   var cart = [];
