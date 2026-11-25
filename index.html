@@ -4880,7 +4880,7 @@
 <!-- ══════════ FAQ ══════════ -->
 <div class="page" id="faq">
   <div class="content">
-    <figure class="page-photo"><picture><source media="(max-width: 600px) and (orientation: portrait)" srcset="faq-bg-study-m.webp"><img src="faq-bg-study.webp" alt="Lachende student leert Nederlands op een laptop in een kantoor bij avond" loading="lazy" decoding="async"></picture></figure>
+    <figure class="page-photo"><picture><source media="(max-width: 600px) and (orientation: portrait)" srcset="faq-bg-study-v2-m.webp"><img src="faq-bg-study-v2.webp" alt="Lachende student leert Nederlands op een laptop in een kantoor bij avond" loading="lazy" decoding="async"></picture></figure>
     <div class="page-head"><div class="page-title" id="faqTitle"></div>
     <p class="page-sub">Snel antwoord op vragen over lessen, niveaus, examens en betalen.</p></div>
     
@@ -4944,11 +4944,11 @@
   // Each entry: { id, white: "always-visible part", orange: "typed part" }
   const PAGE_TITLES = {
     courseware: { id: 'coursewareTitle', white: 'Course',          orange: 'ware'       },
-    services:   { id: 'servicesTitle',   white: 'Onze ',           orange: 'Pakketten'  },
+    services:   { id: 'servicesTitle',   white: '', orange: 'Pakketten' },
     pricing:    { id: 'pricingTitle',    white: 'Kies je ',        orange: 'Pakket'     },
     syllabus:   { id: 'syllabusTitle',   white: '',             orange: 'Syllabus'  },
-    faq:        { id: 'faqTitle',        white: 'Veelgestelde ',   orange: 'Vragen'     },
-    blog:       { id: 'blogTitle',       white: 'Nederlands Leren ',    orange: 'Blog'  },
+    faq:        { id: 'faqTitle',        white: '', orange: 'FAQ' },
+    blog:       { id: 'blogTitle',       white: '', orange: 'Blog' },
     about:      { id: 'aboutTitle',      white: 'Over ',           orange: 'ons'   },
     contact:    { id: 'contactTitle',    white: '',        orange: 'Contact' },
   };
@@ -5224,7 +5224,7 @@
 
   // Title tag per tab: '<page> | Talking Dutch'
   const __HOME_TITLE = document.title;
-  const __TAB_TITLES = {"about": "Over ons", "courseware": "Courseware", "services": "Pakketten & prijzen", "syllabus": "Syllabus A1 tot C2", "faq": "Veelgestelde vragen", "blog": "Blog", "contact": "Contact & boeken", "terms": "Algemene voorwaarden", "privacy": "Privacybeleid"};
+  const __TAB_TITLES = {"about": "Over ons", "courseware": "Courseware", "services": "Pakketten & prijzen", "syllabus": "Syllabus A1 tot C2", "faq": "FAQ", "blog": "Blog", "contact": "Contact & boeken", "terms": "Algemene voorwaarden", "privacy": "Privacybeleid"};
   // Subtitle typewriter: types after the title; the untyped part keeps its space (no layout jump)
   const __subGen = new WeakMap();
   function typeSub(el, delay) {
@@ -5991,7 +5991,7 @@
     <div class="footer-col-group">
       <div class="footer-col-heading">Leren</div>
       <a href="syllabus.html" onclick="show('syllabus'); return false;">Syllabus</a>
-      <a href="faq.html" onclick="show('faq'); return false;">Veelgestelde Vragen</a>
+      <a href="faq.html" onclick="show('faq'); return false;">FAQ</a>
       <a href="blog.html" onclick="show('blog'); return false;">Blog</a>
       <a href="contact.html" onclick="show('contact'); return false;">Contact</a>
     </div>
