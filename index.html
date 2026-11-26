@@ -6489,6 +6489,35 @@ window.addEventListener('load', function () {
 })();
 </script>
 <script>
+// Desktop: equal visible gaps between the tab labels (runs after the equal-width script)
+(function () {
+  var nav = document.querySelector('nav'); if (!nav) return;
+  function tabs() { return [].slice.call(nav.querySelectorAll(':scope > a[id^="tab-"]:not(#tab-home)')).filter(function (a) { return a.offsetWidth; }); }
+  function even() {
+    if (window.innerWidth <= 1100) return;
+    var t = tabs(); if (t.length < 2) return;
+    var first = t[0].getBoundingClientRect(), last = t[t.length - 1].getBoundingClientRect();
+    var span = last.right - first.left;
+    var gap = parseFloat(getComputedStyle(nav).columnGap) || 0;
+    var texts = t.map(function (a) { var r = document.createRange(); r.selectNodeContents(a); return r.getBoundingClientRect().width; });
+    var sum = texts.reduce(function (x, y) { return x + y; }, 0);
+    var g = (span - sum - gap * (t.length - 1)) / (t.length - 1);
+    if (g < 8) return;
+    t.forEach(function (a, i) {
+      var padL = i === 0 ? 0 : g / 2, padR = i === t.length - 1 ? 0 : g / 2;
+      var w = texts[i] + padL + padR;
+      ['width','min-width','max-width'].forEach(function (k) { a.style.setProperty(k, w + 'px', 'important'); });
+      a.style.setProperty('padding-left', padL + 'px', 'important'); a.style.setProperty('padding-right', padR + 'px', 'important');
+    });
+  }
+  function run() { requestAnimationFrame(function () { requestAnimationFrame(even); }); }
+  window.addEventListener('load', run); window.addEventListener('resize', run);
+  new MutationObserver(run).observe(nav, { subtree: true, attributes: true, attributeFilter: ['class'] });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(run);
+  run();
+})();
+</script>
+<script>
 // Trial lesson: open the Google Calendar booking page
 window.bookTrial = function () { window.open('https://calendar.app.google/hLvrLxGvtNZg5TCt6', '_blank', 'noopener'); };
 </script>
