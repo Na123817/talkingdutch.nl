@@ -1442,6 +1442,8 @@
   /* Typing carets: orange on titles, cream on subtexts */
   html body .page-title .pt-cursor, html body #heroLine1 + .pt-cursor, html body .hero .pt-cursor { width: 3px !important; height: 1.05em !important; background: #FFA24D !important; margin-left: -0.15em !important; box-shadow: 0 0 6px rgba(255,162,77,0.6); }
   html body .ts-cur { border-left: 3px solid #F7ECD9 !important; margin-left: 2px !important; box-shadow: none; }
+  html body .payment-method-icon .pm-logo.pm-logo-plain { background: none; box-shadow: none; padding: 0; min-width: 0; height: 28px; }
+  html body .payment-method-icon .pm-logo-plain img { height: 28px; width: auto; display: block; }
   html body .footer-cta-text { margin: 0 0 0.6rem; font-size: 0.92rem; line-height: 1.55; color: rgba(247,236,217,0.75); }
   html body .footer-col-group a.footer-cta-btn { display: inline-flex; align-self: flex-start; padding: 0.7rem 1.3rem; border-radius: 999px; border: 1.5px solid rgba(240,120,30,0.9); background: rgba(240,120,30,0.16); color: #ffd9b0; font-weight: 600; transition: background .25s, transform .25s; }
   html body .footer-col-group a.footer-cta-btn:hover { background: rgba(240,120,30,0.32); color: #fff; transform: translateY(-2px); }
@@ -3703,7 +3705,7 @@
 <!-- ══════════ COURSEWARE ══════════ -->
 <div class="page" id="courseware">
   <div class="content">
-    <figure class="page-photo"><picture><source media="(max-width: 600px) and (orientation: portrait)" srcset="courseware-bg-street-v6-m.webp"><img src="courseware-bg-street-v6.webp" alt="Koningsdagconcert met een publiek in het oranje" loading="lazy" decoding="async"></picture></figure>
+    <figure class="page-photo"><picture><source media="(max-width: 600px) and (orientation: portrait)" srcset="courseware-bg-street-v7-m.webp"><img src="courseware-bg-street-v7.webp" alt="Koningsdagconcert met een publiek in het oranje" loading="lazy" decoding="async"></picture></figure>
     <div class="page-head"><div class="page-title" id="coursewareTitle"></div>
     <p class="page-sub">Al de noodzakelijke courseware én een proefles van € 12</p></div>
     
@@ -5972,7 +5974,7 @@
 
           <div class="payment-method-card">
             <div class="payment-method-icon">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M5 21V10l7-6 7 6v11M9 21v-6h6v6"></path></svg>
+              <span class="pm-logo pm-logo-plain"><img src="pay-iban.png" alt="IBAN bank transfer" width="29" height="28"></span>
             </div>
             <div class="payment-method-name">Bankoverschrijving (IBAN)</div>
             <div class="payment-method-detail">Na je boeking mail ik je mijn bankgegevens. Ze staan niet op deze site.</div>
