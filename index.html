@@ -1371,7 +1371,7 @@
   html body #syllabus.page .toc-study-cat { text-align: center !important; }
   html body #syllabus.page .toc-study-cat-title, html body #syllabus.page .toc-study-item { justify-content: center !important; text-align: center !important; padding-left: 0 !important; }
   /* FAQ numbers: solid orange, clearly visible */
-  html body #faq .faq-q::before { color: var(--accent) !important; -webkit-text-stroke: 0 !important; opacity: 1 !important; }
+  html body #faq .faq-q::before { color: var(--accent) !important; -webkit-text-stroke: 0 !important; opacity: 1 !important; font-variant-numeric: tabular-nums lining-nums; font-feature-settings: "tnum" 1, "lnum" 1; width: 2.9rem; min-width: 2.9rem !important; text-align: left; letter-spacing: 0.02em !important; }
   /* Page titles + subtexts use the homepage hero fonts */
   html body .page .page-title, html body .page .page-title span { font-family: 'Orbitron', sans-serif !important; font-weight: 900 !important; line-height: 1.2 !important; }
   html body .page .page-sub { font-family: 'Orbitron', sans-serif !important; font-weight: 700 !important; }
@@ -1406,8 +1406,21 @@
   /* Active tab: cream + font like the section headings */
   html body nav > a[id^="tab-"].active, html body nav > a[id^="tab-"].active:hover, html body #mnavPanel a.active { color: #F7ECD9 !important; -webkit-text-fill-color: #F7ECD9 !important; -webkit-text-stroke: 0 !important; font-family: 'Orbitron', sans-serif !important; font-weight: 700 !important; text-shadow: 0 1px 10px rgba(0,0,0,0.85) !important; }
   /* Titles: small orange caps like the "Curriculum" label; subtexts: cream heading like "Kies je niveau" */
-  html body .page .page-title, html body .page .page-title span, html body #heroLine1, html body .hero h1, html body .hero h1 span { color: #FFA24D !important; -webkit-text-fill-color: #FFA24D !important; -webkit-text-stroke: 0 !important; font-family: 'Orbitron', sans-serif !important; font-weight: 700 !important; font-size: 0.95rem !important; letter-spacing: 0.24em !important; text-transform: uppercase !important; line-height: 1.6 !important; text-shadow: 0 0 8px rgba(0,0,0,0.95), 0 1px 2px rgba(0,0,0,0.9) !important; }
-  html body .page .page-sub, html body .hero-sub, html body #home .hero-sub.hero-sub { color: #F7ECD9 !important; -webkit-text-fill-color: #F7ECD9 !important; font-family: 'Orbitron', sans-serif !important; font-weight: 700 !important; font-size: clamp(1.3rem, 1.75vw, 1.6rem) !important; letter-spacing: normal !important; text-transform: none !important; line-height: 1.3 !important; text-shadow: 0 1px 10px rgba(0,0,0,0.85) !important; max-width: 1100px !important; margin-top: 0.7rem !important; }
+  html body .page .page-title, html body .page .page-title span, html body #heroLine1, html body .hero h1, html body .hero h1 span { color: #FFA24D !important; -webkit-text-fill-color: #FFA24D !important; -webkit-text-stroke: 0 !important; font-family: 'Orbitron', sans-serif !important; font-weight: 700 !important; font-size: 1.15rem !important; letter-spacing: 0.24em !important; text-transform: uppercase !important; line-height: 1.6 !important; text-shadow: 0 0 8px rgba(0,0,0,0.95), 0 1px 2px rgba(0,0,0,0.9) !important; }
+  html body .page .page-sub, html body .hero-sub, html body #home .hero-sub.hero-sub { color: #F7ECD9 !important; -webkit-text-fill-color: #F7ECD9 !important; font-family: 'Orbitron', sans-serif !important; font-weight: 700 !important; font-size: clamp(1.45rem, 2vw, 1.85rem) !important; white-space: normal; letter-spacing: normal !important; text-transform: none !important; line-height: 1.3 !important; text-shadow: 0 1px 10px rgba(0,0,0,0.85) !important; max-width: 1100px !important; margin-top: 0.7rem !important; }
+  html body .page .page-hero { max-width: 1160px !important; }
+  html body #about .page-head .page-sub { width: max-content; max-width: 92vw !important; margin-left: 50% !important; transform: translateX(-50%); }
+  /* Payment logos: small white tiles, same height as the old icons */
+  html body .payment-method-icon { display: flex; gap: 6px; align-items: center; }
+  html body .payment-method-icon .pm-logo { display: inline-flex; align-items: center; justify-content: center; height: 28px; min-width: 40px; padding: 0 6px; background: #FFFFFF; border-radius: 5px; box-shadow: 0 1px 4px rgba(0,0,0,0.35); }
+  html body .payment-method-icon .pm-logo svg { display: block; }
+  html body .payment-method-icon .pm-word { font-family: Arial, Helvetica, sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.01em; line-height: 1; }
+  /* Contact form: centered text, box spans the page */
+  html body #contact .contact-page { max-width: 1400px !important; }
+  html body #contact .contact-hero { width: 100% !important; max-width: none !important; }
+  html body #contact .contact-hero .contact-kicker, html body #contact .contact-hero .contact-title, html body #contact .contact-hero .contact-subtitle { text-align: center !important; margin-left: auto !important; margin-right: auto !important; }
+  html body #contact .contact-hero .contact-subtitle { max-width: 820px !important; }
+  html body #contact .contact-hero .booking-form-fallback, html body #contact .contact-hero form { max-width: none !important; width: 100% !important; }
   html body .footer-cta-text { margin: 0 0 0.6rem; font-size: 0.92rem; line-height: 1.55; color: rgba(247,236,217,0.75); }
   html body .footer-col-group a.footer-cta-btn { display: inline-flex; align-self: flex-start; padding: 0.7rem 1.3rem; border-radius: 999px; border: 1.5px solid rgba(240,120,30,0.9); background: rgba(240,120,30,0.16); color: #ffd9b0; font-weight: 600; transition: background .25s, transform .25s; }
   html body .footer-col-group a.footer-cta-btn:hover { background: rgba(240,120,30,0.32); color: #fff; transform: translateY(-2px); }
@@ -4923,7 +4936,7 @@
 <!-- ══════════ FAQ ══════════ -->
 <div class="page" id="faq">
   <div class="content">
-    <figure class="page-photo"><picture><source media="(max-width: 600px) and (orientation: portrait)" srcset="faq-bg-woman-m.webp"><img src="faq-bg-woman.webp" alt="Lachende student leert Nederlands op een laptop in een kantoor bij avond" loading="lazy" decoding="async"></picture></figure>
+    <figure class="page-photo"><picture><source media="(max-width: 600px) and (orientation: portrait)" srcset="faq-bg-woman-m.webp"><img src="faq-bg-woman-v2.webp" alt="Lachende student leert Nederlands op een laptop in een kantoor bij avond" loading="lazy" decoding="async"></picture></figure>
     <div class="page-head"><div class="page-title" id="faqTitle"></div>
     <p class="page-sub">Antwoorden over lessen, niveaus, examens en betalen</p></div>
     
@@ -4978,7 +4991,7 @@
     </div>
     </div>
     <aside class="faq-aside"><div class="fa-kicker">Nog vragen?</div><div class="fa-title">Staat je vraag er niet bij?</div><p>Stuur me je vraag — ik help je graag kiezen voor het juiste niveau, pakket of examentraject.</p></aside>
-    <div class="page-cta"><button onclick="bookTrial()" class="btn-cta">Neem contact op</button></div>
+    <div class="page-cta"><button onclick="bookTrial()" class="btn-cta">Contact</button></div>
   </div>
 </div>
 
@@ -5538,7 +5551,7 @@
     <!-- Why Dutch section -->
     <div style="margin-bottom:3.5rem;">
       <div class="home-section-label">De taal</div>
-      <h2 style="font-family:'Orbitron',sans-serif;font-size:clamp(1rem,2.2vw,1.5rem);font-weight:700;color:var(--text);margin-bottom:1.8rem;line-height:1.3;">Waarom Nederlands Leren?</h2>
+      <h2 class="home-section-title sec-title" style="margin-bottom:1.8rem;">Waarom Nederlands Leren?</h2>
       <div class="about-language-grid">
         <div class="about-language-card">
 <div class="gflip-inner">
@@ -5583,7 +5596,7 @@
     <!-- Dutch culture section -->
     <div style="margin-bottom:3.5rem;">
       <div class="home-section-label">De cultuur</div>
-      <h2 style="font-family:'Orbitron',sans-serif;font-size:clamp(1rem,2.2vw,1.5rem);font-weight:700;color:var(--text);margin-bottom:1.2rem;line-height:1.3;">De Nederlandse Samenleving Begrijpen</h2>
+      <h2 class="home-section-title sec-title" style="margin-bottom:1.2rem;">De Nederlandse Samenleving Begrijpen</h2>
       <div style="max-width:680px;margin:0 auto;">
         <p style="color:#f0e6d6;font-size:0.97rem;line-height:1.9;margin-bottom:1rem;">Nederlanders zijn direct: ze zeggen wat ze bedoelen. Dat is niet onbeleefd. Het komt voort uit eerlijkheid en efficiëntie. Als je dat weet, worden wonen, werken en studeren in Nederland een stuk makkelijker.</p>
         <p style="color:#f0e6d6;font-size:0.97rem;line-height:1.9;margin-bottom:1rem;">Het <em>poldermodel</em>, de Nederlandse gewoonte om te praten tot iedereen het eens is, zie je overal terug, van de politiek tot op kantoor. Wie zulke codes begrijpt, maakt echt contact met Nederlanders.</p>
@@ -5899,7 +5912,6 @@
               <label for="qbfMessage">Bericht <span class="qbf-optional">(optioneel)</span></label>
               <textarea id="qbfMessage" rows="3" placeholder="Je niveau, je doelen, of iets anders wat ik moet weten"></textarea>
             </div>
-            <p class="qbf-note">Je aanvraag komt rechtstreeks in mijn inbox. Ik reageer per e-mail.</p>
             <p id="qbfStatus" class="qbf-note" role="status" aria-live="polite" style="margin-top:0.6rem;"></p>
           </form>
         </div>
@@ -5915,7 +5927,7 @@
 
           <div class="payment-method-card">
             <div class="payment-method-icon">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 15h6a3.5 3.5 0 0 0 0-7H8.5L7 15z"></path><path d="M9.5 8H15a3.5 3.5 0 0 1 0 7"></path></svg>
+              <span class="pm-logo"><svg height="22" width="22" viewBox="0 0 24 24" fill="#003087" aria-hidden="true"><path d="M15.607 4.653H8.941L6.645 19.251H1.82L4.862 0h7.995c3.754 0 6.375 2.294 6.473 5.513-.648-.478-2.105-.86-3.722-.86m6.57 5.546c0 3.41-3.01 6.853-6.958 6.853h-2.493L11.595 24H6.74l1.845-11.538h3.592c4.208 0 7.346-3.634 7.153-6.949a5.24 5.24 0 0 1 2.848 4.686M9.653 5.546h6.408c.907 0 1.942.222 2.363.541-.195 2.741-2.655 5.483-6.441 5.483H8.714Z"/></svg></span>
             </div>
             <div class="payment-method-name">PayPal</div>
             <div class="payment-method-detail"><a href="https://paypal.me/jonathanvanhassel34" target="_blank" rel="noopener">paypal.me/jonathanvanhassel34</a></div>
@@ -5923,7 +5935,7 @@
 
           <div class="payment-method-card">
             <div class="payment-method-icon">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="5" width="20" height="14" rx="2"></rect><path d="M2 10h20"></path></svg>
+              <span class="pm-logo"><svg height="24" width="24" viewBox="0 0 24 24" fill="#1A1F71" aria-hidden="true"><path d="M9.112 8.262L5.97 15.758H3.92L2.374 9.775c-.094-.368-.175-.503-.461-.658C1.447 8.864.677 8.627 0 8.479l.046-.217h3.3a.904.904 0 01.894.764l.817 4.338 2.018-5.102zm8.033 5.049c.008-1.979-2.736-2.088-2.717-2.972.006-.269.262-.555.822-.628a3.66 3.66 0 011.913.336l.34-1.59a5.207 5.207 0 00-1.814-.333c-1.917 0-3.266 1.02-3.278 2.479-.012 1.079.963 1.68 1.698 2.04.756.367 1.01.603 1.006.931-.005.504-.602.725-1.16.734-.975.015-1.54-.263-1.992-.473l-.351 1.642c.453.208 1.289.39 2.156.398 2.037 0 3.37-1.006 3.377-2.564m5.061 2.447H24l-1.565-7.496h-1.656a.883.883 0 00-.826.55l-2.909 6.946h2.036l.405-1.12h2.488zm-2.163-2.656l1.02-2.815.588 2.815zm-8.16-4.84l-1.603 7.496H8.34l1.605-7.496z"/></svg></span><span class="pm-logo"><svg height="20" width="32" viewBox="0 0 32 20" aria-hidden="true"><circle cx="11" cy="10" r="9" fill="#EB001B"/><circle cx="21" cy="10" r="9" fill="#F79E1B"/><path d="M16 2.6a9 9 0 0 1 0 14.8a9 9 0 0 1 0-14.8z" fill="#FF5F00"/></svg></span>
             </div>
             <div class="payment-method-name">Credit- / Betaalkaart</div>
             <div class="payment-method-detail">Betaal met je kaart via de PayPal-link hierboven. Je hebt geen PayPal-account nodig.</div>
@@ -5931,7 +5943,7 @@
 
           <div class="payment-method-card">
             <div class="payment-method-icon">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18M9 21V9"></path></svg>
+              <span class="pm-logo"><svg height="22" width="22" viewBox="0 0 24 24" fill="#191C1F" aria-hidden="true"><path d="M20.9133 6.9566C20.9133 3.1208 17.7898 0 13.9503 0H2.424v3.8605h10.9782c1.7376 0 3.177 1.3651 3.2087 3.043.016.84-.2994 1.633-.8878 2.2324-.5886.5998-1.375.9303-2.2144.9303H9.2322a.2756.2756 0 0 0-.2755.2752v3.431c0 .0585.018.1142.052.1612L16.2646 24h5.3114l-7.2727-10.094c3.6625-.1838 6.61-3.2612 6.61-6.9494zM6.8943 5.9229H2.424V24h4.4704z"/></svg></span>
             </div>
             <div class="payment-method-name">Revolut</div>
             <div class="payment-method-detail"><a href="https://revolut.me/jonath4uch" target="_blank" rel="noopener">revolut.me/jonath4uch</a></div>
@@ -5947,7 +5959,7 @@
 
           <div class="payment-method-card">
             <div class="payment-method-icon">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 15h4"></path></svg>
+              <span class="pm-logo"><span class="pm-word" style="color:#CC0066">iDEAL</span></span>
             </div>
             <div class="payment-method-name">iDEAL</div>
             <div class="payment-method-detail">Voor Nederlandse bankrekeningen. Ik mail je een betaallink zodra je boeking is bevestigd.</div>
@@ -5955,7 +5967,7 @@
 
           <div class="payment-method-card">
             <div class="payment-method-icon">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>
+              <span class="pm-logo"><span class="pm-word" style="color:#1D1D1B">wero</span></span>
             </div>
             <div class="payment-method-name">Wero</div>
             <div class="payment-method-detail">Op aanvraag. Ik mail je de details.</div>
