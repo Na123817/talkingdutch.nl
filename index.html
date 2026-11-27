@@ -865,10 +865,10 @@
   .flip-card.orange   .fc-title,
   .flip-card.blue     .fc-title { color: #f7ecd9; }
 
-  .fc-sub { color: rgba(255,255,255,0.85); font-size: 0.82rem; line-height: 1.6; }
+  .fc-sub { color: rgba(247,236,217,0.85); font-size: 0.82rem; line-height: 1.6; }
   .flip-card.featured .fc-sub,
   .flip-card.orange   .fc-sub,
-  .flip-card.blue     .fc-sub { color: rgba(255,255,255,0.85); }
+  .flip-card.blue     .fc-sub { color: rgba(247,236,217,0.85); }
 
   /* Back face typography — dark text on gray */
   .fc-back-title {
@@ -878,11 +878,11 @@
   }
   .fc-back-list {
     list-style: disc; padding-left: 1.1rem;
-    font-size: 0.82rem; color: rgba(255,255,255,0.85);
+    font-size: 0.82rem; color: rgba(247,236,217,0.85);
     line-height: 1.85;
   }
   .flip-card.default .fc-back-title { color: #f7ecd9; }
-  .flip-card.default .fc-back-list  { color: rgba(255,255,255,0.85); }
+  .flip-card.default .fc-back-list  { color: rgba(247,236,217,0.85); }
 
   /* Exam card — orange front & back */
   .flip-card.exam .flip-card-front {
@@ -890,11 +890,11 @@
     border: 1px solid rgba(255,255,255,0.1);
   }
   .flip-card.exam .fc-title { color: #f7ecd9; }
-  .flip-card.exam .fc-sub   { color: rgba(255,255,255,0.85); }
+  .flip-card.exam .fc-sub   { color: rgba(247,236,217,0.85); }
   .flip-card.exam .fc-hint  { color: #f7ecd9; }
   .flip-card.exam .flip-card-back { background: rgba(42,22,8,0.32); border: 1px solid var(--accent); }
   .flip-card.exam .fc-back-title  { color: #f7ecd9; }
-  .flip-card.exam .fc-back-list   { color: rgba(255,255,255,0.85); }
+  .flip-card.exam .fc-back-list   { color: rgba(247,236,217,0.85); }
   /* ── SERVICES: intro text underneath the cards ── */
   html body #services.page.page .services-layout { flex-direction: column; align-items: stretch; gap: 3rem; }
   html body #services.page.page .services-grid { order: 1; width: 100%; flex: none; }
@@ -1103,8 +1103,8 @@
   html body .nr-text { background: transparent; border: 0; color: #f7ecd9; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.6rem 0.6rem; transition: color .2s; text-shadow: 0 1px 6px rgba(0,0,0,0.85); }
   html body .nr-text:hover { color: var(--accent); }
   html body .nr-pill { background: rgba(240,120,30,0.16); border: 1.5px solid rgba(240,120,30,0.9); color: #ffd9b0; font-size: 0.58rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.6rem 1rem; border-radius: 999px; transition: background .2s, transform .2s; }
-  html body .nr-pill:hover { background: rgba(240,120,30,0.32); color: #fff; transform: translateY(-1px); }
-  html body .nr-badge { position: absolute; top: 1px; right: 0; min-width: 17px; height: 17px; padding: 0 4px; border-radius: 999px; background: var(--accent); color: #fff; font: 700 0.62rem/17px 'Barlow', sans-serif; text-align: center; }
+  html body .nr-pill:hover { background: rgba(240,120,30,0.32); color: #F7ECD9; transform: translateY(-1px); }
+  html body .nr-badge { position: absolute; top: 1px; right: 0; min-width: 17px; height: 17px; padding: 0 4px; border-radius: 999px; background: var(--accent); color: #F7ECD9; font: 700 0.62rem/17px 'Barlow', sans-serif; text-align: center; }
   html body .nr-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 1990; }
   html body .nr-panel { position: fixed; z-index: 2000; background: rgba(14,9,5,0.97); border: 1px solid rgba(232,119,34,0.55); border-radius: 14px; color: #f7ecd9; box-shadow: 0 18px 60px rgba(0,0,0,0.6); }
   html body .nr-panel[hidden], html body .nr-backdrop[hidden] { display: none; }
@@ -1117,7 +1117,7 @@
   html body .nr-res:hover, html body .nr-res:focus { background: rgba(232,119,34,0.16); outline: none; }
   html body .nr-res small { display: block; color: var(--accent); font: 700 0.6rem 'Orbitron', sans-serif; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.15rem; }
   html body .nr-res span { font-size: 0.92rem; color: rgba(247,236,217,0.85); line-height: 1.45; }
-  html body .nr-res mark { background: rgba(232,119,34,0.35); color: #fff; border-radius: 3px; padding: 0 2px; }
+  html body .nr-res mark { background: rgba(232,119,34,0.35); color: #F7ECD9; border-radius: 3px; padding: 0 2px; }
   html body .nr-empty { padding: 0.8rem; color: rgba(247,236,217,0.65); font-size: 0.92rem; }
   html body .nr-menu { min-width: 230px; padding: 0.5rem; }
   html body .nr-menu a { display: block; padding: 0.6rem 0.85rem; border-radius: 8px; color: #f7ecd9; text-decoration: none; font-size: 0.95rem; font-family: 'Barlow', sans-serif; }
@@ -1129,7 +1129,7 @@
   html body .nr-x { position: absolute; top: 0.6rem; right: 0.8rem; background: transparent; border: 0; color: #f7ecd9; font-size: 1.7rem; line-height: 1; cursor: pointer; }
   html body .nr-x:hover { color: var(--accent); }
   html body .nr-cta { display: block; width: 100%; box-sizing: border-box; text-align: center; text-decoration: none; background: rgba(240,120,30,0.16); border: 1.5px solid rgba(240,120,30,0.9); color: #ffd9b0; font: 700 0.68rem 'Orbitron', sans-serif; letter-spacing: 0.14em; text-transform: uppercase; padding: 0.9rem 1rem; border-radius: 999px; cursor: pointer; transition: background .2s; }
-  html body .nr-cta:hover { background: rgba(240,120,30,0.32); color: #fff; }
+  html body .nr-cta:hover { background: rgba(240,120,30,0.32); color: #F7ECD9; }
   html body .nr-link { margin-top: 0.9rem; background: transparent; border: 0; color: var(--accent); text-decoration: underline; cursor: pointer; font-size: 0.92rem; font-family: 'Barlow', sans-serif; }
   html body .nr-drawer { top: 0; right: 0; bottom: 0; width: min(390px, 100vw); border-radius: 0; border-width: 0 0 0 1px; display: flex; flex-direction: column; padding: 1.3rem 1.3rem 1.1rem; }
   html body .nr-drawer[hidden] { display: none; }
@@ -1325,7 +1325,7 @@
     html body .mnav-panel a:hover, html body .mnav-panel button.mnav-item:hover { background: rgba(232,119,34,0.14); }
     html body .mnav-panel .mnav-sep { height: 1px; background: rgba(232,119,34,0.25); margin: 0.6rem 0.4rem; }
     html body .mnav-panel svg { width: 20px; height: 20px; flex: 0 0 auto; color: var(--accent); }
-    html body .mnav-count { margin-left: auto; min-width: 20px; height: 20px; padding: 0 6px; border-radius: 999px; background: var(--accent); color: #fff; font: 700 0.7rem/20px 'Barlow', sans-serif; text-align: center; }
+    html body .mnav-count { margin-left: auto; min-width: 20px; height: 20px; padding: 0 6px; border-radius: 999px; background: var(--accent); color: #F7ECD9; font: 700 0.7rem/20px 'Barlow', sans-serif; text-align: center; }
     html body.mnav-lock { overflow: hidden; }
   }
   /* Contact photo: no sepia, daylight colours stay natural */
@@ -1373,8 +1373,8 @@
   html body .page .page-title, html body .page .page-title span { font-family: 'Orbitron', sans-serif !important; font-weight: 900 !important; line-height: 1.2 !important; }
   html body .page .page-sub { font-family: 'Orbitron', sans-serif !important; font-weight: 700 !important; }
   /* Active tab creamy white; nav icons orange */
-  html body nav > a[id^="tab-"].active, html body nav > a[id^="tab-"].active:hover { color: #FFFFFF !important; -webkit-text-stroke: 0.4px #F3E7D3 !important; paint-order: stroke fill; text-shadow: 0 0 6px rgba(243,231,211,0.45) !important; }
-  html body #mnavPanel a.active { color: #FFFFFF !important; -webkit-text-stroke: 0.4px #F3E7D3 !important; paint-order: stroke fill; }
+  html body nav > a[id^="tab-"].active, html body nav > a[id^="tab-"].active:hover { color: #F7ECD9 !important; -webkit-text-stroke: 0.4px #F3E7D3 !important; paint-order: stroke fill; text-shadow: 0 0 6px rgba(243,231,211,0.45) !important; }
+  html body #mnavPanel a.active { color: #F7ECD9 !important; -webkit-text-stroke: 0.4px #F3E7D3 !important; paint-order: stroke fill; }
   html body .nr-icon, html body .nr-icon:hover { color: var(--accent) !important; }
   html body .nr-icon svg { color: var(--accent) !important; stroke: var(--accent) !important; }
   /* Blog list: no numbers */
@@ -1386,11 +1386,11 @@
   html body #contact .qbf-submit:hover, html body #contact .qbf-submit:focus-visible { background: rgba(240,120,30,0.3) !important; border-color: #F0781E !important; transform: none !important; box-shadow: none !important; }
   html body #contact .qbf-submit:disabled { opacity: 0.6; cursor: default; }
   /* Subtext: white with creamy outline */
-  html body .page .page-sub, html body .hero-sub { color: #FFFFFF !important; -webkit-text-stroke: 0.6px #F3E7D3 !important; paint-order: stroke fill; text-shadow: 0 2px 10px rgba(0,0,0,0.75), 0 0 2px rgba(0,0,0,0.6) !important; }
+  html body .page .page-sub, html body .hero-sub { color: #F7ECD9 !important; -webkit-text-stroke: 0.6px #F3E7D3 !important; paint-order: stroke fill; text-shadow: 0 2px 10px rgba(0,0,0,0.75), 0 0 2px rgba(0,0,0,0.6) !important; }
   /* FAQ background darker for readability */
   html body #faq.page figure.page-photo img { filter: brightness(0.6) saturate(0.95) !important; }
   /* Titles match the subtext: white with creamy outline */
-  html body .page .page-title, html body .page .page-title span, html body #heroLine1, html body .hero h1, html body .hero h1 span { color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; -webkit-text-stroke: 1.6px #F3E7D3 !important; paint-order: stroke fill; }
+  html body .page .page-title, html body .page .page-title span, html body #heroLine1, html body .hero h1, html body .hero h1 span { color: #F7ECD9 !important; -webkit-text-fill-color: #FFFFFF !important; -webkit-text-stroke: 1.6px #F3E7D3 !important; paint-order: stroke fill; }
   /* Send button sits centered under the contact box */
   html body #contact .qbf-submit-wrap { display: flex; justify-content: center; margin: 1.6rem 0 0.4rem; order: 100; }
   html body #contact .contact-hero .booking-form-fallback { padding-bottom: 0 !important; }
@@ -1451,9 +1451,11 @@
   /* Trial button uses the Login pill design */
   html body button.booking-gcal-btn.td-pill { padding: 0.85rem 2.2rem !important; border-radius: 999px !important; border: 1px solid rgba(240,120,30,0.9) !important; background: rgba(240,120,30,0.16) !important; color: #FFD9B0 !important; font-family: 'Orbitron', sans-serif !important; font-size: 0.75rem !important; font-weight: 700 !important; letter-spacing: 0.15em !important; text-transform: uppercase !important; box-shadow: none !important; transition: background .2s, border-color .2s !important; }
   html body button.booking-gcal-btn.td-pill:hover { background: rgba(240,120,30,0.3) !important; border-color: #F0781E !important; transform: none !important; }
+  /* TD logo turns cream on the homepage (after clicking it) */
+  html body nav:has(> a#tab-home.active) .nav-logo, html body nav .nav-logo:active { color: #F7ECD9 !important; -webkit-text-fill-color: #F7ECD9 !important; text-shadow: 0 1px 10px rgba(0,0,0,0.85) !important; }
   html body .footer-cta-text { margin: 0 0 0.6rem; font-size: 0.92rem; line-height: 1.55; color: rgba(247,236,217,0.75); }
   html body .footer-col-group a.footer-cta-btn { display: inline-flex; align-self: flex-start; padding: 0.7rem 1.3rem; border-radius: 999px; border: 1.5px solid rgba(240,120,30,0.9); background: rgba(240,120,30,0.16); color: #ffd9b0; font-weight: 600; transition: background .25s, transform .25s; }
-  html body .footer-col-group a.footer-cta-btn:hover { background: rgba(240,120,30,0.32); color: #fff; transform: translateY(-2px); }
+  html body .footer-col-group a.footer-cta-btn:hover { background: rgba(240,120,30,0.32); color: #F7ECD9; transform: translateY(-2px); }
   html body .footer-col-group a.footer-cta-wa { margin-top: 0.4rem; color: #ffb067; }
   @media (max-width: 760px) { html body .site-footer-inner { grid-template-columns: 1fr 1fr; } html body .footer-brand, html body .footer-cta-col { grid-column: 1 / -1; } }
   /* Footer logo blends into the background (no tile) */
@@ -1552,12 +1554,12 @@
     font-weight: 700; color: #f7ecd9;
     margin-bottom: 0.3rem;
   }
-  .price-trial { color: rgba(255,255,255,0.75); font-size: 0.8rem; margin-bottom: 1.5rem; }
+  .price-trial { color: rgba(247,236,217,0.75); font-size: 0.8rem; margin-bottom: 1.5rem; }
   .price-amount { margin-bottom: 0.3rem; }
   .price-amount .dollar { font-size: 1.1rem; vertical-align: top; margin-top: 0.5rem; display: inline-block; color: #f7ecd9; }
   .price-amount .big { font-family: 'Orbitron', sans-serif; font-size: clamp(2.5rem, 5vw, 3.8rem); font-weight: 700; color: #f7ecd9; line-height: 1; }
-  .price-per { color: rgba(255,255,255,0.75); font-size: 0.78rem; margin-bottom: 1.2rem; }
-  .price-tier { color: rgba(255,255,255,0.7); font-size: 0.72rem; font-family: 'Orbitron', sans-serif; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.8rem; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 1rem; }
+  .price-per { color: rgba(247,236,217,0.75); font-size: 0.78rem; margin-bottom: 1.2rem; }
+  .price-tier { color: rgba(247,236,217,0.7); font-size: 0.72rem; font-family: 'Orbitron', sans-serif; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.8rem; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 1rem; }
   .btn-purchase {
     display: inline-block; width: 100%; padding: .75rem 1.5rem;
     background: rgba(0,0,0,0.35); color: #f7ecd9; border: 1px solid rgba(255,255,255,0.3); cursor: pointer;
@@ -1568,11 +1570,11 @@
     margin-bottom: 1.5rem;
   }
   .btn-purchase:hover { background: rgba(0,0,0,0.55); transform: translateY(-1px); }
-  .price-note { color: rgba(255,255,255,0.7); font-size: 0.78rem; line-height: 1.7; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 1.5rem; }
+  .price-note { color: rgba(247,236,217,0.7); font-size: 0.78rem; line-height: 1.7; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 1.5rem; }
   .price-features { list-style: none; padding: 0; text-align: left; }
   .price-features li {
     display: flex; align-items: flex-start; gap: 0.6rem;
-    color: rgba(255,255,255,0.9); font-size: 0.84rem; line-height: 1.6;
+    color: rgba(247,236,217,0.9); font-size: 0.84rem; line-height: 1.6;
     margin-bottom: 0.7rem;
   }
   .price-features li::before { content: '✓'; color: #f7ecd9; flex-shrink: 0; font-size: 0.9rem; margin-top: 0.05rem; }
@@ -1762,7 +1764,7 @@
   .cw-card .gflip-back { border-radius: 12px; padding: 1.6rem 1.4rem; }
   .cw-icon { font-size: 2rem; margin-bottom: 1rem; }
   .cw-title { font-family: 'Orbitron', sans-serif; font-size: 0.75rem; font-weight: 700; color: #f7ecd9; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 0.5rem; }
-  .cw-desc { color: rgba(255,255,255,0.9); font-size: 0.85rem; line-height: 1.7; }
+  .cw-desc { color: rgba(247,236,217,0.9); font-size: 0.85rem; line-height: 1.7; }
   .cw-badge {
     display: inline-block;
     margin-top: 1rem;
@@ -2032,7 +2034,7 @@
   }
   .qbf-field input::placeholder,
   .qbf-field textarea::placeholder {
-    color: rgba(255,255,255,0.35);
+    color: rgba(247,236,217,0.35);
   }
   .qbf-field select {
     cursor: pointer;
@@ -2125,7 +2127,7 @@
   }
   .payment-method-detail {
     font-size: 0.83rem;
-    color: rgba(255,255,255,0.75);
+    color: rgba(247,236,217,0.75);
     line-height: 1.6;
   }
   .payment-method-detail a { color: var(--accent); word-break: break-all; }
@@ -2249,7 +2251,7 @@
   .cw-icon { margin-bottom: 1rem; }
 
   .flip-card-front ul li,
-  .flip-card-front ul { color: rgba(255,255,255,0.88); }
+  .flip-card-front ul { color: rgba(247,236,217,0.88); }
 
   /* ── PRICING: remove top padding since title is gone ── */
   .pricing-wrap { padding-top: 3rem; }
@@ -2271,11 +2273,11 @@
   .price-table th {
     font-family: 'Orbitron', sans-serif;
     font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
-    color: rgba(255,255,255,0.85); background: rgba(232,119,34,0.24);
+    color: rgba(247,236,217,0.85); background: rgba(232,119,34,0.24);
     padding: 0.9rem 1.1rem; text-align: left; border-bottom: 1px solid rgba(255,175,83,0.35);
   }
   .price-table td {
-    font-size: 0.88rem; color: rgba(255,255,255,0.85);
+    font-size: 0.88rem; color: rgba(247,236,217,0.85);
     padding: 0.85rem 1.1rem; border-bottom: 1px solid rgba(255,175,83,0.16);
   }
   .price-table tr:last-child td { border-bottom: none; }
@@ -2458,7 +2460,7 @@
     font-size: 0.78rem; font-weight: 700;
     color: #f7ecd9; margin-bottom: 0.6rem;
   }
-  .hs-desc { font-size: 0.87rem; color: rgba(255,255,255,0.9); line-height: 1.8; }
+  .hs-desc { font-size: 0.87rem; color: rgba(247,236,217,0.9); line-height: 1.8; }
 
   /* ── INTRO BLOCK ── */
   .home-intro-block {
@@ -2522,7 +2524,7 @@
   }
   .about-language-card .about-language-body {
     font-size: 0.95rem;
-    color: rgba(255,255,255,0.9);
+    color: rgba(247,236,217,0.9);
     line-height: 1.85;
   }
   /* ── COURSEWARE CARDS: no flip (the back repeated the front) ── */
@@ -2731,14 +2733,14 @@
   .blog-tag {
     font-family: 'Orbitron', sans-serif; font-size: 0.52rem;
     letter-spacing: 0.2em; text-transform: uppercase;
-    color: rgba(255,255,255,0.85); margin-bottom: 0.6rem;
+    color: rgba(247,236,217,0.85); margin-bottom: 0.6rem;
   }
   .blog-card-title {
     font-family: 'Orbitron', sans-serif; font-size: 0.88rem;
     font-weight: 700; color: #f7ecd9; line-height: 1.4;
   }
   .blog-card-body { padding: 1.2rem 1.6rem 1.6rem; }
-  .blog-card-excerpt { font-size: 0.87rem; color: rgba(255,255,255,0.9); line-height: 1.75; }
+  .blog-card-excerpt { font-size: 0.87rem; color: rgba(247,236,217,0.9); line-height: 1.75; }
   .blog-read-more {
     display: inline-block; margin-top: 1rem;
     font-family: 'Orbitron', sans-serif; font-size: 0.6rem;
@@ -2755,7 +2757,7 @@
   }
   .blog-card-toc-sub {
     display: block; font-family: 'Barlow', sans-serif; text-transform: none;
-    letter-spacing: normal; color: rgba(255,255,255,0.75);
+    letter-spacing: normal; color: rgba(247,236,217,0.75);
     font-size: 0.72rem; margin-top: 0.1rem; line-height: 1.3;
   }
   .blog-card .gflip-back .blog-card-header {
@@ -2838,7 +2840,7 @@
   }
   .testimonial-stars { color: #f7ecd9; font-size: 1rem; margin-bottom: 1rem; letter-spacing: 2px; }
   .testimonial-text {
-    font-size: 0.93rem; color: rgba(255,255,255,0.95); line-height: 1.8;
+    font-size: 0.93rem; color: rgba(247,236,217,0.95); line-height: 1.8;
     font-style: italic; margin-bottom: 1.4rem;
   }
   .testimonial-author {
@@ -2846,7 +2848,7 @@
     letter-spacing: 0.18em; text-transform: uppercase; color: #f7ecd9;
     margin-bottom: 0.2rem;
   }
-  .testimonial-origin { font-size: 0.8rem; color: rgba(255,255,255,0.7); }
+  .testimonial-origin { font-size: 0.8rem; color: rgba(247,236,217,0.7); }
 
   /* ── BOOKING SECTION (homepage) ── */
   .booking-section {
@@ -3021,7 +3023,7 @@
     position: absolute; left: 4%; bottom: 4%;
     font-family: 'Orbitron', sans-serif;
     font-size: 0.42rem; letter-spacing: 0.04em; text-transform: uppercase;
-    color: rgba(255,255,255,0.7);
+    color: rgba(247,236,217,0.7);
     background: rgba(0,0,0,0.45);
     padding: 2px 6px; border-radius: 3px;
     white-space: nowrap;
@@ -3196,9 +3198,9 @@
     font-family: 'Orbitron', sans-serif; font-size: 0.68rem; letter-spacing: 0.14em;
     text-transform: uppercase; color: #f7ecd9; margin-bottom: 0.3rem;
   }
-  .testimonial-photo-date { font-size: 0.8rem; color: rgba(255,255,255,0.8); }
+  .testimonial-photo-date { font-size: 0.8rem; color: rgba(247,236,217,0.8); }
   .testimonial-photo-bio {
-    font-size: 0.78rem; line-height: 1.5; color: rgba(255,255,255,0.85);
+    font-size: 0.78rem; line-height: 1.5; color: rgba(247,236,217,0.85);
     margin-top: 0.6rem;
   }
 
@@ -3891,7 +3893,7 @@
           <div class="flip-card-inner">
             <div class="flip-card-front">
               <div class="fc-title" style="font-size:0.8rem;">E-books &amp; materiaal</div>
-              <ul style="list-style:disc;padding-left:1.1rem;margin-top:0.6rem;font-size:0.82rem;color:rgba(255,255,255,0.9);line-height:1.85">
+              <ul style="list-style:disc;padding-left:1.1rem;margin-top:0.6rem;font-size:0.82rem;color:rgba(247,236,217,0.9);line-height:1.85">
                 <li>Lesmateriaal speciaal voor deze lessen</li>
                 <li>Werkboeken en pdf's die het leren makkelijker maken</li>
                 <li>Hulp via WhatsApp tussen de lessen</li>
@@ -3915,7 +3917,7 @@
             <div class="flip-card-front">
               <div class="fc-title">Verhuizen, studeren of bezoeken</div>
               <div class="fc-sub">Nederlands voor:</div>
-              <ul style="list-style:disc;padding-left:1.1rem;margin-top:0.5rem;font-size:0.82rem;color:rgba(255,255,255,0.9);line-height:1.85">
+              <ul style="list-style:disc;padding-left:1.1rem;margin-top:0.5rem;font-size:0.82rem;color:rgba(247,236,217,0.9);line-height:1.85">
                 <li>Inburgering</li>
                 <li>Studie</li>
                 <li>Reizen</li>
@@ -3938,7 +3940,7 @@
           <div class="flip-card-inner">
             <div class="flip-card-front">
               <div class="fc-title">Grammatica</div>
-              <ul style="list-style:disc;padding-left:1.1rem;margin-top:0.5rem;font-size:0.82rem;color:rgba(255,255,255,0.9);line-height:1.85">
+              <ul style="list-style:disc;padding-left:1.1rem;margin-top:0.5rem;font-size:0.82rem;color:rgba(247,236,217,0.9);line-height:1.85">
                 <li>Spelling</li>
                 <li>Werkwoordstijden</li>
                 <li>Woordenschat</li>
@@ -4055,7 +4057,7 @@
             </div>
             <div>
               <div class="testimonial-author" style="margin-bottom:0.1rem;">Antzela</div>
-              <div style="font-size:0.72rem;color:rgba(255,255,255,0.75);">2 december 2025</div>
+              <div style="font-size:0.72rem;color:rgba(247,236,217,0.75);">2 december 2025</div>
             </div>
           </div>
           <div class="testimonial-stars">★★★★★</div>
@@ -4083,7 +4085,7 @@
             </div>
             <div>
               <div class="testimonial-author" style="margin-bottom:0.1rem;">Rory</div>
-              <div style="font-size:0.72rem;color:rgba(255,255,255,0.75);">22 juli 2025</div>
+              <div style="font-size:0.72rem;color:rgba(247,236,217,0.75);">22 juli 2025</div>
             </div>
           </div>
           <div class="testimonial-stars">★★★★★</div>
@@ -4112,7 +4114,7 @@
             </div>
             <div>
               <div class="testimonial-author" style="margin-bottom:0.1rem;">Matt</div>
-              <div style="font-size:0.72rem;color:rgba(255,255,255,0.75);">22 juli 2025</div>
+              <div style="font-size:0.72rem;color:rgba(247,236,217,0.75);">22 juli 2025</div>
             </div>
           </div>
           <div class="testimonial-stars">★★★★★</div>
@@ -4159,12 +4161,12 @@
 <div class="gflip-front">
           <div style="margin-bottom:0.8rem;"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="15" stroke="#f7ecd9" stroke-width="2"></circle><path d="M12 18l4 4 8-8" stroke="#f7ecd9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M22 10l2 2" stroke="#f7ecd9" stroke-width="1.5" stroke-linecap="round"></path></svg></div>
           <div style="font-family:'Orbitron',sans-serif;font-size:0.7rem;font-weight:700;color:#f7ecd9;margin-bottom:0.5rem;">Rond jouw doel</div>
-          <div style="font-size:0.84rem;color:rgba(255,255,255,0.9);line-height:1.75;">Examen, gesprekken, werk of inburgering: elke les werkt naar wat jij nodig hebt.</div>
+          <div style="font-size:0.84rem;color:rgba(247,236,217,0.9);line-height:1.75;">Examen, gesprekken, werk of inburgering: elke les werkt naar wat jij nodig hebt.</div>
         </div>
 <div class="gflip-back">
           <div style="margin-bottom:0.8rem;"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="15" stroke="#f7ecd9" stroke-width="2"></circle><path d="M12 18l4 4 8-8" stroke="#f7ecd9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M22 10l2 2" stroke="#f7ecd9" stroke-width="1.5" stroke-linecap="round"></path></svg></div>
           <div style="font-family:'Orbitron',sans-serif;font-size:0.7rem;font-weight:700;color:#f7ecd9;margin-bottom:0.5rem;">Rond jouw doel</div>
-          <div style="font-size:0.84rem;color:rgba(255,255,255,0.9);line-height:1.75;">Examen, gesprekken, werk of inburgering: elke les werkt naar wat jij nodig hebt.</div>
+          <div style="font-size:0.84rem;color:rgba(247,236,217,0.9);line-height:1.75;">Examen, gesprekken, werk of inburgering: elke les werkt naar wat jij nodig hebt.</div>
         </div>
 </div>
 </div>
@@ -4173,12 +4175,12 @@
 <div class="gflip-front">
           <div style="margin-bottom:0.8rem;"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="8" width="20" height="14" rx="3" stroke="#f7ecd9" stroke-width="2"></rect><rect x="12" y="8" width="20" height="14" rx="3" stroke="#f7ecd9" stroke-width="2"></rect><path d="M16 22v4M20 22v4M13 26h10" stroke="#f7ecd9" stroke-width="2" stroke-linecap="round"></path></svg></div>
           <div style="font-family:'Orbitron',sans-serif;font-size:0.7rem;font-weight:700;color:#f7ecd9;margin-bottom:0.5rem;">Eerst spreken</div>
-          <div style="font-size:0.84rem;color:rgba(255,255,255,0.9);line-height:1.75;">Je leert spreken door te spreken, niet door grammaticatabellen te lezen. Je praat Nederlands vanaf je allereerste les.</div>
+          <div style="font-size:0.84rem;color:rgba(247,236,217,0.9);line-height:1.75;">Je leert spreken door te spreken, niet door grammaticatabellen te lezen. Je praat Nederlands vanaf je allereerste les.</div>
         </div>
 <div class="gflip-back">
           <div style="margin-bottom:0.8rem;"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="8" width="20" height="14" rx="3" stroke="#f7ecd9" stroke-width="2"></rect><rect x="12" y="8" width="20" height="14" rx="3" stroke="#f7ecd9" stroke-width="2"></rect><path d="M16 22v4M20 22v4M13 26h10" stroke="#f7ecd9" stroke-width="2" stroke-linecap="round"></path></svg></div>
           <div style="font-family:'Orbitron',sans-serif;font-size:0.7rem;font-weight:700;color:#f7ecd9;margin-bottom:0.5rem;">Eerst spreken</div>
-          <div style="font-size:0.84rem;color:rgba(255,255,255,0.9);line-height:1.75;">Je leert spreken door te spreken, niet door grammaticatabellen te lezen. Je praat Nederlands vanaf je allereerste les.</div>
+          <div style="font-size:0.84rem;color:rgba(247,236,217,0.9);line-height:1.75;">Je leert spreken door te spreken, niet door grammaticatabellen te lezen. Je praat Nederlands vanaf je allereerste les.</div>
         </div>
 </div>
 </div>
@@ -4187,12 +4189,12 @@
 <div class="gflip-front">
           <div style="margin-bottom:0.8rem;"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="6" width="5" height="24" rx="1" stroke="#f7ecd9" stroke-width="2"></rect><rect x="14" y="10" width="5" height="20" rx="1" stroke="#f7ecd9" stroke-width="2"></rect><rect x="22" y="4" width="5" height="26" rx="1" stroke="#f7ecd9" stroke-width="2"></rect></svg></div>
           <div style="font-family:'Orbitron',sans-serif;font-size:0.7rem;font-weight:700;color:#f7ecd9;margin-bottom:0.5rem;">Helder materiaal</div>
-          <div style="font-size:0.84rem;color:rgba(255,255,255,0.9);line-height:1.75;">Werkboeken, pdf's, audio en presentaties, allemaal inbegrepen en up-to-date voor jouw niveau.</div>
+          <div style="font-size:0.84rem;color:rgba(247,236,217,0.9);line-height:1.75;">Werkboeken, pdf's, audio en presentaties, allemaal inbegrepen en up-to-date voor jouw niveau.</div>
         </div>
 <div class="gflip-back">
           <div style="margin-bottom:0.8rem;"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="6" width="5" height="24" rx="1" stroke="#f7ecd9" stroke-width="2"></rect><rect x="14" y="10" width="5" height="20" rx="1" stroke="#f7ecd9" stroke-width="2"></rect><rect x="22" y="4" width="5" height="26" rx="1" stroke="#f7ecd9" stroke-width="2"></rect></svg></div>
           <div style="font-family:'Orbitron',sans-serif;font-size:0.7rem;font-weight:700;color:#f7ecd9;margin-bottom:0.5rem;">Helder materiaal</div>
-          <div style="font-size:0.84rem;color:rgba(255,255,255,0.9);line-height:1.75;">Werkboeken, pdf's, audio en presentaties, allemaal inbegrepen en up-to-date voor jouw niveau.</div>
+          <div style="font-size:0.84rem;color:rgba(247,236,217,0.9);line-height:1.75;">Werkboeken, pdf's, audio en presentaties, allemaal inbegrepen en up-to-date voor jouw niveau.</div>
         </div>
 </div>
 </div>
@@ -4201,12 +4203,12 @@
 <div class="gflip-front">
           <div style="margin-bottom:0.8rem;"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 10a4 4 0 0 1 4-4h16a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H20l-6 6v-6H10a4 4 0 0 1-4-4V10z" stroke="#f7ecd9" stroke-width="2" stroke-linejoin="round"></path><path d="M12 18h3M12 13h12" stroke="#f7ecd9" stroke-width="2" stroke-linecap="round"></path></svg></div>
           <div style="font-family:'Orbitron',sans-serif;font-size:0.7rem;font-weight:700;color:#f7ecd9;margin-bottom:0.5rem;">Hulp tussen de lessen</div>
-          <div style="font-size:0.84rem;color:rgba(255,255,255,0.9);line-height:1.75;">Loop je ergens op vast? Vraag het me via WhatsApp of e-mail. Je hoeft niet te wachten tot de volgende les.</div>
+          <div style="font-size:0.84rem;color:rgba(247,236,217,0.9);line-height:1.75;">Loop je ergens op vast? Vraag het me via WhatsApp of e-mail. Je hoeft niet te wachten tot de volgende les.</div>
         </div>
 <div class="gflip-back">
           <div style="margin-bottom:0.8rem;"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 10a4 4 0 0 1 4-4h16a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H20l-6 6v-6H10a4 4 0 0 1-4-4V10z" stroke="#f7ecd9" stroke-width="2" stroke-linejoin="round"></path><path d="M12 18h3M12 13h12" stroke="#f7ecd9" stroke-width="2" stroke-linecap="round"></path></svg></div>
           <div style="font-family:'Orbitron',sans-serif;font-size:0.7rem;font-weight:700;color:#f7ecd9;margin-bottom:0.5rem;">Hulp tussen de lessen</div>
-          <div style="font-size:0.84rem;color:rgba(255,255,255,0.9);line-height:1.75;">Loop je ergens op vast? Vraag het me via WhatsApp of e-mail. Je hoeft niet te wachten tot de volgende les.</div>
+          <div style="font-size:0.84rem;color:rgba(247,236,217,0.9);line-height:1.75;">Loop je ergens op vast? Vraag het me via WhatsApp of e-mail. Je hoeft niet te wachten tot de volgende les.</div>
         </div>
 </div>
 </div>
